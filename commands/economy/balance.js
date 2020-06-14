@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
 }
 
 exports.help = {
-  name: "bal",
+  name: "balance",
   description: "balance ur money",
   usage: "/bal <mention>",
   example: "/bal @mention someone"
