@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
 
         if (money === null) money = 0
 
-        message.channel.send(`${user} you have ${money} coins`)
+        message.channel.send(`**${user}** have **${money}** moneys`)
 }
 
 exports.help = {
