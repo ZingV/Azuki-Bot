@@ -1,5 +1,8 @@
 exports.run = async (client, message, args) => {
-  if (message.channel.id !== "VERIFICATION_CHANNEL_ID") {
+  
+  let channel = message.channels.mentions.first();
+  
+  if (message.channel.id !== channel) {
     // If the channel it wasn't verification channel, ignore it.
     return;
   }

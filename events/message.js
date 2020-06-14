@@ -39,7 +39,7 @@ module.exports = async (client, message) => {
   const member = message.member,
         now = Date.now(),
         timestamps = cooldowns.get(commandFile.help.name),
-        cooldownAmount = (commandFile.conf.cooldown || 3) * 1000;
+        cooldownAmount = (commandFile.conf.cooldown || 3) * 3000;
   
   if (!timestamps.has(member.id)) {
     if (!client.config.owners.includes(message.author.id)) {
@@ -50,7 +50,7 @@ module.exports = async (client, message) => {
     const expirationTime = timestamps.get(member.id) + cooldownAmount;
     
     if (now < expirationTime) {
-      const timeLeft = (expirationTime - now) / 1000;
+      const timeLeft = (expirationTime - now) / 3000;
       return message.channel.send(`Calm down dude, please wait **${timeLeft.toFixed(1)}** seconds to try the command again.`);
     }
     
