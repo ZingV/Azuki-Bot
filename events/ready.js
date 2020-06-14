@@ -1,3 +1,3 @@
 module.exports = client => {
-  console.log("The bot is ready!");
+  console.log(`${client.user.tag} The bot is ready!`);
 }
