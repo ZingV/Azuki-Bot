@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
     .setColor(0x1d1d1d)
     .setTimestamp(new Date())
     .setDescription(`Type \`${prefix}help [command]\` to get more specific information about a command.`)
-    .setTitle("A bot")
+    .setTitle(client.user.username + " Commands list")
     
     for (const mod of module) {
       // You can change the .join(" | ") to commas, dots or every symbol.
