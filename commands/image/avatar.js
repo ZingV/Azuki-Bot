@@ -8,13 +8,14 @@ exports.run = async (client, message, args) => {
   
   let embed = new Discord.MessageEmbed()
   
-  .setImage(user.avatarURL)
+  .setImage(user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
   .setColor(config.color)
   .setAuthor("Avatar")
   .setFooter("Searched by " + message.author.tag)
-  .setDescription("[Avatar URL Link](" + user.avatarURL + ")")
+  .setDescription("[Avatar URL Link](" + user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }) + ")")
+  
+  message.channel.send(embed)
 }
-
 exports.help = {
   name: "avatar",
   description: "Searching avatar from users",
