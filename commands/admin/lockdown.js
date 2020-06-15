@@ -13,11 +13,11 @@ exports.run = async (client, message, args) => {
       "<:redtick:719865119277842492> | You must set a duration for the lockdown in either hours, minutes or seconds."
     );
 
-  if (validUnlocks.includes(time)) {[
+  if (validUnlocks.includes(time)) {
     message.channel
-      .overwritePermissions(message.guild.id, {
+      .createOverwrite(message.guild.id, {
         SEND_MESSAGES: null
-      ]})
+      })
       .then(() => {
         message.channel.send(
           "<:greentick:719865049920831548> **| Channels Unlocked down**"
@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
       });
   } else {
     message.channel
-      .overwritePermissions(message.guild.id, {
+      .createOverwrite(message.guild.id, {
         SEND_MESSAGES: false
       })
       .then(() => {
@@ -44,8 +44,8 @@ exports.run = async (client, message, args) => {
           .then(() => {
             client.lockit[message.channel.id] = setTimeout(() => {
               message.channel
-                .overwritePermissions(message.guild.id, {
-                  SEND_MESSAGES: null
+                .createOverwrite(message.guild.id, {
+                  SEND_MESSAGE: null
                 })
                 .then(
                   message.channel.send(
