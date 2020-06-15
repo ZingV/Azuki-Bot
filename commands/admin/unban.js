@@ -5,16 +5,15 @@ const fetch = require("node-superfetch");
 module.exports.run = async (client, message, args) => {
   if (!message.member.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"]))
     return message.channel.send(
-      "<:redtick:719865119277842492> | You dont have permission to perform this command!"
+      "<a:b_no:721969465205588048> | You dont have permission to perform this command!"
     );
 
-  let bannedMember = await client
-    .fetchUser(args[0])
-    .catch(err =>
-      message.channel.send(
-        "<:redtick:719865119277842492> | Please enter his id for unban!"
-      )
+  if (args[0])
+    return message.channel.send(
+      "<a:b_no:721969465205588048> | Please enter his id for unban"
     );
+
+  let bannedMember = await client.fetchUser(args[0]);
 
   let reason = args.slice(1).join(" ");
   if (!reason) reason = "No Reason Given";
@@ -22,7 +21,7 @@ module.exports.run = async (client, message, args) => {
   if (!message.guild.me.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"]))
     return (
       message.channel.send(
-        "<:redtick:719865119277842492> | I dont have permission to perform this command!"
+        "<a:b_no:721969465205588048> | I dont have permission to perform this command!"
       ) | message.delete()
     );
   try {
@@ -36,13 +35,13 @@ module.exports.run = async (client, message, args) => {
 };
 
 exports.help = {
-         name: "unban",
-         description: "unbanning members from guilds",
-         usage: "/unban <id user>",
-         example: "/unban 717230602159521822",
+  name: "unban",
+  description: "unbanning members from guilds",
+  usage: "/unban <id user>",
+  example: "/unban 717230602159521822"
 };
 
 exports.conf = {
-          aliases: [""],
-          cooldown: 5
+  aliases: [""],
+  cooldown: 5
 };
