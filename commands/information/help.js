@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
     .setColor(config.color)
     .setTimestamp(new Date())
     .setFooter(`© 2020 Ordinary Bot • This Bot Under Development By McDunaldz#8760`)
-    .setDescription(`Type \`${prefix}help [command]\` to get more specific information about a command.`)
+    .setDescription(`\nTo check the command usage, type \`${prefix}help <commands>\`\n`)
     .setTitle(client.user.username + " Commands list")
     
     for (const mod of module) {
