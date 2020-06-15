@@ -26,8 +26,8 @@ module.exports.run = async (client, message, args) => {
       ) | message.delete()
     );
   try {
-    message.guild.unban(bannedMember, { reason: reason });
-    message.channel.send(
+    message.guild.members.unban(bannedMember, { reason: reason });
+    return message.channel.send(
       `<:greentick:719865049920831548> | **${bannedMember.tag}** has been unbanned from the guild!`
     );
   } catch (e) {
