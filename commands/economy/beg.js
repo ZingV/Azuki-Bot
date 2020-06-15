@@ -28,7 +28,7 @@ exports.run = async (client, message, args) => {
     let job = jobs[Math.floor(Math.random() * jobs.length)];
 
     let embed = new Discord.MessageEmbed()
-      .setColor("RANDOM")
+      .setColor(config.cklor)
       .setAuthor(
         `${message.author.tag}, your begging worked`,
         message.author.displayAvatarURL()
