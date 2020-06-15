@@ -24,10 +24,10 @@ exports.run = async (client, message, args) => {
     
     // Members
     let member = message.guild.members;
-    let offline = member.filter(m => m.user.presence.status === "offline").size,
-        online = member.filter(m => m.user.presence.status === "online").size,
-        idle = member.filter(m => m.user.presence.status === "idle").size,
-        dnd = member.filter(m => m.user.presence.status === "dnd").size,
+    let offline = member.cache.filter(m => m.user.presence.status === "offline").size,
+        online = member.cache.filter(m => m.user.presence.status === "online").size,
+        idle = member.cache.filter(m => m.user.presence.status === "idle").size,
+        dnd = member.cache.filter(m => m.user.presence.status === "dnd").size,
         robot = member.filter(m => m.user.bot).size,
         total = message.guild.memberCount;
     
@@ -46,7 +46,7 @@ exports.run = async (client, message, args) => {
     let h = Math.floor(x / 86400000) // 86400000, 5 digits-zero.
     let created = dateformat(message.guild.createdAt); // Install "dateformat" first.
     
-    const embed = new Discord.RichEmbed()
+    const embed = new Discord.MessageEmbed()
     .setColor(0x7289DA)
     .setTimestamp(new Date())
     .setThumbnail(icon)
@@ -62,10 +62,10 @@ exports.run = async (client, message, args) => {
 }
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "serverinfo",
+         description: "checking info about guilds",
+         usage: "/serverinfo",
+         example: "/serverinfo",
 };
 
 exports.conf = {

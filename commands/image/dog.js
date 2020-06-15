@@ -10,7 +10,7 @@ exports.run = async (client, message, args) => {
     //console.log(body.file)
     if(!{body}) return message.channel.send("I broke! Try again.")
 
-        let dEmbed = new Discord.RichEmbed()
+        let dEmbed = new Discord.MessageEmbed()
         .setColor(config.color)
         .setAuthor(`TestBot DOGS!`, message.guild.iconURL)
         .setImage(body.message)
@@ -23,10 +23,10 @@ exports.run = async (client, message, args) => {
 }
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "dog",
+         description: "search pictures about dog",
+         usage: "/dog",
+         example: "/dog",
 };
 
 exports.conf = {

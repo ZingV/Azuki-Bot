@@ -17,10 +17,10 @@ exports.run = async (client, message, args) => {
   }
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "meme",
+         description: "search some meme with images",
+         usage: "/meme",
+         example: "/meme",
 };
 
 exports.conf = {

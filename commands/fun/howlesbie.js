@@ -37,10 +37,10 @@ exports.run = (client, message, args, ops) => {
 }
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "howlesbi",
+         description: "to check lesbie you are",
+         usage: "/howlesbi, /howlesbi <@mentions>",
+         example: "/howlesbi, /howlesbi @McDunaldz",
 };
 
 exports.conf = {

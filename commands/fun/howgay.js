@@ -18,7 +18,7 @@ exports.run = (client, message, args, ops) => {
     
     if (message.author.id === ops.ownerID) return message.channel.send('<:greentick:719865049920831548> | You are 0% gay')
     if (message.author.id === ops.friendID) return message.channel.send('<:greentick:719865049920831548> | You are 0% gay')
-  
+    
     return message.channel.send('<:greentick:719865049920831548> | You are ' + Math.floor(Math.random() * 100 + 0) + '% gay')
     
   }

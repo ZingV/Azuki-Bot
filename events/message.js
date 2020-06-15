@@ -59,13 +59,13 @@ module.exports = async (client, message) => {
   }
   
   let ops = {
-    ownerID: "",
-    friendID: ""
+    ownerID: "583649910092595232",
+    friendID: "354046774350184449"
   };
   
   try {
     if (!commandFile) return;
-    commandFile.run(client, message, args);
+    commandFile.run(client, message, args, ops);
   } catch (error) {
     console.log(error.message);
   } finally {
