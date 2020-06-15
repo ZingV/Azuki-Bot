@@ -47,7 +47,7 @@ exports.run = async (client, message, args) => {
     let created = dateformat(message.guild.createdAt); // Install "dateformat" first.
     
     const embed = new Discord.MessageEmbed()
-    .setColor(0x7289DA)
+    .setColor(config.color)
     .setTimestamp(new Date())
     .setThumbnail(icon)
     .setAuthor(message.guild.name, icon)
