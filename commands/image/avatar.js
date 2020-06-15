@@ -4,7 +4,7 @@ const config = require("../../config.json");
 exports.run = async (client, message, args) => {
   let msg = await message.channel.send("Generating Avatar.....");
   
-  let user = message.mentions.users.first() || message.author();
+  let user = message.mentions.users.first() || message.author;
   
   let embed = new Discord.MessageEmbed()
   

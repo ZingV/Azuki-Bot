@@ -4,7 +4,7 @@ const post = require("node-superfetch");
 
 exports.run = async (client, message, args) => {
   // This command is super frickin' dangerous. Make it only visible and usable for you only, or give it to someone you trust.
-  if (!client.config.owners.includes(message.author.id)) return;
+  if (!client.config.owners.includes(message.author.id)) return message.channel.send("<a:b_no:721969465205588048> **| Only owner can use this command.**")
   
   const embed = new Discord.MessageEmbed()
   .setTitle("")
@@ -16,7 +16,7 @@ exports.run = async (client, message, args) => {
     let evaled;
     
     // This method is to prevent someone that you trust, open the secret shit here.
-    if (code.includes(`SECRET`) || code.includes(`TOKEN`) || code.includes("process.env")) {
+    if (code.includes(`SECRET`) || code.includes(`token`) || code.includes("process.env")) {
       evaled = "No, shut up, what will you do it with the token?";
     } else {
       evaled = eval(code);
