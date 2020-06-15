@@ -19,7 +19,7 @@ exports.run = async (client,message, args) => {
             let job = jobs[Math.floor(Math.random()* jobs.length)]
 
             let embed = new Discord.MessageEmbed()
-            .setColor("RANDOM")
+            .setColor("#00bfff")
             .setAuthor(`${message.author.tag}, it paid off`, message.author.displayAvatarURL())
             .setDescription(`${message.author}, you searched a ${job} and found ${amountearned} coins`)
 

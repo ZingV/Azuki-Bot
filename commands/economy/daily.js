@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const db = require("quick.db");
+const config = require("../../config.json")
 const ms = require("parse-ms");
 
 exports.run = async (client, message, args) => {
@@ -16,7 +17,7 @@ exports.run = async (client, message, args) => {
   } else {
     let embed = new Discord.MessageEmbed()
       .setAuthor(`Daily`, message.author.displayAvatarURL)
-      .setColor("GREEN")
+      .setColor(config.color)
       .setDescription(`**Daily Rewards**`)
       .addField(`Collected`, amount);
     message.channel.send(embed);
