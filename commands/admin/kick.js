@@ -20,3 +20,15 @@ module.exports.run = async (client, message, args) => {
       message.channel.send("<:redtick:719865119277842492> | I was unable to kick the member.");
     })
   }
+
+exports.help = {
+         name: "",
+         description: "",
+         usage: "",
+         example: "",
+};
+
+exports.conf = {
+          aliases: [""],
+          cooldown: 5
+};

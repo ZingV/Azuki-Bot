@@ -74,3 +74,15 @@ if (!args[0]) return message.channel.send("<:redtick:719865119277842492> | Pleas
       .then()
       .catch(err => msg.reply("Please mention the user!"));
   }
+
+exports.help = {
+         name: "",
+         description: "",
+         usage: "",
+         example: "",
+};
+
+exports.conf = {
+          aliases: [""],
+          cooldown: 5
+};

@@ -22,3 +22,15 @@ module.exports.run = async (client, message, args) => {
         message.channel.send(`<:greentick:719865049920831548> | You has been removed ${role} from **${rMember.displayName}**.`)
     }
 }
+
+exports.help = {
+         name: "",
+         description: "",
+         usage: "",
+         example: "",
+};
+
+exports.conf = {
+          aliases: [""],
+          cooldown: 5
+};

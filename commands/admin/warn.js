@@ -65,3 +65,15 @@ exports.run = async (client, message, args, ops) => {
     ); //DO NOT FORGET TO USE ASYNC FUNCTION
   }
 };
+
+exports.help = {
+         name: "",
+         description: "",
+         usage: "",
+         example: "",
+};
+
+exports.conf = {
+          aliases: [""],
+          cooldown: 5
+};

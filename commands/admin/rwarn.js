@@ -38,3 +38,15 @@ exports.run = async (cliemt, message, args) => {
     }`
   ); //DO NOT FORGET TO USE ASYNC FUNCTION
 };
+
+exports.help = {
+         name: "",
+         description: "",
+         usage: "",
+         example: "",
+};
+
+exports.conf = {
+          aliases: [""],
+          cooldown: 5
+};

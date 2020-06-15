@@ -9,3 +9,15 @@ exports.run = async (client, message, args) => {
 
     message.channel.send(`<:greentick:719865049920831548> | ${user} have **${warnings}** warnings`);
   }
+
+exports.help = {
+         name: "",
+         description: "",
+         usage: "",
+         example: "",
+};
+
+exports.conf = {
+          aliases: [""],
+          cooldown: 5
+};

@@ -29,3 +29,15 @@ mutee.removeRole(muterole.id).then(() => {
     message.channel.send(`<:greentick:719865049920831548> | **${mutee} SPEAK**!`)
 })
 };
+
+exports.help = {
+         name: "",
+         description: "",
+         usage: "",
+         example: "",
+};
+
+exports.conf = {
+          aliases: [""],
+          cooldown: 5
+};

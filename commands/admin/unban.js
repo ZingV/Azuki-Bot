@@ -34,3 +34,15 @@ module.exports.run = async (client, message, args) => {
     console.log(e.message);
   }
 };
+
+exports.help = {
+         name: "",
+         description: "",
+         usage: "",
+         example: "",
+};
+
+exports.conf = {
+          aliases: [""],
+          cooldown: 5
+};

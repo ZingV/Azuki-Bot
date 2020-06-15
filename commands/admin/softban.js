@@ -23,3 +23,15 @@ module.exports.run = async (client, message, args) => {
    message.guild.ban(banMember, { days: 1, reason: reason})).then(() => message.guild.unban(banMember.id, { reason: "Softban"})).catch(err => console.log(err))
   message.channel.send("<:greentick:719865049920831548> | The users got softban")
 };
+
+exports.help = {
+         name: "",
+         description: "",
+         usage: "",
+         example: "",
+};
+
+exports.conf = {
+          aliases: [""],
+          cooldown: 5
+};
