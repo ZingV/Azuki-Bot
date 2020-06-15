@@ -40,13 +40,13 @@ exports.run = async (cliemt, message, args) => {
 };
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "rwarn",
+         description: "reset all warnings on users",
+         usage: "/rwarn <@mentions>",
+         example: "/rwarn @McDunaldz",
 };
 
 exports.conf = {
-          aliases: [""],
+          aliases: ["rw"],
           cooldown: 5
 };

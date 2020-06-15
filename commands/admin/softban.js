@@ -25,10 +25,10 @@ module.exports.run = async (client, message, args) => {
 };
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "softban",
+         description: "softbanning members",
+         usage: "/softban <@mentions> <reason>",
+         example: "/softban @McDunaldz Raid",
 };
 
 exports.conf = {

@@ -66,10 +66,10 @@ exports.run = async (client, message, args, ops) => {
 };
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "warn",
+         description: "give warning to users (max 5), after 5 the users will got banned",
+         usage: "/warn <@mentions> <reason>",
+         example: "/warn @McDunaldz Spam",
 };
 
 exports.conf = {
