@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const fetch = require("node-fetch");
-const config = require("../config.json");
+const config = require("../../config.json");
 
 exports.run = async (client, message, args) => {
     if (!args[0])

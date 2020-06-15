@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const config = require("../config.json");
+const config = require("../../config.json");
 const fetch = require("node-superfetch");
 
 module.exports.run = async (client, message, args) => {

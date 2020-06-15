@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
   if (!message.member.hasPermission("ADMINISTRATOR"))
     return message.channel.send("<:redtick:719865119277842492> | **You don't have permission!**");
-  var channel = client.channels.get(message.channel.id);
+  var channel = client.channels.cache.get(message.channel.id);
   var copy = client.users.get("622019385086836765");
   var hasil = channel.position;
   channel.clone().then(channel => {

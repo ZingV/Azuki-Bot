@@ -15,7 +15,12 @@
     "weather-js": "^2.0.0",
     "ops": "^0.0.1",
     "moment": "^2.26.0",
-    "ms": "^2.1.2"
+    "ms": "^2.1.2",
+    "fs": "^0.0.2",
+    "superagent": "^5.2.2",
+    "random-puppy": "^1.1.0",
+    "node-fetch": "^2.6.0",
+    "date-format": "^3.0.0"
   },
   "engines": {
     "node": "12.x"

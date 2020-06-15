@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const db = require("quick.db");
-const config = require("../config.json");
 
 exports.run = async (client, message, args, ops) => {
   if (!message.member.hasPermission("ADMINISTRATOR")) {
