@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
   channel.clone().then(channel => {
     message.channel.delete();
     channel.setPosition(hasil);
-    channel.send("<:greentick:719865049920831548> | **Channel has been Nuked!**", {
+    channel.send("<a:b_yes:721969088813072425> | **Channel has been Nuked!**", {
       files: [
         {
           attachment:

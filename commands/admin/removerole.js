@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
         return message.channel.send(`<a:b_no:721969465205588048> | **${rMember.displayName}**, doesnt have the role!`)
     } else {
         await rMember.roles.remove(role.id).catch(e => console.log(e.message))
-        message.channel.send(`<:greentick:719865049920831548> | You has been removed ${role} from **${rMember.displayName}**.`)
+        message.channel.send(`<a:b_yes:721969088813072425> | You has been removed ${role} from **${rMember.displayName}**.`)
     }
 }
 

@@ -65,11 +65,11 @@ module.exports.run = async (client, message, args) => {
     message.delete();
     mutee
       .send(
-        `<:greentick:719865049920831548> | You have muted been in ${message.guild.name} for: ${reason}`
+        `<a:b_yes:721969088813072425> | You have muted been in ${message.guild.name} for: ${reason}`
       )
       .catch(err => console.log(err.message));
     message.channel.send(
-      `<:greentick:719865049920831548> | **${mutee.user.tag}** was successfully muted.`,
+      `<a:b_yes:721969088813072425> | **${mutee.user.tag}** was successfully muted.`,
       {
         files: [
           {

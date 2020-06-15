@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
     
     await message.delete()
     await message.channel.bulkDelete(args[0])
-    .then(messages => message.channel.send(`<:greentick:719865049920831548> | Deleted ${messages.size}/${args[0]} messages.`)).then(d => d.delete({timeout: 2000})) // How long this message will be deleted (in ms)
+    .then(messages => message.channel.send(`<a:b_yes:721969088813072425> | Deleted ${messages.size}/${args[0]} messages.`)).then(d => d.delete({timeout: 2000})) // How long this message will be deleted (in ms)
     .catch(() => message.channel.send("Something went wrong, while deleting messages.")) // This error will be displayed when the bot doesn't have an access to do it.
   }
 

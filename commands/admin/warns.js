@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
 
     if (warnings === null) warnings = 0;
 
-    message.channel.send(`<:greentick:719865049920831548> | ${user} have **${warnings}** warnings`);
+    message.channel.send(`<a:b_yes:721969088813072425> | ${user} have **${warnings}** warnings`);
   }
 
 exports.help = {

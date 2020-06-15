@@ -30,10 +30,10 @@ exports.run = async (cliemt, message, args) => {
 
   db.delete(`warnings_${message.guild.id}_${user.id}`);
   user.send(
-    `<:greentick:719865049920831548> | Your all warnings are reseted by ${message.author.username} from ${message.guild.name}`
+    `<a:b_yes:721969088813072425> | Your all warnings are reseted by ${message.author.username} from ${message.guild.name}`
   );
   await message.channel.send(
-    `<:greentick:719865049920831548> | Reseted all warnings of ${
+    `<a:b_yes:721969088813072425> | Reseted all warnings of ${
       message.mentions.users.first().username
     }`
   ); //DO NOT FORGET TO USE ASYNC FUNCTION

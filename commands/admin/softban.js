@@ -44,7 +44,7 @@ module.exports.run = async (client, message, args) => {
     .then(() => message.guild.unban(banMember.id, { reason: "Softban" }))
     .catch(err => console.log(err));
   message.channel.send(
-    "<:greentick:719865049920831548> | The users got softban"
+    "<a:b_yes:721969088813072425> | The users got softban"
   );
 };
 

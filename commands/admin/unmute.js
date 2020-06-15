@@ -25,8 +25,8 @@ if(!muterole) return message.channel.send("<:redtick:719865119277842492> | There
 //remove role to the mentioned user and also send the user a dm explaing where and why they were unmuted
 mutee.roles.remove(muterole.id).then(() => {
     message.delete()
-    mutee.send(`<:greentick:719865049920831548> | You have been unmuted in ${message.guild.name} for: ${reason}`).catch(err => console.log(err))
-    message.channel.send(`<:greentick:719865049920831548> | **${mutee} SPEAK**!`)
+    mutee.send(`<a:b_yes:721969088813072425> | You have been unmuted in ${message.guild.name} for: ${reason}`).catch(err => console.log(err))
+    message.channel.send(`<a:b_yes:721969088813072425> | **${mutee} SPEAK**!`)
 })
 };
 

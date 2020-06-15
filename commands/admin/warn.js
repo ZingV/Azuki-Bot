@@ -45,20 +45,20 @@ exports.run = async (client, message, args, ops) => {
   if (warnings === null) {
     db.set(`warnings_${message.guild.id}_${user.id}`, 1);
     user.send(
-      `<:greentick:719865049920831548> | You have been warned in **${message.guild.name}** for ${reason}`
+      `<a:b_yes:721969088813072425> | You have been warned in **${message.guild.name}** for ${reason}`
     );
     await message.channel.send(
-      `<:greentick:719865049920831548> | You warned **${
+      `<a:b_yes:721969088813072425> | You warned **${
         message.mentions.users.first().username
       }** for ${reason}`
     ); //DO NOT FORGET TO USE ASYNC FUNCTION
   } else if (warnings !== null) {
     db.add(`warnings_${message.guild.id}_${user.id}`, 1);
     user.send(
-      "<:greentick:719865049920831548> | You have been warned in **${message.guild.name}** for ${reason}"
+      "<a:b_yes:721969088813072425> | You have been warned in **${message.guild.name}** for ${reason}"
     );
     await message.channel.send(
-      `<:greentick:719865049920831548> | You warned **${
+      `<a:b_yes:721969088813072425> | You warned **${
         message.mentions.users.first().username
       }** for ${reason}`
     ); //DO NOT FORGET TO USE ASYNC FUNCTION
