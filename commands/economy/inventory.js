@@ -1,4 +1,5 @@
 const db = require("quick.db");
+const config = require("../../config.json");
 const Discord = require("discord.js");
 
 exports.run = async (client, message, args) => {
@@ -6,6 +7,7 @@ exports.run = async (client, message, args) => {
   let user = message.mentions.users.first || message.author;
   if (items === null) items = "nothing yet";
   let embed = new Discord.MessageEmbed()
+    .setColor(config.color)
     .setTitle(`${message.author.username}'s Inventory`)
     .addField("Inventory", items);
   message.channel.send(embed);

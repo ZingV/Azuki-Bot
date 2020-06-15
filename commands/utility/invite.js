@@ -18,6 +18,6 @@ exports.help = {
 }
 
 exports.conf = {
-  aliases: ["inv"],
+  aliases: ["invite"],
   cooldown: 5
 }
