@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
     if (!reason) reason = "No reason provided";
     
     member.kick(reason).then(() => {
-      message.channel.send(`<:greentick:719865049920831548> | Successfully kicked **${user.tag}**`);
+      message.channel.send(`<a:b_yes:721969088813072425> | Successfully kicked **${user.tag}**`);
     }).catch(err => {
       message.channel.send("<a:b_no:721969465205588048> | I was unable to kick the member.");
     })

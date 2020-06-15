@@ -4,8 +4,10 @@ const config = require("../../config.json")
 exports.run = async (client, message, args) => {
   let embed = new Discord.MessageEmbed()
   
-  .setDecription("[Click Here](https://discordapp.com/oauth2/authorize?client_id=711662245565825064&scope=bot&permissions=536345726)")
+  .setDescription("[Click Here](https://discordapp.com/oauth2/authorize?client_id=711662245565825064&scope=bot&permissions=536345726) **For invite the bot to ur server!**")
   .setColor(config.color)
+  
+  message.channel.send(embed)
 }
 
 exports.help = {
@@ -16,6 +18,6 @@ exports.help = {
 }
 
 exports.conf = {
-  aliases: [""],
+  aliases: ["inv"],
   cooldown: 5
 }

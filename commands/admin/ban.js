@@ -44,7 +44,7 @@ module.exports.run = async (client, message, args) => {
     .ban(reason)
     .then(() => {
       message.channel.send(
-        `<:greentick:719865049920831548> | Successfully banned **${user.tag}**`,
+        `<a:b_yes:721969088813072425> | Successfully banned **${user.tag}**`,
         {
           files: [
             {

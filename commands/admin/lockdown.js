@@ -20,7 +20,7 @@ exports.run = async (client, message, args) => {
       })
       .then(() => {
         message.channel.send(
-          "<:greentick:719865049920831548> **| Channels Unlocked down**"
+          "<a:b_yes:721969088813072425> **| Channels Unlocked down**"
         );
         clearTimeout(client.lockit[message.channel.id]);
         delete client.lockit[message.channel.id];
@@ -36,7 +36,7 @@ exports.run = async (client, message, args) => {
       .then(() => {
         message.channel
           .send(
-            `<:greentick:719865049920831548> **| Channel locked down for ${ms(
+            `<a:b_yes:721969088813072425> **| Channel locked down for ${ms(
               ms(time),
               { long: true }
             )}**`
@@ -49,7 +49,7 @@ exports.run = async (client, message, args) => {
                 })
                 .then(
                   message.channel.send(
-                    "<:greentick:719865049920831548> **| Channel Unlocked down**"
+                    "<a:b_yes:721969088813072425> **| Channel Unlocked down**"
                   )
                 )
                 .catch(console.error);

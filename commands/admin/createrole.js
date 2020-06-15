@@ -9,7 +9,7 @@ exports.run = async (client, message, args, color) => {
     "name": args[0],
     "color": hex
    }).then((role) => {
-     message.channel.send(`<:greentick:719865049920831548> | **<@&${role.id}>, has been added**`);
+     message.channel.send(`<a:b_yes:721969088813072425> | **<@&${role.id}>, has been added**`);
 });
 }
 
