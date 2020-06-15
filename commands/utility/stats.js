@@ -35,7 +35,7 @@ exports.run = async (client, message, args) => {
 
   var embed = new Discord.MessageEmbed()
     .setThumbnail(
-      "https://cdn.discordapp.com/avatars/711662245565825064/8ccc5f1d6bf12963824c1f95a2e40526.png?size=2048"
+      "https://cdn.discordapp.com/avatars/711662245565825064/8efc5b559dceb783df316aeb7526110a.png?size=2048"
     )
     .setAuthor(
      client.user.username + " Statistics",

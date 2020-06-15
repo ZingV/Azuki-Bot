@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
         var current = result[0].current;
         var location = result[0].location;
 
-        const weatherinfo = new Discord.RichEmbed()
+        const weatherinfo = new Discord.MessageEmbed()
         .setDescription(`**${current.skytext}**`)
         .setAuthor(`Weather forecast for ${current.observationpoint}`)
         .setThumbnail(current.imageUrl)
@@ -33,10 +33,10 @@ exports.run = async (client, message, args) => {
     }
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "weather",
+         description: "to see weather on some location",
+         usage: "/weather <location>",
+         example: "/weather jakarta",
 };
 
 exports.conf = {

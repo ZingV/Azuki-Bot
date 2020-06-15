@@ -23,7 +23,7 @@ exports.run = async (client, message, args) => {
     }
   });
 
-  let Embed = new Discord.RichEmbed()
+  let Embed = new Discord.MessageEmbed()
     .setTitle(`Emojis in ${message.guild.name}.`)
     .setDescription(
       `**Animated [${Animated}]**:\n${EmojisAnimated}\n\n**Standard [${EmojiCount}]**:\n${Emojis}\n\n**Over all emojis [${OverallEmojis}]**`
@@ -34,10 +34,10 @@ exports.run = async (client, message, args) => {
 };
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "emoji",
+         description: "to see all emoji in guilds",
+         usage: "/emoji",
+         example: "/emoji",
 };
 
 exports.conf = {
