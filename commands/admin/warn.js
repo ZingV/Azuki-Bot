@@ -4,7 +4,7 @@ const db = require("quick.db");
 exports.run = async (client, message, args, ops) => {
   if (!message.member.hasPermission("ADMINISTRATOR")) {
     return message.channel.send(
-      "<:redtick:719865119277842492> | You should have admin perms to use this command!"
+      "<a:b_no:721969465205588048> | You should have admin perms to use this command!"
     );
   }
 
@@ -12,18 +12,18 @@ exports.run = async (client, message, args, ops) => {
 
   if (!user) {
     return message.channel.send(
-      "<:redtick:719865119277842492> | Please Mention the person to who you want to warn - warn @mention <reaosn>"
+     "<a:b_no:721969465205588048> | Please Mention the person to who you want to warn - warn @mention <reaosn>"
       )};
 
   if (message.mentions.users.first().bot) {
     return message.channel.send(
-      "<:redtick:719865119277842492> | You can not warn bots"
+      "<a:b_no:721969465205588048> | You can not warn bots"
     );
   }
 
   if (message.author.id === user.id) {
     return message.channel.send(
-      "<:redtick:719865119277842492> | You can not warn yourself"
+      "<a:b_no:721969465205588048> | You can not warn yourself"
     );
   }
 
@@ -31,7 +31,7 @@ exports.run = async (client, message, args, ops) => {
 
   if (!reason) {
     return message.channel.send(
-      "<:redtick:719865119277842492> | Please provide reason to warn - warn @mention <reason>"
+      "<a:b_no:721969465205588048> | Please provide reason to warn - warn @mention <reason>"
     );
   }
 

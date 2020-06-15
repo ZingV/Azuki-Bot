@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
   let embed = new Discord.MessageEmbed()
     .setTitle("Shop")
     .setColor("RED")
-    .addField("Fishing Rod", "id: rod\ncost: 1,000 coins")
+    .addField("<:rods:721718010070434136> | Fishing Rod", "id: rod\ncost: 1,000 coins")
     .addField("Sword", "id: sword\ncost: 700 coins")
     .addField("Pickaxe", "id: pick\ncost: 1,200 coins")
     .addField("Gun", "id: gun\ncost: 10,000 coins")
