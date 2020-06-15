@@ -9,10 +9,10 @@ exports.run = async (client, message, args) => {
   let OverallEmojis = 0;
 
   function Emoji(id) {
-    return client.emojis.get(id).toString();
+    return client.emojis.cache.get(id).toString();
   }
 
-  message.guild.emojis.forEach(emoji => {
+  message.guild.emojis.cache.forEach(emoji => {
     OverallEmojis++;
     if (emoji.animated) {
       Animated++;

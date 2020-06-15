@@ -49,7 +49,7 @@ exports.run = async (client, message, args) => {
     const embed = new Discord.MessageEmbed()
       .setAuthor(
         "Spotify Track Information",
-        "https://image.flaticon.com/icons/svg/2111/2111624.svg"
+        "https://cdn.discordapp.com/emojis/719125875395788880.png?v=1"
       )
       .setColor(0x1ed768)
       .setThumbnail(image)
