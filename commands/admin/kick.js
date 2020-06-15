@@ -22,10 +22,10 @@ module.exports.run = async (client, message, args) => {
   }
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "kick",
+         description: "kicking members on guilds",
+         usage: "/kick <@mentions>",
+         example: "/kick @McDunaldz",
 };
 
 exports.conf = {

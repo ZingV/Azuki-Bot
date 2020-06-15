@@ -79,7 +79,7 @@ exports.help = {
          name: "hack",
          description: "hacking people",
          usage: "/hack <@mentions>",
-         example: "/hacl @",
+         example: "/hacl @McDunaldz",
 };
 
 exports.conf = {

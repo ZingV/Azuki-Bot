@@ -5,7 +5,7 @@ exports.run = async (client, message, args, color) => {
    if(!args[0]) return message.channel.send(`Invalid Argument! example : o.createrole <name> <hexcode>`); 
    var hex = args[1];
     if(!hex) '#000000';
-   message.guild.createRole({
+   message.guild.roles.create({
     "name": args[0],
     "color": hex
    }).then((role) => {
