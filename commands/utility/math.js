@@ -33,3 +33,8 @@ exports.help = {
   usage: "/math <amount> [*,/,+,-] <amount>",
   example: "/math 5*5"
 }
+
+exports.conf = {
+  aliases: ["calc"],
+  cooldown: 5
+}

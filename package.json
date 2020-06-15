@@ -22,7 +22,8 @@
     "node-fetch": "^2.6.0",
     "date-format": "^3.0.0",
     "date-fns": "^2.14.0",
-    "dateformat": "^3.0.3"
+    "dateformat": "^3.0.3",
+    "mathjs": "^6.6.5"
   },
   "engines": {
     "node": "12.x"
