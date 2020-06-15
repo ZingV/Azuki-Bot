@@ -18,7 +18,7 @@ const config = require("./config.json");
 require("./handler/module.js")(client);
 require("./handler/Event.js")(client);
 
-let prefix = config.
+let prefix = config.prefix;
 
 client.on("ready", () => {
   function randomStatus() {
