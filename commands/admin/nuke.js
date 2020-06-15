@@ -4,7 +4,7 @@ module.exports.run = async (client, message, args) => {
   if (!message.member.hasPermission("ADMINISTRATOR"))
     return message.channel.send("<:redtick:719865119277842492> | **You don't have permission!**");
   var channel = client.channels.cache.get(message.channel.id);
-  var copy = client.users.get("622019385086836765");
+  var copy = client.users.cache.get("622019385086836765");
   var hasil = channel.position;
   channel.clone().then(channel => {
     message.channel.delete();
@@ -22,10 +22,10 @@ module.exports.run = async (client, message, args) => {
 };
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "nuke",
+         description: "purging all message on guilds",
+         usage: "/nuke",
+         example: "/nuke",
 };
 
 exports.conf = {

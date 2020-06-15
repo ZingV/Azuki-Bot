@@ -38,7 +38,7 @@ module.exports.run = async (client, message, args) => {
   if (!reason) reason = "No reason given";
 
   //define mute role and if the mute role doesnt exist then create one
-  let muterole = message.guild.roles.find(r => r.name === "Muted");
+  let muterole = message.guild.roles.cache.find(r => r.name === "Muted");
   if (!muterole) {
     try {
       muterole = await message.guild.createRole({
@@ -47,7 +47,7 @@ module.exports.run = async (client, message, args) => {
         permissions: []
       });
       message.guild.channels.forEach(async (channel, id) => {
-        await channel.overwritePermissions(muterole, {
+        await channel.createOverwrite(muterole, {
           SEND_MESSAGES: false,
           ADD_REACTIONS: false,
           SEND_TTS_MESSAGES: false,
@@ -61,7 +61,7 @@ module.exports.run = async (client, message, args) => {
   }
 
   //add role to the mentioned user and also send the user a dm explaing where and why they were muted
-  mutee.addRole(muterole.id).then(() => {
+  mutee.roles.add(muterole.id).then(() => {
     message.delete();
     mutee
       .send(
@@ -83,10 +83,10 @@ module.exports.run = async (client, message, args) => {
 };
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "mute",
+         description: "make silence ur members",
+         usage: "/mute <@mentions> <reason>",
+         example: "/mute @McDunaldz Spam",
 };
 
 exports.conf = {

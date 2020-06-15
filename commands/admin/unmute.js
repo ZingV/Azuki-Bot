@@ -19,11 +19,11 @@ let reason = args.slice(1).join(" ");
 if(!reason) reason = "No reason given"
 
 //define mute role and if the mute role doesnt exist then send a message
-let muterole = message.guild.roles.find(r => r.name === "Muted")
+let muterole = message.guild.roles.cache.find(r => r.name === "Muted")
 if(!muterole) return message.channel.send("<:redtick:719865119277842492> | There is no mute role to remove!")
 
 //remove role to the mentioned user and also send the user a dm explaing where and why they were unmuted
-mutee.removeRole(muterole.id).then(() => {
+mutee.roles.remove(muterole.id).then(() => {
     message.delete()
     mutee.send(`<:greentick:719865049920831548> | You have been unmuted in ${message.guild.name} for: ${reason}`).catch(err => console.log(err))
     message.channel.send(`<:greentick:719865049920831548> | **${mutee} SPEAK**!`)
@@ -31,10 +31,10 @@ mutee.removeRole(muterole.id).then(() => {
 };
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "unmute",
+         description: "unmute members guilds",
+         usage: "/unmute <@mentions>",
+         example: "/unmute @McDunaldz",
 };
 
 exports.conf = {
