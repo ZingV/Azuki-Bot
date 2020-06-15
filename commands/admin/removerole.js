@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
   if(rMember === message.author.id) return message.channel.send("<:redtick:719865119277842492> | You can't removerole from urself")
   if(rMember === client.user.id) return message.channel.send("<:redtick:719865119277842492> | You can't remove my role")
   
-    let role = message.guild.roles.find() || message.mentions.roles.first()
+    let role = message.guild.roles.find || message.mentions.roles.first()
     if(!role) return message.channel.send("<:redtick:719865119277842492> | Please mention the roles.") 
 
     if(!message.guild.me.hasPermission(["MANAGE_ROLES", "ADMINISTRATOR"])) return message.channel.send("I don't have permission.")

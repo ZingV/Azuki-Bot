@@ -13,11 +13,11 @@ exports.run = async (client, message, args) => {
       "<:redtick:719865119277842492> | You must set a duration for the lockdown in either hours, minutes or seconds."
     );
 
-  if (validUnlocks.includes(time)) {
+  if (validUnlocks.includes(time)) {[
     message.channel
       .overwritePermissions(message.guild.id, {
         SEND_MESSAGES: null
-      })
+      ]})
       .then(() => {
         message.channel.send(
           "<:greentick:719865049920831548> **| Channels Unlocked down**"
@@ -64,10 +64,10 @@ exports.run = async (client, message, args) => {
 };
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "lockdown",
+         description: "lock chat channels with time elapsed",
+         usage: "/lockdown <time>",
+         example: "/lockdown 10s",
 };
 
 exports.conf = {
