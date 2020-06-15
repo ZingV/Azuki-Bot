@@ -6,18 +6,18 @@ exports.run = async (cliemt, message, args) => {
 
   if (!user) {
     return message.channel.send(
-      "<:redtick:719865119277842492> | Please mention the person whose warning you want to reset"
+      "<a:b_no:721969465205588048> | Please mention the person whose warning you want to reset"
     );
   }
 
   if (message.mentions.users.first().bot) {
     return message.channel.send(
-      "<:redtick:719865119277842492> | Bot are not allowed to have warnings"
+      "<a:b_no:721969465205588048> | Bot are not allowed to have warnings"
     );
   }
 
   if (message.author.id === user.id) {
-    return message.channel.send("<:redtick:719865119277842492> | You are not allowed to reset your warnings");
+    return message.channel.send("<a:b_no:721969465205588048> | You are not allowed to reset your warnings");
   }
 
   let warnings = db.get(`warnings_${message.guild.id}_${user.id}`);

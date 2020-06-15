@@ -1,16 +1,18 @@
-const Discord = require("discord.js"),
-      { post } = require("node-superfetch");
+const Discord = require("discord.js")
+const config = require("../../config.json")
+const post = require("node-superfetch");
 
 exports.run = async (client, message, args) => {
   // This command is super frickin' dangerous. Make it only visible and usable for you only, or give it to someone you trust.
   if (!client.config.owners.includes(message.author.id)) return;
   
   const embed = new Discord.MessageEmbed()
+  .setTitle("")
   .addField("Input", "```js\n" + args.join(" ") + "```");
   
   try {
     const code = args.join(" ");
-    if (!code) return message.channel.send("Please include the code.");
+    if (!code) return message.channel.send("<a:b_no:721969465205588048> | Please include the code.");
     let evaled;
     
     // This method is to prevent someone that you trust, open the secret shit here.

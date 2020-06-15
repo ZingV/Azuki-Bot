@@ -3,14 +3,14 @@ const ms = require("ms");
 exports.run = async (client, message, args) => {
   if (!message.member.hasPermission("ADMINISTRATOR"))
     return message.channel.send(
-      "<:redtick:719865119277842492> | You don't have permession to execute the command."
+      "<a:b_no:721969465205588048> | You don't have permession to execute the command."
     );
   if (!client.lockit) client.lockit = [];
   let time = args.join(" ");
   let validUnlocks = ["release", "unlock"];
   if (!time)
     return message.channel.send(
-      "<:redtick:719865119277842492> | You must set a duration for the lockdown in either hours, minutes or seconds."
+      "<a:b_no:721969465205588048> | You must set a duration for the lockdown in either hours, minutes or seconds."
     );
 
   if (validUnlocks.includes(time)) {

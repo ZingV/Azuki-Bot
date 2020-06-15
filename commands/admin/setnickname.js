@@ -4,14 +4,14 @@ exports.run = async (client, message, args) => {
   
   // You can make a single array to detect the user permissions.
   if (!message.member.hasPermission(["MANAGE_GUILD", "ADMINISTRATOR"])) {
-    return message.channel.send({embed: {color: "RED", description: "You can't use this command!"}})
+    return message.channel.send("<a:b_no:721969465205588048> | You can't use this command!")
   }
   
   let user = message.mentions.users.first(); // You can mention someone, not only just user.
-  if (!user) return message.channel.send({embed: {color: "RED", description: "You need to mention the user!"}});
+  if (!user) return message.channel.send("<a:b_no:721969465205588048> | You need to mention the user!");
   
   let nick = args.slice(1).join(" ");
-  if (!nick) return message.channel.send({embed: {color: "RED", description: "You need to input the nickname!"}});
+  if (!nick) return message.channel.send("<a:b_no:721969465205588048> | You need to input the nickname!");
   
   let member = message.guild.members.cache.get(user.id);
   

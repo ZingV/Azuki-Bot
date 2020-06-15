@@ -6,32 +6,32 @@ module.exports.run = async (client, message, args) => {
   // check if the command caller has permission to use the command
   if (!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner)
     return message.channel.send(
-      "<:redtick:719865119277842492> | You dont have permission to use this command."
+      "<a:b_no:721969465205588048> | You dont have permission to use this command."
     );
 
   if (!message.guild.me.hasPermission(["MANAGE_ROLES", "ADMINISTRATOR"]))
     return message.channel.send(
-      "<:redtick:719865119277842492> | I don't have permission to add roles!"
+      "<a:b_no:721969465205588048> | I don't have permission to add roles!"
     );
 
   //define the reason and mutee
   let mutee = message.mentions.members.first();
   if (!mutee)
     return message.channel.send(
-      "<:redtick:719865119277842492> | Please mention the user to be ~~silence~~!"
+      "<a:b_no:721969465205588048> | Please mention the user to be ~~silence~~!"
     );
 
   if (mutee.id === message.author.id)
     return message.channel.send(
-      "<:redtick:719865119277842492> | You can't mute ur self"
+      "<a:b_no:721969465205588048> | You can't mute ur self"
     );
   if (mutee.id === client.user.id)
     return message.channel.send(
-      "<:redtick:719865119277842492> | You can't mute me"
+      "<a:b_no:721969465205588048> | You can't mute me"
     );
   if (mutee.id === "583649910092595232")
     return message.channel.send(
-      "<:redtick:719865119277842492> | You can't mute my owner"
+      "<a:b_no:721969465205588048> | You can't mute my owner"
     );
 
   let reason = args.slice(1).join(" ");

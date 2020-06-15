@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
     !message.member.hasPermission("ADMINISTRATOR")
   )
     return message.channel.send(
-      "<:redtick:719865119277842492> | You don't have a permissions to do this."
+      "<a:b_no:721969465205588048> | You don't have a permissions to do this."
     );
   let user = message.mentions.users.first();
 
@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 
   if (!user)
     return message.channel.send(
-      "<:redtick:719865119277842492> | Who do you want to kill?",
+      "<a:b_no:721969465205588048> | Who do you want to kill?",
       {
         files: [
           {
