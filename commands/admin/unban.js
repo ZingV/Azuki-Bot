@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const config = require("../../config.json");
 const fetch = require("node-superfetch");
 
-module.exports.run = async (client, message, args) => {
+exports.run = async (client, message, args) => {
   if (!message.member.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"]))
     return message.channel.send(
       "<a:b_no:721969465205588048> | You can't use this commands."
