@@ -13,11 +13,15 @@ setInterval(() => {
 const Discord = require("discord.js");
 const tutorialBot = require("./handler/ClientBuilder.js"); // We're gonna create this soon.
 const client = new tutorialBot();
+const config = require("./config.json");
 
 require("./handler/module.js")(client);
 require("./handler/Event.js")(client);
 
 client.on("ready", () => {
+  
+  let prefix = config.prefix;
+  
   function randomStatus() {
     let status = [`${client.users.cache.size} Users | /help`]; // You can change it whatever you want.
     let rstatus = Math.floor(Math.random() * status.length);

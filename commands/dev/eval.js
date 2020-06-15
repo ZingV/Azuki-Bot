@@ -7,7 +7,8 @@ exports.run = async (client, message, args) => {
   if (!client.config.owners.includes(message.author.id)) return message.channel.send("<a:b_no:721969465205588048> **| Only owner can use this command.**")
   
   const embed = new Discord.MessageEmbed()
-  .setTitle("")
+  .setColor(config.color)
+  .setTitle("<a:b_yes:721969088813072425> Evaluates code")
   .addField("Input", "```js\n" + args.join(" ") + "```");
   
   try {
