@@ -30,7 +30,7 @@ client.on("ready", () => {
     // Example: streaming
 
     client.user.setActivity(status[rstatus], {
-      type: "WATCHING"
+      type: "STREAMING"
     });
   }
   setInterval(randomStatus, 30000);

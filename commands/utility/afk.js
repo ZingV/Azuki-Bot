@@ -1,5 +1,6 @@
 const Discord = require('discord.js'), db = require('quick.db');
 const status = new db.table("AFKs");
+const config = require("../../config.json")
 
 exports.run = async (client, message, args) => {
 
@@ -7,7 +8,7 @@ let afk = await status.fetch(message.author.id);
 const embed = new Discord.MessageEmbed().setColor(0xffffff)
     
   if (!afk) {
-    embed.setColor(
+    embed.setColor(config.color)
     embed.setDescription(`**${message.author.tag}** now AFK.`)
     embed.setFooter(`Reason: ${args.join(" ") ? args.join(" ") : "AFK"}`)
     status.set(message.author.id, args.join(" ") || `AFK`);
