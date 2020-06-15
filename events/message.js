@@ -58,6 +58,11 @@ module.exports = async (client, message) => {
     setTimeout(() => timestamps.delete(member.id), cooldownAmount); // This will delete the cooldown from the user by itself.
   }
   
+  let ops = {
+    ownerID: "",
+    friendID: ""
+  };
+  
   try {
     if (!commandFile) return;
     commandFile.run(client, message, args);

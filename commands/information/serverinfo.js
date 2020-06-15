@@ -60,3 +60,15 @@ exports.run = async (client, message, args) => {
     .addField(`Roles Count`, message.guild.roles.size)
     message.channel.send(embed);
 }
+
+exports.help = {
+         name: "",
+         description: "",
+         usage: "",
+         example: "",
+};
+
+exports.conf = {
+          aliases: [""],
+          cooldown: 5
+};

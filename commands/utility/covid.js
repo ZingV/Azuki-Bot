@@ -4,11 +4,7 @@ client.commands = new Discord.Collection();
 const fetch = require("node-fetch");
 const config = require("../config.json");
 
-module.exports = {
-  name: "covid",
-  description: "covid statistics",
-
-  async run(client, message, args) {
+exports.run = async (client, message, args) => {
     if (!args[0])
       return message.channel.send("<:redtick:719865119277842492> | Please enter country you want to see stats!");
 

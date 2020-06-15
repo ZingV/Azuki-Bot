@@ -12,7 +12,10 @@
     "node-superfetch": "^0.1.10",
     "quick.db": "^7.1.1",
     "parse-ms": "^2.0.0",
-    "weather-js": "^2.0.0"
+    "weather-js": "^2.0.0",
+    "ops": "^0.0.1",
+    "moment": "^2.26.0",
+    "ms": "^2.1.2"
   },
   "engines": {
     "node": "12.x"

@@ -2,8 +2,7 @@ const Discord = require("discord.js")
 const config = require("../config.json");
 const superagent = require("superagent")
 
-
-module.exports.run = async (client, message, args) => {
+exports.run = async (client, message, args) => {
     let msg = await message.channel.send("Generating...")
 
     let {body} = await superagent
@@ -22,3 +21,15 @@ module.exports.run = async (client, message, args) => {
 
         msg.delete();
 }
+
+exports.help = {
+         name: "",
+         description: "",
+         usage: "",
+         example: "",
+};
+
+exports.conf = {
+          aliases: [""],
+          cooldown: 5
+};

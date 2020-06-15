@@ -3,11 +3,7 @@ const weather = require('weather-js');
 const Discord = require('discord.js');
 const config = require("../config.json")
 
-module.exports = {
-    name: "weather",
-    description: "Checks a weather forecast",
-
-    async run (client, message, args){
+exports.run = async (client, message, args) => {
 
     weather.find({search: args.join(" "), degreeType: 'C'}, function (error, result){
         // 'C' can be changed to 'F' for farneheit results
@@ -35,4 +31,15 @@ module.exports = {
         message.channel.send(weatherinfo)
         })        
     }
-}
+
+exports.help = {
+         name: "",
+         description: "",
+         usage: "",
+         example: "",
+};
+
+exports.conf = {
+          aliases: [""],
+          cooldown: 5
+};

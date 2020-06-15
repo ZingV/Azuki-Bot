@@ -1,16 +1,16 @@
 const Discord = require("discord.js");
 const db = require("quick.db");
 
-module.exports.run = async (client, message, args) => {
-  let guildsEval = await client.guilds.size;
-  let channelsEval = await client.channels.size;
-  let usersEval = await client.users.size;
+exports.run = async (client, message, args) => {
+  let guildsEval = await client.guilds.cache.size;
+  let channelsEval = await client.channels.cache.size;
+  let usersEval = await client.users.cache.size;
   const Node = process.version;
   const config = require("../config.json");
-  const credit = client.users.get("622019385086836765").tag;
-  client.users.get("622019385086836765").username;
-  const owner = client.users.get("583649910092595232").tag;
-  client.users.get("583649910092595232").username;
+  const credit = client.users.cache.get("622019385086836765").tag;
+  client.users.cache.get("622019385086836765").username;
+  const owner = client.users.cache.get("583649910092595232").tag;
+  client.users.cache.get("583649910092595232").username;
   function parseDur(ms) {
     let seconds = ms / 1000,
       days = parseInt(seconds / 86400);
@@ -75,4 +75,16 @@ module.exports.run = async (client, message, args) => {
     )
     .setTimestamp();
   return message.channel.send(embed);
+};
+
+exports.help = {
+         name: "",
+         description: "",
+         usage: "",
+         example: "",
+};
+
+exports.conf = {
+          aliases: [""],
+          cooldown: 5
 };
