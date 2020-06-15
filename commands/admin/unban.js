@@ -6,13 +6,15 @@ module.exports.run = async (client, message, args) => {
   if (!message.member.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"]))
     return message.channel.send(
       "<a:b_no:721969465205588048> | You can't use this commands."
-      )
-  if (args[0])
-    return message.channel.send(
-      "<a:b_no:721969465205588048> | Please enter his id for unban"
     );
 
-  let bannedMember = await client.fetchUser(args[0]);
+  let bannedMember = await client.users
+    .fetch(args[0])
+    .catch(err =>
+      message.channel.send(
+        "<a:b_no:721969465205588048> | Please enter his id for unban"
+      )
+    );
 
   let reason = args.slice(1).join(" ");
   if (!reason) reason = "No Reason Given";
