@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 
   if (!user)
     return message.channel.send(
-      "<a:b_no:721969465205588048> | Who do you want to kill?",
+      "<a:b_yes:721969088813072425> | Who do you want to ban?",
       {
         files: [
           {
