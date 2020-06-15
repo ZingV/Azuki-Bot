@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config.json");
 
 exports.run = async (client, message, args) => {
   let prefix = client.config.prefix;
@@ -10,7 +11,7 @@ exports.run = async (client, message, args) => {
     // This will hide a folder from display that includes "hide: true" in their module.json
     if (!client.config.owners.includes(message.author.id)) module = client.helps.array().filter(x => !x.hide);
     const embed = new Discord.MessageEmbed()
-    .setColor(0x1d1d1d)
+    .setColor("#FF1000")
     .setTimestamp(new Date())
     .setDescription(`Type \`${prefix}help [command]\` to get more specific information about a command.`)
     .setTitle(client.user.username + " Commands list")
@@ -35,7 +36,7 @@ exports.run = async (client, message, args) => {
       let example = command.help.example ? command.help.example : "No example provided.";
       
       let embed = new Discord.MessageEmbed()
-      .setColor(0x7289DA)
+      .setColor("#ff1000")
       .setTitle(name)
       .setDescription(desc)
       .setThumbnail(client.user.displayAvatarURL())

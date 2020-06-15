@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
     }
     
     let x = Date.now() - user.createdAt; // Since the user created their account.
-    let y = Date.now() - message.guild.members.get(user.id).joinedAt; // Since the user joined the server.
+    let y = Date.now() - message.guild.members.cache.get(user.id).joinedAt; // Since the user joined the server.
     let created = Math.floor(x / 86400000); // 5 digits-zero.
     let joined = Math.floor(y / 86400000);
     
@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
     let status = user.presence.status; // DND, IDLE, OFFLINE, ONLINE
     let avatar = user.avatarURL // Use 2048 for high quality avatar.
     
-    const embed = new Discord.RichEmbed()
+    const embed = new Discord.MessageEmbed()
     .setAuthor(user.tag, avatar)
     .setThumbnail(avatar)
     .setTimestamp()
@@ -45,13 +45,13 @@ exports.run = async (client, message, args) => {
 }
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "userinfo",
+         description: "checking userinfo in guilds",
+         usage: "/whois, /whois <@mentions",
+         example: "/whois, /whois @McDunaldz",
 };
 
 exports.conf = {
-          aliases: [""],
+          aliases: ["whois"],
           cooldown: 5
 };

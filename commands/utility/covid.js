@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
         .then(res => res.text())
         .then(json => {
           var info = JSON.parse(json);
-          var embed = new Discord.RichEmbed()
+          var embed = new Discord.MessageEmbed()
             .setColor(config.color)
             .setAuthor("Global")
             .setThumbnail(
@@ -36,7 +36,7 @@ exports.run = async (client, message, args) => {
         .then(res => res.text())
         .then(json => {
           var info = JSON.parse(json);
-          var embed = new Discord.RichEmbed()
+          var embed = new Discord.MessageEmbed()
             .setColor(config.color)
             .setAuthor(info.country)
             .setThumbnail(info.countryInfo.flag)
@@ -63,10 +63,10 @@ exports.run = async (client, message, args) => {
   };
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "covid",
+         description: "see covid stats in other country",
+         usage: "/covid all, /covid <country>",
+         example: "/covid all, /covid id",
 };
 
 exports.conf = {

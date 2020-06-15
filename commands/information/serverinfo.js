@@ -28,15 +28,15 @@ exports.run = async (client, message, args) => {
         online = member.cache.filter(m => m.user.presence.status === "online").size,
         idle = member.cache.filter(m => m.user.presence.status === "idle").size,
         dnd = member.cache.filter(m => m.user.presence.status === "dnd").size,
-        robot = member.filter(m => m.user.bot).size,
+        robot = member.cache.filter(m => m.user.bot).size,
         total = message.guild.memberCount;
     
     // Channels
     let channels = message.guild.channels;
-    let text = channels.filter(r => r.type === "text").size,
-        vc = channels.filter(r => r.type === "voice").size,
-        category = channels.filter(r => r.type === "category").size,
-        totalchan = channels.size;
+    let text = channels.cache.filter(r => r.type === "text").size,
+        vc = channels.cache.filter(r => r.type === "voice").size,
+        category = channels.cache.filter(r => r.type === "category").size,
+        totalchan = channels.cache.size;
     
     // Region
     let location = region[message.guild.region];
@@ -57,7 +57,7 @@ exports.run = async (client, message, args) => {
     .addField("Owner", `**${message.guild.owner.user.tag}**`)
     .addField(`Members [${total}]`, `Online: ${online} \nIdle: ${idle} \nDND: ${dnd} \nOffline: ${offline} \nBots: ${robot}`)
     .addField(`Channels [${totalchan}]`, `Text: ${text} \nVoice: ${vc} \nCategory: ${category}`)
-    .addField(`Roles Count`, message.guild.roles.size)
+    .addField(`Roles Count`, message.guild.roles.cache.size)
     message.channel.send(embed);
 }
 
