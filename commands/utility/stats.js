@@ -4,7 +4,6 @@ const db = require("quick.db");
 exports.run = async (client, message, args) => {
   let guildsEval = await client.guilds.cache.size;
   let channelsEval = await client.channels.cache.size;
-  let rolesEval = await client.roles.cache.size;
   let usersEval = await client.users.cache.size;
   const Node = process.version;
   const config = require("../../config.json");
@@ -50,7 +49,7 @@ exports.run = async (client, message, args) => {
 • Processor: Intel(R) Xeon(R) CPU E5-2673 v3 @ 2,40 GHz
 • Architecture: x64_x64\n• Node.js: ${Node}\n• Discord.js: v12.2.0\n• Websocket: ${client.ws.ping.toFixed(
         2
-      )}ms\`\`\`\n**General information**,\n\`\`\`• Guilds: ${guildsEval.toLocaleString()}\n• Channels: ${channelsEval.toLocaleString()}\n• Roles: ${rolesEval.toLocaleString()}\n• Users: ${usersEval.toLocaleString()}\n• Uptime: ${parseDur(
+      )}ms\`\`\`\n**General information**,\n\`\`\`• Guilds: ${guildsEval.toLocaleString()}\n• Channels: ${channelsEval.toLocaleString()}\n• Users: ${usersEval.toLocaleString()}\n• Uptime: ${parseDur(
         client.uptime
       )}\`\`\`\n**Usage Information**\n\`\`\`• Memory usage:\n${(
         process.memoryUsage().rss /

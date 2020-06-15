@@ -75,7 +75,8 @@ exports.help = {
 };
 
 exports.conf = {
-  aliases: ["ev"]
+  aliases: ["ev"],
+  cooldown: 0
 };
 
 function clean(string) {

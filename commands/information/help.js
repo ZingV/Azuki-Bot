@@ -13,6 +13,7 @@ exports.run = async (client, message, args) => {
     const embed = new Discord.MessageEmbed()
     .setColor(config.color)
     .setTimestamp(new Date())
+    .setFooter(`© 2020 Ordinary Bot • This Bot Under Development By McDunaldz#8760`)
     .setDescription(`Type \`${prefix}help [command]\` to get more specific information about a command.`)
     .setTitle(client.user.username + " Commands list")
     

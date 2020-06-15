@@ -18,10 +18,9 @@ const config = require("./config.json");
 require("./handler/module.js")(client);
 require("./handler/Event.js")(client);
 
+let prefix = config.
+
 client.on("ready", () => {
-  
-  let prefix = config.prefix;
-  
   function randomStatus() {
     let status = [`${client.users.cache.size} Users | ${prefix}help`]; // You can change it whatever you want.
     let rstatus = Math.floor(Math.random() * status.length);
@@ -36,7 +35,15 @@ client.on("ready", () => {
   }
   setInterval(randomStatus, 30000);
 });
+
+client.on("message", async message => {
+  const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
+  if (message.content.match(prefixMention)) {
+    return message.reply(`My prefix is \`${prefix}\``);
+  }
+
 client.package = require("./package.json");
 client.on("warn", console.warn); // This will warn you via logs if there was something wrong with your bot.
 client.on("error", console.error); // This will send you an error message via logs if there was something missing with your coding.
-client.login(process.env.token).catch(console.error); // This token will leads to the .env file. It's safe in there.
+client.login(process.env.token).catch(console.error); // This token will leads to the .env file. It's safe in there
+});
