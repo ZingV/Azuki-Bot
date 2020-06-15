@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const ms = require("parse-ms");
 const talkedRecently = new Set();
+const config = require("../../config.json")
 const db = require("quick.db");
 
 exports.run = async (client, message, args) => {
@@ -10,7 +11,7 @@ exports.run = async (client, message, args) => {
   if (worked != null && timeoutworked - (Date.now() - worked) > 0) {
     let time = ms(timeoutworked - (Date.now() - worked));
     message.channel.send(
-      `You have already begged please come back in **${time.minutes}m ${time.seconds}s**`
+      `<a:b_no:721969465205588048> | You have already begged please come back in **${time.minutes}m ${time.seconds}s**`
     );
   } else {
     let amountearned = Math.floor(Math.random() * 50) + 1;
@@ -28,7 +29,7 @@ exports.run = async (client, message, args) => {
     let job = jobs[Math.floor(Math.random() * jobs.length)];
 
     let embed = new Discord.MessageEmbed()
-      .setColor(config.cklor)
+      .setColor(config.color)
       .setAuthor(
         `${message.author.tag}, your begging worked`,
         message.author.displayAvatarURL()
