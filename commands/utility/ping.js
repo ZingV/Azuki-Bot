@@ -9,7 +9,7 @@ exports.run = async (client, message, argan) => {
     const embed = new Discord.RichEmbed() 
     .setColor(config.color) // Tired of choosing the embed colors? Just type "RANDOM" on it! 
     .addField("⌛ Latency", `**${m.createdTimestamp - message.createdTimestamp}ms**`) 
-    .addField("💓 API", `**${Math.floor(client.ping)}ms**`)// Use "client.ping" if your Discord.js is < 1.15.1 --- Use "client.ws.ping" if your Discord.js is > 12.0.0 
+    .addField("💓 API", `**${Math.floor(client.ws.ping)}ms**`)// Use "client.ping" if your Discord.js is < 1.15.1 --- Use "client.ws.ping" if your Discord.js is > 12.0.0 
     .setTimestamp()
     
     return m.edit(`🏓 Pong!`, embed); 

@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
     if(rMember.roles.cache.has(role.id)) {
         return message.channel.send(`**${rMember.displayName}**, already has the role!`)
     } else {
-        await rMember.role.add(role.id).catch(e => console.log(e.message))
+        await rMember.roles.add(role.id).catch(e => console.log(e.message))
         message.channel.send(`<:greentick:719865049920831548> | You has been added **${role}** to **${rMember.displayName}.**`)
     }
 };

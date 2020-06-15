@@ -36,10 +36,10 @@ module.exports.run = async (client, message, args) => {
 };
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "unban",
+         description: "unbanning members from guilds",
+         usage: "/unban <id user>",
+         example: "/unban 717230602159521822",
 };
 
 exports.conf = {

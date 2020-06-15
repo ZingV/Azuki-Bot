@@ -64,10 +64,10 @@ module.exports.run = async (client, message, args) => {
 };
 
 exports.help = {
-         name: "",
-         description: "",
-         usage: "",
-         example: "",
+         name: "ban",
+         description: "banning members on guilds",
+         usage: "/ban <@mentions>",
+         example: "/ban @McDunaldz",
 };
 
 exports.conf = {
