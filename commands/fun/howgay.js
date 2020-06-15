@@ -16,10 +16,10 @@ exports.run = (client, message, args, ops) => {
 }
   if (!args[0]) {
     
-    if (message.author.id === ops.ownerID) return message.channel.send('<:greentick:719865049920831548> | You are 0% gay')
-    if (message.author.id === ops.friendID) return message.channel.send('<:greentick:719865049920831548> | You are 0% gay')
+    if (message.author.id === ops.ownerID) return message.channel.send('<a:b_yes:721969088813072425> | You are 0% gay')
+    if (message.author.id === ops.friendID) return message.channel.send('<a:b_yes:721969088813072425> | You are 0% gay')
     
-    return message.channel.send('<:greentick:719865049920831548> | You are ' + Math.floor(Math.random() * 100 + 0) + '% gay')
+    return message.channel.send('<a:b_yes:721969088813072425> | You are ' + Math.floor(Math.random() * 100 + 0) + '% gay')
     
   }
   
@@ -27,10 +27,10 @@ exports.run = (client, message, args, ops) => {
     
     const user = getUserFromMention(args[0])
     
-    if (user.id === ops.ownerID) return message.channel.send(`<:greentick:719865049920831548> | **${user.tag}** is 0% gay`)
-    if (user.id === ops.friendID) return message.channel.send(`<:greentick:719865049920831548> | **${user.tag}** is 0% gay`)
+    if (user.id === ops.ownerID) return message.channel.send(`<a:b_yes:721969088813072425> | **${user.tag}** is 0% gay`)
+    if (user.id === ops.friendID) return message.channel.send(`<a:b_yes:721969088813072425> | **${user.tag}** is 0% gay`)
     
-    if (user) return message.channel.send(`<:greentick:719865049920831548> | **${user.tag}** is ` + Math.floor(Math.random() * 100 + 0) + '% gay')
+    if (user) return message.channel.send(`<a:b_yes:721969088813072425> | **${user.tag}** is ` + Math.floor(Math.random() * 100 + 0) + '% gay')
     
   }
     
