@@ -27,6 +27,7 @@ exports.run = async (client, message, args) => {
     let nickname = member.nickname !== undefined && member.nickname !== null ? member.nickname : "None"; // Nickname
     let createdate = moment.utc(user.createdAt).format("dddd, MMMM Do YYYY, HH:mm:ss"); // User Created Date
     let joindate = moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss"); // User Joined the Server Date
+    let roles = [];
     let status = user.presence.status; // DND, IDLE, OFFLINE, ONLINE
     let avatar = user.avatarURL // Use 2048 for high quality avatar.
     
