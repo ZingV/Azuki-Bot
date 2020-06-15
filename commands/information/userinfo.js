@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 const parse_ms = require("parse-ms")
-const config = require("../config.json")
+const config = require("../../config.json")
 const moment = require("moment");
 
 exports.run = async (client, message, args) => {

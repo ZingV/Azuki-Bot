@@ -62,8 +62,7 @@ exports.run = async (client, message, args) => {
         .then()
         .catch(err => message.channel.send("<:redtick:719865119277842492> | Please enter the **Valid Country!**"));
     }
-  }
-};
+  };
 
 exports.help = {
          name: "",

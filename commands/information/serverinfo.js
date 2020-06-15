@@ -1,6 +1,6 @@
 const dateformat = require("dateformat")
 const Discord = require("discord.js")
-const config = require ("../config.json");
+const config = require ("../../config.json");
 
 exports.run = async (client, message, args) => {
 

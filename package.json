@@ -20,7 +20,9 @@
     "superagent": "^5.2.2",
     "random-puppy": "^1.1.0",
     "node-fetch": "^2.6.0",
-    "date-format": "^3.0.0"
+    "date-format": "^3.0.0",
+    "date-fns": "^2.14.0",
+    "dateformat": "^3.0.3"
   },
   "engines": {
     "node": "12.x"
