@@ -34,7 +34,7 @@ exports.run = async (client,message, args) => {
 exports.help = {
   name: "scout",
   description: "finding items on forest",
-  usage: "/scout",
+  usage: "scout",
   example: "/scout"
 };
 

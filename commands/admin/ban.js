@@ -66,7 +66,7 @@ module.exports.run = async (client, message, args) => {
 exports.help = {
          name: "ban",
          description: "banning members on guilds",
-         usage: "/ban <@mentions>",
+         usage: "ban <@mentions>",
          example: "/ban @McDunaldz",
 };
 

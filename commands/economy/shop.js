@@ -25,7 +25,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "shop",
   description: "place for buying items",
-  usage: "/shop",
+  usage: "shop",
   example: "/shop"
 };
 

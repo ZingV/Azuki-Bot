@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "daily",
   description: "get daily coins",
-  usage: "/daily",
+  usage: "daily",
   example: "/daily"
 };
 

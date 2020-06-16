@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args) => {
 exports.help = {
          name: "removerole",
          description: "remove roles from members",
-         usage: "/demote <@mentions> <@roles>",
+         usage: "demote <@mentions> <@roles>",
          example: "/demote @McDunaldz @Youtuber",
 };
 

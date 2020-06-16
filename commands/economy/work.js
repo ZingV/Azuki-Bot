@@ -38,7 +38,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "work",
   description: "work and earn money",
-  usage: "/work",
+  usage: "work",
   example: "/work"
 };
 

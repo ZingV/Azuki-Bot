@@ -51,7 +51,7 @@ module.exports.run = async (client, message, args) => {
 exports.help = {
   name: "softban",
   description: "softbanning members",
-  usage: "/softban <@mentions> <reason>",
+  usage: "softban <@mentions> <reason>",
   example: "/softban @McDunaldz Raid"
 };
 

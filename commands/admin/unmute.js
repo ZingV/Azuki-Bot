@@ -26,14 +26,14 @@ if(!muterole) return message.channel.send("<a:b_no:721969465205588048> | There i
 mutee.roles.remove(muterole.id).then(() => {
     message.delete()
     mutee.send(`<a:b_yes:721969088813072425> | You have been unmuted in ${message.guild.name} for: ${reason}`).catch(err => console.log(err))
-    message.channel.send(`<a:b_yes:721969088813072425> | **${mutee} SPEAK**!`)
+    message.channel.send(`<a:b_yes:721969088813072425> | **SPEAK! ${mutee}**!`)
 })
 };
 
 exports.help = {
          name: "unmute",
          description: "unmute members guilds",
-         usage: "/unmute <@mentions>",
+         usage: "unmute <@mentions>",
          example: "/unmute @McDunaldz",
 };
 

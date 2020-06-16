@@ -85,7 +85,7 @@ module.exports.run = async (client, message, args) => {
 exports.help = {
          name: "mute",
          description: "make silence ur members",
-         usage: "/mute <@mentions> <reason>",
+         usage: "mute <@mentions> <reason>",
          example: "/mute @McDunaldz Spam",
 };
 

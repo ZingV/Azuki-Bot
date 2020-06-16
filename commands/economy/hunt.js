@@ -42,7 +42,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "hunt",
   description: "hunt for animals",
-  usage: "/hunt",
+  usage: "hunt",
   example: "/hunt"
 };
 

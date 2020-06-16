@@ -15,7 +15,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
          name: "purge",
          description: "purging message on guilds",
-         usage: "/purge <amount>",
+         usage: "purge <amount>",
          example: "/purge 10",
 };
 

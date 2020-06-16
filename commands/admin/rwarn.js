@@ -42,7 +42,7 @@ exports.run = async (cliemt, message, args) => {
 exports.help = {
          name: "rwarn",
          description: "reset all warnings on users",
-         usage: "/rwarn <@mentions>",
+         usage: "rwarn <@mentions>",
          example: "/rwarn @McDunaldz",
 };
 

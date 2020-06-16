@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args) => {
 exports.help = {
          name: "addrole",
          description: "addrole to members",
-         usage: "/addrole <@mentions> <@role>",
+         usage: "addrole <@mentions> <@role>",
          example: "/addrole @McDunaldz @Member",
 };
 

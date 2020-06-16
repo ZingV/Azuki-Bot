@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args) => {
 exports.help = {
          name: "kick",
          description: "kicking members on guilds",
-         usage: "/kick <@mentions>",
+         usage: "kick <@mentions>",
          example: "/kick @McDunaldz",
 };
 

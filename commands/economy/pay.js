@@ -30,7 +30,7 @@ exports.run = async(client,message, args) => {
 exports.help = {
   name: "pay",
   description: "paying people",
-  usage: "/pay <mention> <amount>",
+  usage: "pay <mention> <amount>",
   example: "/pay @McDunaldz 100"
 };
 

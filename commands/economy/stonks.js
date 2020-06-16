@@ -35,7 +35,7 @@ exports.run = async(client,message, args) => {
 exports.help = {
   name: "stonks",
   description: "invest on somr stonks",
-  usage: "/stonks",
+  usage: "stonks",
   example: "/stonks"
 };
 

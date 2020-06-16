@@ -78,7 +78,7 @@ if (!args[0]) return message.channel.send("<:redtick:719865119277842492> | Pleas
 exports.help = {
          name: "hack",
          description: "hacking people",
-         usage: "/hack <@mentions>",
+         usage: "hack <@mentions>",
          example: "/hacl @McDunaldz",
 };
 

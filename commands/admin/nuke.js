@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args) => {
 exports.help = {
          name: "nuke",
          description: "purging all message on guilds",
-         usage: "/nuke",
+         usage: "nuke",
          example: "/nuke",
 };
 

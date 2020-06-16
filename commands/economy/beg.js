@@ -48,7 +48,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "beg",
   description: "beg and earn ur money",
-  usage: "/beg",
+  usage: "beg",
   example: "/beg"
 };
 

@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
          name: "warns",
          description: "count warnings on users",
-         usage: "/warns <@mentions>",
+         usage: "warns <@mentions>",
          example: "/warns @McDunaldz",
 };
 

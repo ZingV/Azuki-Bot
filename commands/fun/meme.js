@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
          name: "meme",
          description: "search some meme with images",
-         usage: "/meme",
+         usage: "meme",
          example: "/meme",
 };
 

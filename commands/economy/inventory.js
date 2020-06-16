@@ -16,7 +16,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "inventory",
   description: "to check ur inventory",
-  usage: "/inv",
+  usage: "inv",
   example: "/inv"
 };
 
