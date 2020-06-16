@@ -32,20 +32,19 @@ exports.run = async (client, message, args) => {
       let name = command.help.name; // The command name.
       let desc = command.help.description; // The command description.
       let cooldown = command.conf.cooldown + " second(s)"; // The command cooldown.
-      let aliases = command.conf.aliases.join(", ") ? command.conf.aliases.join(", ") : "No aliases provided.";
+      let aliases = command.conf.aliases.join(", ") ? command.conf.aliases.join(", ") : "-.";
       let usage = command.help.usage ? command.help.usage : "No usage provided.";
       let example = command.help.example ? command.help.example : "No example provided.";
       
       let embed = new Discord.MessageEmbed()
       .setColor(config.color)
-      .setTitle(name)
-      .setDescription("📝 | ", desc)
+      .setTitle(`Command:${name}`)
+      .addField("📝 **| Description**", desc)
       .setThumbnail("https://twemoji.maxcdn.com/2/72x72/2753.png")
       .setFooter("[] optional, <> required. Don't includes these things while typing a command.")
-      .addField("Cooldown", cooldown)
-      .addField("Aliases", aliases, true)
-      .addField("Usage", usage, true)
-      .addField("Example", example, true)
+      .addField("⏱️ **| Cooldown**", cooldown)
+      .addField("✂️ **| Aliases**", aliases, true)
+      .addField("🔑 **| Usage**", usage, true)
       
       return message.channel.send(embed);
     } else {
