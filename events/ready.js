@@ -10,7 +10,7 @@ module.exports = client => {
   client.on("message", async message => {
     const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
     if (message.content.match(prefixMention)) {
-      return message.reply(`My prefix is \`${prefix}\``);
+      return message.channel.send(`👋 ${message.author} My prefix is \`${prefix}\``);
     }
 
     let afk = new db.table("AFKs"),

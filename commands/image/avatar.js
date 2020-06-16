@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const config = require("../../config.json");
 
 exports.run = async (client, message, args) => {
-  let msg = await message.channel.send("Generating Avatar.....");
+  let msg = await message.channel.send("Generating Avatar.....").then(d => d.delete({timeout: 1000}));
   
   let user = message.mentions.users.first() || message.author;
   
@@ -10,9 +10,9 @@ exports.run = async (client, message, args) => {
   
   .setImage(user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
   .setColor(config.color)
-  .setAuthor("Avatar")
+  .setAuthor(user.tag + " Avatar")
   .setFooter("Searched by " + message.author.tag)
-  .setDescription("[Avatar URL Link](" + user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }) + ")")
+  .setDescription("[Avatar URL Link](" + user.displayAvatarURL({ format: 'png', dynamic: true, size: 2048 }) + ")")
   
   message.channel.send(embed)
 }
