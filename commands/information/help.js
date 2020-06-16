@@ -32,7 +32,7 @@ exports.run = async (client, message, args) => {
       let name = command.help.name; // The command name.
       let desc = command.help.description; // The command description.
       let cooldown = command.conf.cooldown + " second(s)"; // The command cooldown.
-      let aliases = command.conf.aliases.join(", ") ? command.conf.aliases.join(", ") : "-.";
+      let aliases = command.conf.aliases.join(", ") ? command.conf.aliases.join(", ") : "-";
       let usage = command.help.usage ? command.help.usage : "No usage provided.";
       let example = command.help.example ? command.help.example : "No example provided.";
       
