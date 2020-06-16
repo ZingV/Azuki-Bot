@@ -1,8 +1,9 @@
 const Discrod = require('discord.js')
 const ms = require('ms')
 
-exports.run = async (client, message, args) => {
+exports.run = async (client, message, args, ops) => {
 if (!args[0]) return message.channel.send("<:redtick:719865119277842492> | Please mention the users!");
+  if(message.author.id === ops.ownerID) return message.channel.send("<a:b_no:721969465205588048> | You can't hack my owner!");
     const toHack = args.slice(0).join(" ") && args.shift().toLowerCase();
     message.delete();
 
@@ -68,7 +69,7 @@ if (!args[0]) return message.channel.send("<:redtick:719865119277842492> | Pleas
 
     let time11 = "42s";
     setTimeout(function() {
-      msg.edit(`<:greentick:719865049920831548> | ${toHack} Succesfully hacked.`);
+      msg.edit(`<a:b_yes:721969088813072425> | ${toHack} Succesfully hacked.`);
       console.log("[HACK] Hack was successful.");
     }, ms(time11))
       .then()
