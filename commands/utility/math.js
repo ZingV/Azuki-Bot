@@ -18,7 +18,7 @@ exports.run = (client, message, args, tools) => {
   }
   
   const embed = new Discord.MessageEmbed()
-    .setColor('#ffffff')
+    .setColor('#00bfff')
     .setTitle('Math Calculation')
     .addField('Input', `\`\`\`js\n${args.join(' ')}\`\`\``)
     .addField('Output', `\`\`\`js\n${resp}\`\`\``)
