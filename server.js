@@ -1,6 +1,6 @@
 const http = require('http');
-const express = require('express');
-const app = express();
+const app = require('express');
+
 app.get("/", (request, response) => {
   console.log('Pinging');
   response.sendStatus(200);
