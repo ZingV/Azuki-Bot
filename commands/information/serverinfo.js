@@ -4,7 +4,7 @@ const config = require ("../../config.json");
 
 exports.run = async (client, message, args) => {
 
-    let icon = message.guild.iconURL// Server Avatar
+    let icon = message.guild.iconURL({size: 2048})// Server Avatar
     
     let region = {
       "brazil": "🇧🇷 Brazil",

@@ -29,7 +29,7 @@ exports.run = async (client, message, args) => {
     let joindate = moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss"); // User Joined the Server Date
     let roles = [];
     let status = user.presence.status; // DND, IDLE, OFFLINE, ONLINE
-    let avatar = user.avatarURL // Use 2048 for high quality avatar.
+    let avatar = user.avatarURL({size: 2048}) // Use 2048 for high quality avatar.
     
     const embed = new Discord.MessageEmbed()
     .setAuthor(user.tag, avatar)
