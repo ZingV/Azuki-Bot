@@ -69,7 +69,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "spotify",
   description: "check someone when listening to spotify",
-  usage: "/spotify, /spotify <@mentions>",
+  usage: "spotify, spotify <@mentions>",
   example: "/spotify, /spotify @McDunaldz"
 };
 

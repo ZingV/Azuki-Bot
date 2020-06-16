@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "avatar",
   description: "Searching avatar from users",
-  usage: "/av, /av <@mentions>",
+  usage: "av, av <@mentions>",
   example: "/av, /av @McDunaldz"
 }
 

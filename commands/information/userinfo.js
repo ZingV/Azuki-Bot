@@ -48,7 +48,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
          name: "userinfo",
          description: "checking userinfo in guilds",
-         usage: "/whois, /whois <@mentions",
+         usage: "whois, whois <@mentions",
          example: "/whois, /whois @McDunaldz",
 };
 

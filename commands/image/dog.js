@@ -25,7 +25,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
          name: "dog",
          description: "search pictures about dog",
-         usage: "/dog",
+         usage: "dog",
          example: "/dog",
 };
 

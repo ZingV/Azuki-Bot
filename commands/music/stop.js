@@ -1,7 +1,7 @@
 exports.help = {
          name: "stop",
          description: "stop all music on queue",
-         usage: "/stop",
+         usage: "stop",
          example: "/stop",
 };
 

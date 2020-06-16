@@ -69,7 +69,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "covid",
   description: "see covid stats in other country",
-  usage: "/covid all, /covid <country>",
+  usage: "covid all, covid <country>",
   example: "/covid all, /covid id"
 };
 

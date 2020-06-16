@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
          name: "nowplaying",
          description: "checking what now playing on music queue",
-         usage: "/np",
+         usage: "np",
          example: "/np",
 };
 

@@ -4,7 +4,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
          name: "loop",
          description: "looping ur music queue",
-         usage: "/loop",
+         usage: "loop",
          example: "/loop",
 };
 

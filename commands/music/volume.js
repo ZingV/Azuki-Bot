@@ -1,7 +1,7 @@
 exports.help = {
          name: "volume",
          description: "change volume",
-         usage: "/v <amount> max 100%",
+         usage: "v <amount> max 100%",
          example: "/v 80",
 };
 

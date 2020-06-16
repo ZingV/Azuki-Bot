@@ -80,7 +80,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
          name: "stats",
          description: "to see status about bot",
-         usage: "/stats",
+         usage: "stats",
          example: "/stats",
 };
 

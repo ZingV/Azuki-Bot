@@ -64,7 +64,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
          name: "serverinfo",
          description: "checking info about guilds",
-         usage: "/serverinfo",
+         usage: "serverinfo",
          example: "/serverinfo",
 };
 

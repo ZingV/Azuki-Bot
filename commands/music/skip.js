@@ -1,7 +1,7 @@
 exports.help = {
          name: "skip",
          description: "skip music on queue",
-         usage: "/skip",
+         usage: "skip",
          example: "/skip",
 };
 

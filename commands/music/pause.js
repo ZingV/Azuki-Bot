@@ -4,7 +4,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
          name: "pause",
          description: "pause ur music",
-         usage: "/pause",
+         usage: "pause",
          example: "/pause",
 };
 

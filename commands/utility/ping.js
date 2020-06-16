@@ -23,7 +23,7 @@ exports.run = async (client, message, argan) => {
 exports.help = {
   name: "ping",
   description: "Ponged!",
-  usage: "/ping",
+  usage: "ping",
   example: "/ping"
 };
 

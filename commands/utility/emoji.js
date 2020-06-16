@@ -36,7 +36,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
          name: "emoji",
          description: "to see all emoji in guilds",
-         usage: "/emoji",
+         usage: "emoji",
          example: "/emoji",
 };
 

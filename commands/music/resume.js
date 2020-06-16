@@ -1,7 +1,7 @@
 exports.help = {
          name: "resume",
          description: "resume music what ur play now",
-         usage: "/resume",
+         usage: "resume",
          example: "/resume",
 };
 

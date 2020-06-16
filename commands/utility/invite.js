@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "invite",
   description: "invite the bot to ur server!",
-  usage: "/invite",
+  usage: "invite",
   example: "/invite"
 }
 

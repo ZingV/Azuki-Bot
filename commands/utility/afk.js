@@ -23,7 +23,7 @@ const embed = new Discord.MessageEmbed().setColor(0xffffff)
 exports.help = {
          name: "afk",
          description: "make status afk on guilds",
-         usage: "/afk <@reason>",
+         usage: "afk <@reason>",
          example: "/afk Sleeping",
 };
 

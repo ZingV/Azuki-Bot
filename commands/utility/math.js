@@ -30,7 +30,7 @@ exports.run = (client, message, args, tools) => {
 exports.help = {
   name: 'math',
   description: "finish ur math problem",
-  usage: "/math <amount> [*,/,+,-] <amount>",
+  usage: "math <amount> [*,/,+,-] <amount>",
   example: "/math 5*5"
 }
 

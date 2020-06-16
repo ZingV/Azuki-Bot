@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
          name: "play",
          description: "to play music",
-         usage: "/p <url/music name>",
+         usage: "p <url/music name>",
          example: "/p lily",
 };
 
