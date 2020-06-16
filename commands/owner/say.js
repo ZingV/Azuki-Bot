@@ -1,9 +1,9 @@
 const config = require("../../config.json");
 
 exports.run = async (client, message, args, ops) => {
-  if (message.author.id === config.owners) return message.channel.send("<a:b_no:721969465205588048> | Only owner can use this commands");
+  if (message.author.id !== "583649910092595232") return message.channel.send("<a:b_no:721969465205588048> | Only owner can use this commands");
   
-  if (!args.join(" ")) return message.channel.send("**Nothing to say?**");
+  if (!args.join(" ")) return message.channel.send("<a:b_no:721969465205588048> | **Nothing to say?**");
 
   message.delete({ Timeout: 0 });
 
