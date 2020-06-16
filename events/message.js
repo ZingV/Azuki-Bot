@@ -51,7 +51,7 @@ module.exports = async (client, message) => {
     
     if (now < expirationTime) {
       const timeLeft = (expirationTime - now) / 3000;
-      return message.channel.send(`Calm down dude, please wait **${timeLeft.toFixed(1)}** seconds to try the command again.`);
+      return message.channel.send(`<a:b_no:721969465205588048> **| ⏱️ Reach limit spam**, please wait **${timeLeft.toFixed(1)}** seconds to try the command again.`);
     }
     
     timestamps.set(member.id, now);
