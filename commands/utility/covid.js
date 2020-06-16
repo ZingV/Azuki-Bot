@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
 const config = require("../../config.json");
-
 exports.run = async (client, message, args) => {
   if (!args[0])
     return message.channel.send(
@@ -18,7 +17,7 @@ exports.run = async (client, message, args) => {
           .setColor(config.color)
           .setAuthor("Global")
           .setThumbnail(
-            "https://twemoji.maxcdn.com/2/72x72/2753.png"
+            "https://cdn.discordapp.com/attachments/717166064282370061/722394846928699442/IMG-20200616-WA0019.png"
           )
           .addField("Population", info.population.toLocaleString())
           .addField("Total Cases", info.cases.toLocaleString())
