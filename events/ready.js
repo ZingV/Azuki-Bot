@@ -10,7 +10,9 @@ module.exports = client => {
   client.on("message", async message => {
     const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
     if (message.content.match(prefixMention)) {
-      return message.channel.send(`👋 ${message.author} My prefix is \`${prefix}\``);
+      return message.channel.send(
+        `👋 ${message.author} My prefix is \`${prefix}\``
+      );
     }
 
     let afk = new db.table("AFKs"),
@@ -21,15 +23,16 @@ module.exports = client => {
       let status = await afk.fetch(mentioned.id);
 
       if (status) {
-          message.channel.send(
-            `This user (${mentioned.user.tag}) is AFK: **${status}**`
-          ).then(i => i.delete({ timeout: 5000 }));
+        message.channel
+          .send(`This user (${mentioned.user.tag}) is AFK: **${status}**`)
+          .then(i => i.delete({ timeout: 5000 }));
       }
     }
 
     if (authorStatus) {
-       message.channel.send(`**${message.author.tag}** is no longer AFK.`);
-      message.channel.send(embed).then(i => i.delete({ timeout: 5000 }));
+      message.channel
+        .send(`**${message.author.tag}** is no longer AFK.`)
+        .then(i => i.delete({ timeout: 5000 }));
       afk.delete(message.author.id);
     }
   });
