@@ -8,12 +8,10 @@ let afk = await status.fetch(message.author.id);
 const embed = new Discord.MessageEmbed().setColor(0xffffff)
     
   if (!afk) {
-    embed.setColor(config.color)
-    embed.setDescription(`**${message.author.tag}** now AFK.`)
-    embed.setFooter(`Reason: ${args.join(" ") ? args.join(" ") : "AFK"}`)
+    message.channel.send(`${message.author.tag} i set your AFK: ${args.join(" ") ? args.join(" ") : "AFK"}`)
     status.set(message.author.id, args.join(" ") || `AFK`);
   } else {
-    embed.setDescription("You are no longer AFK.");
+    message.channel.send(`${message.author} You are no longer AFK.`);
     status.delete(message.author.id);
   }
     

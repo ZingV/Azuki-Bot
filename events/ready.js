@@ -21,19 +21,14 @@ module.exports = client => {
       let status = await afk.fetch(mentioned.id);
 
       if (status) {
-        const embed = new Discord.MessageEmbed()
-          .setColor(config.color)
-          .setDescription(
+          message.channel.send(
             `This user (${mentioned.user.tag}) is AFK: **${status}**`
-          );
-        message.channel.send(embed).then(i => i.delete({ timeout: 5000 }));
+          ).then(i => i.delete({ timeout: 5000 }));
       }
     }
 
     if (authorStatus) {
-      const embed = new Discord.MessageEmbed()
-        .setColor(config.color)
-        .setDescription(`**${message.author.tag}** is no longer AFK.`);
+       message.channel.send(`**${message.author.tag}** is no longer AFK.`);
       message.channel.send(embed).then(i => i.delete({ timeout: 5000 }));
       afk.delete(message.author.id);
     }
