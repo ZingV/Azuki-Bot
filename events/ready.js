@@ -21,19 +21,16 @@ module.exports = client => {
 
     if (mentioned) {
       let status = await afk.fetch(mentioned.id);
-      
-    if(!mentioned.bot)
-      return;
 
       if (status) {
         message.channel.send(
-          `This user ${mentioned.user} is AFK: **${status}**`
+          `**${mentioned.user.tag}** is AFK: **${status}**`
         );
       }
     }
 
     if (authorStatus) {
-      message.channel.send(`**${message.author.tag}** is no longer AFK.`);
+      message.channel.send(`**${message.author}** is no longer AFK.`);
       afk.delete(message.author.id);
     }
   });

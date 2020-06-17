@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
     );
     status.set(message.author.id, args.join(" ") || `AFK`);
   } else {
-    message.channel.send(`${message.author} You are no longer AFK.`);
+    message.channel.send(`**${message.author.tag}** You are no longer AFK.`);
     status.delete(message.author.id);
   }
 };
