@@ -30,7 +30,7 @@ module.exports = client => {
     }
 
     if (authorStatus) {
-      message.channel.send(`**${message.author}** is no longer AFK.`);
+      message.channel.send(`Welcome back! **${message.author}** i removed your AFK.`);
       afk.delete(message.author.id);
     }
   });

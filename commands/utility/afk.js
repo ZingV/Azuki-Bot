@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
 
   if (!afk) {
     message.channel.send(
-      `**${message.author}** i set your AFK: ${
+      `**${message.author}** i set your **AFK** to: ${
         args.join(" ") ? args.join(" ") : "AFK"
       }`
     );

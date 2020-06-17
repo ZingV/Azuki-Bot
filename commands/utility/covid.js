@@ -27,7 +27,7 @@ exports.run = async (client, message, args) => {
           .addField("Today Death", info.todayDeaths.toLocaleString())
           .addField("Total Deaths", info.deaths.toLocaleString())
           .addField("Total Critical", info.critical.toLocaleString())
-          .setFooter(`#STAYATHOME`)
+          .setFooter(`#GETWELLSOON`)
           .setTimestamp();
         message.channel.send(embed);
       });
