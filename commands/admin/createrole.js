@@ -11,11 +11,11 @@ exports.run = async (client, message, args, color) => {
     return message.channel.send(
       `<a:b_no:721969465205588048> | Invalid Argument! example : o.createrole <hexcode> <name>`
     );
-  var hex = args[1];
+  var hex = args[0];
   if (!hex) "#000000";
   message.guild.roles
     .create({
-      data: { color: hex, name: args[0] }
+      data: { color: hex, name: args[1] }
     })
     .then(role => {
       message.channel.send(
@@ -32,5 +32,5 @@ exports.conf = {
 exports.help = {
   name: "createrole",
   description: "you can make role with commands",
-  usage: "createrole <rolename> <hex>"
+  usage: "createrole <hex> <rolename>"
 };
