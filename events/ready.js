@@ -23,9 +23,9 @@ module.exports = client => {
       let status = await afk.fetch(mentioned.id);
 
       if (status) {
-        message.channel.send(
-          `**${mentioned.user.tag}** is AFK: **${status}**`
-        );
+        message.channel
+          .send(`**${mentioned.user.tag}** is AFK: **${status}**`)
+          .then(i => i.delete({ timeout: 1000 }));
       }
     }
 
