@@ -12,9 +12,7 @@ exports.run = async (client, message, args) => {
     const pull = require(`./${commandName}.js`);
     client.commands.set(commandName, pull);
   } catch (e) {
-    return message.channel.send(
-      `Could not reload: \`${args[0].toUpperCase()}\``
-    );
+    return message.channel.send(e.message);
   }
   message.channel.send(
     `The  command \`${args[0].toUpperCase()}\` has been reloaded!`
