@@ -5,7 +5,11 @@ exports.run = async (client, message, args) => {
   const role = message.guild.roles.cache.size;
   
   let embed = new MessageEmbed()
-  .addField(
+  .addField("Roles", role)
+  .setColor(config.color)
+  .setTimestamp(new Date())
+  
+  message.channel.send(embed)
 }
 
 exports.help = {
