@@ -44,9 +44,7 @@ module.exports = client => {
       if (blacklist === "Blacklisted")
         return message.reply("You are blacklisted from the bot!");
 
-      // If message.member is uncached, cache it.
-      if (!message.member)
-        message.member = await message.guild.fetchMember(message);
+      // If message.member is unca
     }
   });
 };
