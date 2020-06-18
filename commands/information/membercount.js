@@ -19,6 +19,6 @@ exports.help = {
 }
 
 exports.conf = {
-  aliases: [""],
-  cooldown: 0
+  aliases: ["mcount"],
+  cooldown: 5
 }

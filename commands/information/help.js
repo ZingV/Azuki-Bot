@@ -57,7 +57,7 @@ exports.run = async (client, message, args) => {
 
       let embed = new Discord.MessageEmbed()
         .setColor(config.color)
-        .setTitle(`Command:${name}`)
+        .setTitle(`Command: ${name}`)
         .addField("📝 **| Description**", desc)
         .setThumbnail("https://twemoji.maxcdn.com/2/72x72/2753.png")
         .setFooter(
