@@ -30,8 +30,23 @@ module.exports = client => {
     }
 
     if (authorStatus) {
-      message.channel.send(`Welcome back! **${message.author}** i removed your AFK.`);
+      message.channel.send(
+        `Welcome back! **${message.author}** i removed your AFK.`
+      );
       afk.delete(message.author.id);
+
+      let blacklist = await db.fetch(`blacklist_${message.author.id}`);
+
+      if (message.author.bot) return;
+      if (!message.guild) return;
+      if (!message.content.startsWith(prefix)) return;
+
+      if (blacklist === "Blacklisted")
+        return message.reply("You are blacklisted from the bot!");
+
+      // If message.member is uncached, cache it.
+      if (!message.member)
+        message.member = await message.guild.fetchMember(message);
     }
   });
 };
