@@ -1,10 +1,13 @@
 const Discord = require("discord.js")
+const config = require("../../config.json")
 
 exports.run = async (client, message, args) => {
   const total = message.guild.memberCount;
-  
+
   let embed = new Discord.MessageEmbed()
   .addField(`Members`, total)
+  .setColor(config.color)
+  .setTimestamp(new Date())
   
   message.channel.send(embed)
 }
