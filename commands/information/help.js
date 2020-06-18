@@ -59,7 +59,7 @@ exports.run = async (client, message, args) => {
         .setColor(config.color)
         .setTitle(`Command: ${name}`)
         .addField("📝 **| Description**", desc)
-        .setThumbnail("https://twemoji.maxcdn.com/2/72x72/2753.png")
+        .setThumbnail("https://cdn.discordapp.com/emojis/723186182304956477.png?v=1")
         .setFooter(
           "[] optional, <> required. Don't includes these things while typing a command."
         )

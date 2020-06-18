@@ -15,7 +15,7 @@ exports.run = async (client, message, args) => {
   
   let member = message.guild.members.cache.get(user.id);
   
-  await member.setNickname(nick)
+  await member.setNickname(nick).catch(e => message.channel.send("Something error"))
   return message.channel.send(`<a:b_yes:721969088813072425> | Successfully changed **${user.tag}** nickname to **${nick}**`);
 }
 

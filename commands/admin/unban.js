@@ -28,11 +28,10 @@ exports.run = async (client, message, args) => {
   try {
     message.guild.members
       .unban(bannedMember, { reason: reason })
-      .catch(e =>
-        message.channel.send(
+      .catch(e => console.log(e.message))
+        return message.channel.send(
           `<a:b_yes:721969088813072425> | **${bannedMember.tag}** has been unbanned from the guild!`
-        )
-      );
+        );
   } catch (e) {
     console.log(e.message);
   }

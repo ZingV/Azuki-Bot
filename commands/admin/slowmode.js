@@ -27,7 +27,7 @@ exports.run = async (client, message, args) => {
   else if (toSecond < 1) return message.channel.send("<a:b_no:721969465205588048> | Timer should be more than or equal to 1 second.");
   
   await channel.setRateLimitPerUser(toSecond);
-  return message.channel.send(`<a:b_yes:721969088813072425>  | <#${channel.id}> has been slowing down for **${ms(ms(time), {long: true})}**.`);
+  return message.channel.send(`<a:b_yes:721969088813072425> | <#${channel.id}> has been slowing down for **${ms(ms(time), {long: true})}**.`);
 }
 
 exports.help = {

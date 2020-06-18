@@ -38,7 +38,7 @@ module.exports.run = async (client, message, args) => {
 
   banMember
     .send(
-      `<:greentick:719865049920831548> | You have been banned from ${message.guild.name} for: ${reason}`
+      `<:tick:723185581395542017> | You have been banned from ${message.guild.name} for: ${reason}`
     )
     .then(() => message.guild.ban(banMember, { days: 1, reason: reason }))
     .then(() => message.guild.unban(banMember.id, { reason: "Softban" }))

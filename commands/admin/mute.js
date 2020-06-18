@@ -65,7 +65,7 @@ module.exports.run = async (client, message, args) => {
     message.delete();
     mutee
       .send(
-        `<a:b_yes:721969088813072425> | You have muted been in ${message.guild.name} for: ${reason}`
+        `<:tick:723185581395542017> | You have muted been in ${message.guild.name} for: ${reason}`
       )
       .catch(err => console.log(err.message));
     message.channel.send(
