@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config.json")
 
 exports.run = async (client, message, args) => {
   let user;
@@ -51,7 +52,7 @@ exports.run = async (client, message, args) => {
         "Spotify Track Information",
         "https://cdn.discordapp.com/emojis/719125875395788880.png?v=1"
       )
-      .setColor(0x1ed768)
+      .setColor(config.color)
       .setThumbnail(image)
       .addField("Name:", name, true)
       .addField("Album:", album, true)
