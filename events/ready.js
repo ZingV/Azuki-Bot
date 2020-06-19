@@ -25,13 +25,15 @@ module.exports = client => {
       if (status) {
         message.channel
           .send(`**${mentioned.user.tag}** is AFK: **${status}**`)
-          .then(i => i.delete({ timeout: 1000 }));
+          .then(i => i.delete({ timeout: 500 }));
       }
     }
 
     if (authorStatus) {
       message.channel.send(
-        `Welcome back! **${message.author}** i removed your **AFK**`)
+        `Welcome back! **${message.author}** i removed your **AFK**`
+      );
+      afk.delete(message.author.id);
     }
   });
 };
