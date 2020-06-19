@@ -5,6 +5,7 @@ exports.run = async (client, message, args) => {
     return message.channel.send(
       "<a:b_no:721969465205588048> | You don't have permession to execute the command."
     );
+
   if (!client.lockit) client.lockit = [];
   let time = args.join(" ");
   let validUnlocks = ["release", "unlock"];
@@ -64,13 +65,13 @@ exports.run = async (client, message, args) => {
 };
 
 exports.help = {
-         name: "lockdown",
-         description: "lock chat channels with time elapsed",
-         usage: "lockdown <time>",
-         example: "/lockdown 10s",
+  name: "lockdown",
+  description: "lock chat channels with time elapsed",
+  usage: "lockdown <time>",
+  example: "/lockdown 10s"
 };
 
 exports.conf = {
-          aliases: [""],
-          cooldown: 5
+  aliases: [""],
+  cooldown: 5
 };
