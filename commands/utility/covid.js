@@ -51,7 +51,7 @@ exports.run = async (client, message, args) => {
           .addField("Total Critical", info.critical.toLocaleString())
           .setDescription("**Affected Country**\n215")
           .setFooter(
-            `Want see global cases? type ${config.prefix}covid all | #STAYATHOME`
+            `Want see global cases? type ${config.prefix}covid all | #GETWELLSOON`
           )
           .setTimestamp();
 
