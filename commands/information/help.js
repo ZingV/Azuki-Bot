@@ -22,7 +22,7 @@ exports.run = async (client, message, args) => {
       )
       .setAuthor(
         client.user.username + " Commands list",
-        client.user.displayAvatarURL
+        client.user.displayAvatarURL()
       );
 
     for (const mod of module) {

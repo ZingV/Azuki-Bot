@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
     })
   var embed = new discord.MessageEmbed()
   .setColor("#00bfff")
-  .setFooter(client.user.username)
+  .setFooter(client.user.username, client.user.displayAvatarURL())
   .setTimestamp(new Date())
   .setDescription(`The lockdown for ${message.channel} has ended.`)
       message.channel.send(embed);
