@@ -20,7 +20,7 @@ exports.run = async (client, message, args) => {
       .setDescription(
         `\nTo check the command usage, type \`${prefix}help <commands>\`\n`
       )
-      .setTitle(
+      .setAuthor(
         client.user.username + " Commands list",
         client.user.displayAvatarURL
       );

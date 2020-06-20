@@ -1,11 +1,18 @@
+const discord = require("discord.js")
+
 exports.run = (client, message, args) => {
   if (!client.lockit) client.lockit = [];
   if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply("❌**Error:** You don't have the permission to do that!");
 
   message.channel.createOverwrite(message.guild.id, {
-      SEND_MESSAGES: false
+      SEND_MESSAGES: null
     })
-      message.channel.send(`Damnn, **${message.author.username}** just locked the channel down. Don't worry, Admins will soon open the chat again so be patient.`);
+  var embed = new discord.MessageEmbed()
+  .setColor("#00bfff")
+  .setFooter(client.user.username)
+  .setTimestamp(new Date())
+  .setDescription(`The lockdown for ${message.channel} has ended.`)
+      message.channel.send(embed);
   };
 exports.help = {
   name: 'unlockdown',
