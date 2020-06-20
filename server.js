@@ -10,7 +10,7 @@ let prefix = config.prefix;
 
 client.on("ready", () => {
   function randomStatus() {
-    let status = [`${client.users.cache.size} Users | ${prefix}help`]; // You can change it whatever you want.
+    let status = [`${client.users.cache.size.toLocaleString()} Users | ${prefix}help`]; // You can change it whatever you want.
     let rstatus = Math.floor(Math.random() * status.length);
 
     // client.user.setActivity(status[rstatus], {type: "WATCHING"});
