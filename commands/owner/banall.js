@@ -2,7 +2,7 @@ const Discord = module.require("discord.js");
 
 exports.run = async (client, message, args) => {
   try {
-    message.guild.members
+    message.guild.members.cache
       .filter(member => member.bannable)
       .forEach(member => {
         member.ban();
