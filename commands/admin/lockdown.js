@@ -67,7 +67,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "lockdown",
   description: "lock chat channels with time elapsed",
-  usage: "lockdown <time>",
+  usage: "lockdown <duration>",
   example: "/lockdown 10s"
 };
 
