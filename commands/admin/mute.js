@@ -41,12 +41,12 @@ module.exports.run = async (client, message, args) => {
   let muterole = message.guild.roles.cache.find(r => r.name === "Muted");
   if (!muterole) {
     try {
-      muterole = await message.guild.createRole({
+      muterole = await message.guild.roles.create({
         name: "Muted",
         color: "#514f48",
         permissions: []
       });
-      message.guild.channels.forEach(async (channel, id) => {
+      message.guild.channels.cache.forEach(async (channel, id) => {
         await channel.createOverwrite(muterole, {
           SEND_MESSAGES: false,
           ADD_REACTIONS: false,
