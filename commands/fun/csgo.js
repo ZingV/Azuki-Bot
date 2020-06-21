@@ -68,7 +68,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "csgo",
   description: "Playing csgo",
-  usage: "csgo"
+  usage: "csgo <STEAMID64>"
 }
 
 exports.conf = {
