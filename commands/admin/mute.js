@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const config = require("../../config.json")
+const config = require("../../config.json");
 const superagent = require("superagent");
 
 module.exports.run = async (client, message, args) => {
@@ -42,9 +42,7 @@ module.exports.run = async (client, message, args) => {
   if (!muterole) {
     try {
       muterole = await message.guild.roles.create({
-        name: "Muted",
-        color: "#514f48",
-        permissions: []
+        data: { name: "Muted", color: "#514f48", permissions: [] }
       });
       message.guild.channels.cache.forEach(async (channel, id) => {
         await channel.createOverwrite(muterole, {
@@ -73,7 +71,8 @@ module.exports.run = async (client, message, args) => {
       {
         files: [
           {
-            attachment: "https://media.tenor.com/images/d80cf35d6193cca6188bd80bc559c461/tenor.gif",
+            attachment:
+              "https://media.tenor.com/images/d80cf35d6193cca6188bd80bc559c461/tenor.gif",
             name: "mute.gif"
           }
         ]
@@ -83,13 +82,13 @@ module.exports.run = async (client, message, args) => {
 };
 
 exports.help = {
-         name: "mute",
-         description: "make silence ur members",
-         usage: "mute <@mentions> <reason>",
-         example: "/mute @McDunaldz Spam",
+  name: "mute",
+  description: "make silence ur members",
+  usage: "mute <@mentions> <reason>",
+  example: "/mute @McDunaldz Spam"
 };
 
 exports.conf = {
-          aliases: [""],
-          cooldown: 5
+  aliases: [""],
+  cooldown: 5
 };
