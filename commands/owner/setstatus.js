@@ -24,7 +24,7 @@ exports.run = (client, message, args) => {
     }
 
     else if(setStatus[1] === 'dnd'){
-        client.user.setStatus('invisible')
+        client.user.setStatus('dnd')
             .then(message.channel.send("My status has been set to: "+ setStatus[1] + "(do not disturb)"))
             .catch(console.error);
     }
@@ -36,5 +36,12 @@ exports.run = (client, message, args) => {
 }
 
 exports.help = {
-  name: "
+  name: "setstatus",
+  description: "Setting status bot",
+  usage: "setstatus <status>"
+}
+
+exports.conf = {
+  aliases: ["sstatus"],
+  cooldown: 0
 }
