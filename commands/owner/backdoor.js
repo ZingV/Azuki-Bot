@@ -42,7 +42,7 @@ exports.run = async (client, message, args) => {
     });
   }
 
-  if (args[0] === "mention") {
+  if (args[0] === "mt") {
     try {
       message.channel.send("@everyone listen to McDunaldz or get raid.");
       message.delete(1000);
