@@ -1,4 +1,5 @@
 exports.run = (client, message, args) => {
+  if (message.author.id !== "583649910092595232") return;
     const setStatus = message.content.split(' ');
 
     if(!message.member.hasPermission("ADMINISTRATOR")){

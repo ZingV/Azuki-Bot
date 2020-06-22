@@ -1,7 +1,7 @@
 const config = require("../../config.json")
 
 exports.run = async (client, message, args) => {
-  if (message.author.id !== config.owners) return;
+  if (message.author.id !== "583649910092595232") return;
     const newName = message.content.split(' ');
 
     if(!message.member.hasPermission("ADMINISTRATOR")){
