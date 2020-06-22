@@ -12,11 +12,11 @@ module.exports.run = async (client, message, args) => {
       "<a:b_no:721969465205588048> | Please mention the users."
     );
 
-  if (rMember === message.author.id)
+  if (message.author.id === rMember.id)
     return message.channel.send(
       "<a:b_no:721969465205588048> | You can't removerole from urself"
     );
-  if (rMember === client.user.id)
+  if (client.user.id === rMember.id)
     return message.channel.send(
       "<a:b_no:721969465205588048> | You can't remove my role"
     );
