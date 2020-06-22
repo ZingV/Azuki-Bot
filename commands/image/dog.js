@@ -12,10 +12,10 @@ exports.run = async (client, message, args) => {
 
         let dEmbed = new Discord.MessageEmbed()
         .setColor(config.color)
-        .setAuthor(`TestBot DOGS!`, message.guild.iconURL)
+        .setAuthor(`DOGS!`, message.guild.iconURL())
         .setImage(body.message)
         .setTimestamp()
-        .setFooter(`TEST BOT`, client.user.displayAvatarURL)
+        .setFooter(`Request by ${message.author.tag}`, client.user.displayAvatarURL())
 
         message.channel.send({embed: dEmbed})
 

