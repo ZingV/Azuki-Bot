@@ -1,3 +1,15 @@
+const http = require('http');
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  console.log('Ping received');
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 60000);
+
 const Discord = require("discord.js");
 const tutorialBot = require("./handler/ClientBuilder.js"); // We're gonna create this soon.
 const client = new tutorialBot();
@@ -27,11 +39,4 @@ client.on("ready", () => {
 client.package = require("./package.json");
 client.on("warn", console.warn); // This will warn you via logs if there was something wrong with your bot.
 client.on("error", console.error); // This will send you an error message via logs if there was something missing with your coding.
-client.login(process.env.token).catch(console.error); // This token will leads to the .env file. It's safe in there
-
-//__________________________________________________________________//
-
-const http = require('http');
-const express = require('express');
-const app = express();
-app.get("/", (re
+client.login(process.env.token).catch(console.error); // This token will leads to the .env file. It's safe in ther
