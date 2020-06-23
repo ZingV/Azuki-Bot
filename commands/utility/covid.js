@@ -17,7 +17,7 @@ exports.run = async (client, message, args) => {
           .setColor(config.color)
           .setAuthor("Global")
           .setThumbnail(
-            "https://cdn.discordapp.com/avatars/583649910092595232/df4edf376c02e282df5d993326c9c7bc.png?size=2048"
+            "https://cdn.discordapp.com/emojis/725005297919197255.png?v=1"
           )
           .addField("Population", info.population.toLocaleString())
           .addField("Total Cases", info.cases.toLocaleString())
