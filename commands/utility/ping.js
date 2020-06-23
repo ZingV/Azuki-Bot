@@ -4,7 +4,7 @@ const config = require("../../config.json")
 exports.run = async (client, message, argan) => {
   
   try { 
-    const m = await message.channel.send("Pinging..."); // Make sure the async is written, top of the client.on("message", ...) 
+    const m = await message.channel.send("Pinging...")// Make sure the async is written, top of the client.on("message", ...) 
     
     const embed = new Discord.MessageEmbed() 
     .setColor(config.color) // Tired of choosing the embed colors? Just type "RANDOM" on it! 
