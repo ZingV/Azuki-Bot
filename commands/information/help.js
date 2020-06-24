@@ -27,7 +27,7 @@ exports.run = async (client, message, args) => {
 
     for (const mod of module) {
       // You can change the .join(" | ") to commas, dots or every symbol.
-      embed.addField(`${mod.name}`, mod.cmds.map(x => `\`${x}\``).join(' | '));
+      embed.addField(`${mod.name}`, mod.cmds.map(x => `\`${x}\``).join(' `|` '));
     }
 
     return message.channel.send(embed);
@@ -44,7 +44,7 @@ exports.run = async (client, message, args) => {
         client.commands.get(client.aliases.get(cmd));
       let name = command.help.name; // The command name.
       let desc = command.help.description; // The command description.
-      let cooldown = command.conf.cooldown + " second(s)"; // The command cooldown.
+      let cooldown = command.conf.cooldown + " seconds"; // The command cooldown.
       let aliases = command.conf.aliases.join(", ")
         ? command.conf.aliases.join(", ")
         : "-";
