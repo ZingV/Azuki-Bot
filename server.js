@@ -1,8 +1,8 @@
-const http = require('http');
-const express = require('express');
+const http = require("http");
+const express = require("express");
 const app = express();
 app.get("/", (request, response) => {
-  console.log('Ping received');
+  console.log("Ping received");
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
@@ -22,7 +22,11 @@ let prefix = config.prefix;
 
 client.on("ready", () => {
   function randomStatus() {
-    let status = [`${client.users.cache.size.toLocaleString()} Users | ${prefix}help`]; // You can change it whatever you want.
+    let status = [
+      `🌏 ${client.guilds.cache.size.toLocaleString()} Guild`,
+      `👥 ${client.users.cache.size.toLocaleString()} Users`,
+      `👋 Use ${prefix}help`
+    ]; // You can change it whatever you want.
     let rstatus = Math.floor(Math.random() * status.length);
 
     // client.user.setActivity(status[rstatus], {type: "WATCHING"});
@@ -33,7 +37,7 @@ client.on("ready", () => {
       type: "WATCHING"
     });
   }
-  setInterval(randomStatus, 30000);
+  setInterval(randomStatus, 10000);
 });
 
 client.package = require("./package.json");
