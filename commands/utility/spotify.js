@@ -76,5 +76,5 @@ exports.help = {
 
 exports.conf = {
   aliases: ["sp"],
-  cooldown: 5
+  cooldown: 2
 };

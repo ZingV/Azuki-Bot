@@ -28,5 +28,5 @@ exports.help = {
 
 exports.conf = {
   aliases: ["setnick"],
-  cooldown: 5
+  cooldown: 2
 }

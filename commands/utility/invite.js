@@ -19,5 +19,5 @@ exports.help = {
 
 exports.conf = {
   aliases: ["invite"],
-  cooldown: 5
+  cooldown: 2
 }

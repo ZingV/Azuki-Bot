@@ -22,5 +22,5 @@ exports.help = {
 
 exports.conf = {
   aliases: ['unld'],
-  cooldown: 5
+  cooldown: 2
  }

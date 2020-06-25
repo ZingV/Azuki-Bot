@@ -54,5 +54,5 @@ exports.help = {
 
 exports.conf = {
           aliases: ["whois"],
-          cooldown: 5
+          cooldown: 2
 };

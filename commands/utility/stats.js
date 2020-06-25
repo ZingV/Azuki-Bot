@@ -5,6 +5,7 @@ exports.run = async (client, message, args) => {
   let guildsEval = await client.guilds.cache.size;
   let channelsEval = await client.channels.cache.size;
   let usersEval = await client.users.cache.size;
+  const discord = require ("discord.js").version
   const Node = process.version;
   const config = require("../../config.json");
   const credit = client.users.cache.get("622019385086836765").tag;
@@ -47,7 +48,7 @@ exports.run = async (client, message, args) => {
       }help to see all commands list!\`\n**Owner**\n\`\`\`• ${owner}\`\`\`\n**Credits**\n**\`\`\`• Thanks to ${credit}\`\`\`**\n**Server Information**\n\`\`\`\n• Operating System: Enterprise Linux 5
 • Kernel: 4.16.0-34-Enterprise
 • Processor: Intel(R) Xeon(R) CPU E5-2673 v3 @ 2,40 GHz
-• Architecture: x64_x64\n• Node.js: ${Node}\n• Discord.js: v12.2.0\n• Websocket: ${client.ws.ping.toFixed(
+• Architecture: x64_x64\n• Node.js: ${Node}\n• Discord.js: ${discord}\n• Websocket: ${client.ws.ping.toFixed(
         2
       )}ms\`\`\`\n**General information**,\n\`\`\`• Guilds: ${guildsEval.toLocaleString()}\n• Channels: ${channelsEval.toLocaleString()}\n• Users: ${usersEval.toLocaleString()}\n• Uptime: ${parseDur(
         client.uptime
@@ -86,5 +87,5 @@ exports.help = {
 
 exports.conf = {
           aliases: ["info"],
-          cooldown: 5
+          cooldown: 2
 };

@@ -39,5 +39,5 @@ exports.help = {
 
 exports.conf = {
   aliases: ["slow"],
-  cooldown: 10
+  cooldown: 2
 }

@@ -22,5 +22,5 @@ exports.help = {
 
 exports.conf = {
   aliases: ['ld'],
-  cooldown: 5
+  cooldown: 2
  }

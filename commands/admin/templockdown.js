@@ -73,5 +73,5 @@ exports.help = {
 
 exports.conf = {
   aliases: ["templd"],
-  cooldown: 5
+  cooldown: 2
 };

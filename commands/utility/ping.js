@@ -29,6 +29,6 @@ exports.help = {
 
 exports.conf = {
   aliases: ["beep"],
-  cooldown: 5 // This number is a seconds, not a milliseconds.
+  cooldown: 2 // This number is a seconds, not a milliseconds.
   // 1 = 1 seconds.
 }

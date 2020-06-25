@@ -20,5 +20,5 @@ exports.help = {
 
 exports.conf = {
   aliases: ["rcount"],
-  cooldown: 5
+  cooldown: 2
 }

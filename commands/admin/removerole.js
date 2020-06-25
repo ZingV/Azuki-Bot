@@ -53,5 +53,5 @@ exports.help = {
 
 exports.conf = {
   aliases: ["demote"],
-  cooldown: 5
+  cooldown: 2
 };
