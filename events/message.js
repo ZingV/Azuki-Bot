@@ -7,7 +7,7 @@ module.exports = async (client, message) => {
   
   let prefix = client.config.prefix;
   
-  let inviteLink = ["https://discord.gg", "https://discord.com/invite"];
+  let inviteLink = []
   
   if (inviteLink.some(word => message.content.toLowerCase().includes(word))) {
     await message.delete();
