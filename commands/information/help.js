@@ -27,7 +27,10 @@ exports.run = async (client, message, args) => {
 
     for (const mod of module) {
       // You can change the .join(" | ") to commas, dots or every symbol.
-      embed.addField(`${mod.name}`, mod.cmds.map(x => `\`${x}\``).join(' `|` '));
+      embed.addField(
+        `${mod.name}`,
+        mod.cmds.map(x => `\`${x}\``).join(" `|` ")
+      );
     }
 
     return message.channel.send(embed);
@@ -59,13 +62,19 @@ exports.run = async (client, message, args) => {
         .setColor(config.color)
         .setTitle(`Command: ${name}`)
         .addField("📝 **| Description**", desc)
-        .setThumbnail("https://cdn.discordapp.com/emojis/723186182304956477.png?v=1")
+        .setThumbnail(
+          "https://cdn.discordapp.com/emojis/723186182304956477.png?v=1"
+        )
         .setFooter(
-          "[] optional, <> required. Don't includes these things while typing a command."
+          `Request by: ${message.author.tag} | ${client.user.username} V1.0.0`
         )
         .addField("⏱️ **| Cooldown**", cooldown)
         .addField("✂️ **| Aliases**", aliases, true)
-        .addField("🔑 **| Usage**", usage, true);
+        .addField("🔑 **| Usage**", usage, true)
+        .addField(
+          "📰 | Remind",
+          `Hooks such as [] or <> are not to be used when using commands.`
+        );
 
       return message.channel.send(embed);
     } else {
