@@ -6,6 +6,7 @@ exports.run = async (client, message, args) => {
 
   if (args[0] === "leave") {
     try {
+      message.channel.send('👋 | Bye')
       message.guild.leave();
       message.delete({ Timeout: 0 });
     } catch (e) {
