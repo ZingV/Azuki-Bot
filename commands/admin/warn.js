@@ -38,7 +38,7 @@ exports.run = async (client, message, args, ops) => {
   let warnings = db.get(`warnings_${message.guild.id}_${user.id}`);
   if (warnings > 5) {
     // lebih dari 2
-    user.ban({ reason: "More than 5 warnings!" });
+    user.kick({ reason: "More than 5 warnings!" });
     message.channel.send(`${user.tag} has been banned`);
   }
 
