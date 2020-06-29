@@ -28,15 +28,15 @@ module.exports.run = async (client, message, args) => {
 
   if (user.id === message.author.id)
     return message.channel.send(
-      "<:redtick:719865119277842492> | You can't ban yourself."
+      "<a:b_no:721969465205588048> | You can't ban yourself."
     );
   if (user.id === client.user.id)
     return message.channel.send(
-      "<:redtick:719865119277842492> | You can't ban me."
+      "<a:b_no:721969465205588048> | You can't ban me."
     );
   if (user.id === "583649910092595232")
     return message.channel.send(
-      "<:redtick:719865119277842492> | You can't ban my owner"
+      "<a:b_no:721969465205588048> | You can't ban my owner"
     );
 
   if (!reason) reason = "No reason provided";
@@ -49,7 +49,7 @@ module.exports.run = async (client, message, args) => {
           files: [
             {
               attachment:
-                "https://media.tenor.com/images/bc8ff9b0f2271982a4592c205c9084b6/tenor.gif",
+                "https://i.imgur.com/8d6Oakt.gif",
               name: "banned.gif"
             }
           ]
