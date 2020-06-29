@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
         // 'C' can be changed to 'F' for farneheit results
         if(!args[0]) return message.channel.send('<a:b_no:721969465205588048> | **Please specify a location**')
 
-        if(result === undefined || result.length === 0) return message.channel.send('**Invalid** location');
+        if(result === undefined || result.length === 0) return message.channel.send('<a:b_no:721969465205588048> | **Invalid** location');
 
         var current = result[0].current;
         var location = result[0].location;
