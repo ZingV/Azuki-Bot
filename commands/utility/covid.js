@@ -4,7 +4,7 @@ const config = require("../../config.json");
 exports.run = async (client, message, args) => {
   if (!args[0])
     return message.channel.send(
-      "<:redtick:719865119277842492> | Please enter country you want to see stats!"
+      "<a:b_no:721969465205588048> | Please enter country you want to see stats!"
     );
 
   if (args.join(" ") === "all") {

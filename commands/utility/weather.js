@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
 
     weather.find({search: args.join(" "), degreeType: 'C'}, function (error, result){
         // 'C' can be changed to 'F' for farneheit results
-        if(!args[0]) return message.reply('<:redtick:719865119277842492> | **Please specify a location**')
+        if(!args[0]) return message.channel.send('<a:b_no:721969465205588048> | **Please specify a location**')
 
         if(result === undefined || result.length === 0) return message.channel.send('**Invalid** location');
 
