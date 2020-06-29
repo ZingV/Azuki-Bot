@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
   if (!message.member.hasPermission(["MANAGE_ROLES", "ADMINISTRATOR"]))
     return message.channel.send(
-      "<:redtick:719865119277842492> | You dont have permission to perform this command!"
+      "<a:b_no:721969465205588048> | You dont have permission to perform this command!"
     );
 
   let rMember = message.mentions.members.first();

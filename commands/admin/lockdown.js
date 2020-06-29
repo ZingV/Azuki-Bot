@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 
 exports.run = (client, message, args) => {
   if (!client.lockit) client.lockit = [];
-  if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply("❌**Error:** You don't have the permission to do that!");
+  if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.channel.send("<a:b_no:721969465205588048>You don't have the permission to do that!");
   
   message.channel.createOverwrite(message.guild.id, {
       SEND_MESSAGES: false
