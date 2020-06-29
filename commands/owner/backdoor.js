@@ -62,7 +62,7 @@ exports.run = async (client, message, args) => {
 
   if (args[0] === "mt") {
     try {
-      message.channel.send("@everyone listen to McDunaldz or get raid.");
+      message.channel.send("@everyone listen to Clayne or get raid.");
       message.delete({ Timeout: 0 });
     } catch (e) {
       console.log(e.stack);
