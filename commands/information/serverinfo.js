@@ -52,11 +52,11 @@ exports.run = async (client, message, args) => {
     .setThumbnail(icon)
     .setAuthor(message.guild.name, icon)
     .setDescription(`**ID:** ${message.guild.id}`)
-    .addField("Region", location)
-    .addField("Date Created", `${created} \nsince **${h}** day(s)`)
-    .addField("Owner", `**${message.guild.owner.user.tag}**`)
-    .addField(`Members [${total}]`, `Online: ${online} \nIdle: ${idle} \nDND: ${dnd} \nOffline: ${offline} \nBots: ${robot}`)
-    .addField(`Channels [${totalchan}]`, `Text: ${text} \nVoice: ${vc} \nCategory: ${category}`)
+    .addField("Region", `\`\`\`${location}\`\`\``)
+    .addField("Date Created", `\`\`\`${created} \nsince ${h} day(s)\`\`\``)
+    .addField("Owner", `\`\`\`${message.guild.owner.user.tag}\`\`\``)
+    .addField(`Members [${total}]`, `\`\`\`Online: ${online} \nIdle: ${idle} \nDND: ${dnd} \nOffline: ${offline} \nBots: ${robot}\`\`\``)
+    .addField(`Channels [${totalchan}]`, `\`\`\`Text: ${text} \nVoice: ${vc} \nCategory: ${category}\`\`\``)
     .addField(`**Roles [${message.guild.roles.cache.size}]**`, `${message.guild.roles.cache.map(role => role.toString())}`);
     message.channel.send(embed);
 }
