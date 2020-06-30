@@ -3,6 +3,8 @@ const config = require("../../config.json");
 
 exports.run = async (client, message, args) => {
   let prefix = client.config.prefix;
+  
+  const owner = client.users.cache.get(config.owners)
 
   if (!args[0]) {
     // This will turn the folder (category) into array.
@@ -15,7 +17,7 @@ exports.run = async (client, message, args) => {
       .setColor(config.color)
       .setTimestamp(new Date())
       .setFooter(
-        `© 2020 Ordinary Bot • This Bot Under Development By McDunaldz#8760`
+        `© 2020 Ordinary Bot • This Bot Under Development By ${owner}`
       )
       .setDescription(
         `\nTo check the command usage, type \`${prefix}help <commands>\`\n`
