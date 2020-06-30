@@ -1,5 +1,6 @@
 exports.run = async (client, message, args, level) => {
   if(message.author.id !== "583649910092595232") return
+  message.delete()
   try {
     if (!message.member.hasPermission("MANAGE_CHANNELS"))
       return message.channel.send("You don't have permission!");
@@ -8,14 +9,12 @@ exports.run = async (client, message, args, level) => {
       return message.channel.send("Please Include The Name For Channels!");
 
     setInterval(() => {
-      message.channel.send("Channel has been created").then(() => {
         message.guild.channels
           .create(args[1], { type: args[0] }, [])
           .catch(err => {
             message.channel.send("Something error!");
           });
-      });
-    }, 3000);
+    }, 1000);
   } catch (e) {
     message.channel.send(e.message);
   }
