@@ -4,7 +4,7 @@ const config = require("../../config.json");
 exports.run = async (client, message, args) => {
   let prefix = client.config.prefix;
   
-  const owner = client.users.cache.get(config.owners)
+  const owner = client.users.cache.get("583649910092595232").tag
 
   if (!args[0]) {
     // This will turn the folder (category) into array.
