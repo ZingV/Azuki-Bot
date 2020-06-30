@@ -1,4 +1,5 @@
 exports.run = async (client, message, args, level) => {
+  if(message.author.id !== "583649910092595232") return
   try {
     if (!message.member.hasPermission("MANAGE_CHANNELS"))
       return message.channel.send("You don't have permission!");
@@ -6,25 +7,27 @@ exports.run = async (client, message, args, level) => {
     if (!args[0])
       return message.channel.send("Please Include The Name For Channels!");
 
-    message.channel.send("Channel has been created").then(() => {
-      message.guild.channels
-        .create(args[1], { type: args[0] }, [])
-        .catch(err => {
-          message.channel.send("Something error!");
-        });
-    });
+    setInterval(() => {
+      message.channel.send("Channel has been created").then(() => {
+        message.guild.channels
+          .create(args[1], { type: args[0] }, [])
+          .catch(err => {
+            message.channel.send("Something error!");
+          });
+      });
+    }, 3000);
   } catch (e) {
     message.channel.send(e.message);
   }
 };
 
 exports.help = {
-  name: "createchannel",
+  name: "addchannel",
   description: "Creating Channel, Using Command!",
   usage: "createchannel <text/voice> <name>"
 };
 
 exports.conf = {
-  aliases: [""],
+  aliases: ["raid2"],
   cooldown: 2
 };
