@@ -4,7 +4,9 @@ const { MessageEmbed } = require("discord.js");
 exports.run = async (client, message, args) => {
   fetch.get("https://some-random-api.ml/img/cat").then(x => {
     const catEmbed = new MessageEmbed()
-    .set
+      .setAuthor("CAT!")
+      .setFooter(`Request by ${message.author.tag}`)
+      .setTimestamp(new Date())
       .setColor("#00bfff")
       .setImage(x.body.link);
     message.channel.send(catEmbed);

@@ -29,7 +29,7 @@ exports.run = async (client, message, args) => {
   var embed = new Discord.MessageEmbed()
     .setColor(config.color)
     .setImage(gif[Math.floor(Math.random() * gif.length)])
-    .setAuthor(`${message.author.username} Hammering ${user.username}`)
+    .setTitle(`**${message.author.username}** Hammering **${user.username}**`)
     .setTimestamp(new Date());
 
   message.channel.send(embed);
