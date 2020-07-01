@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
   
   let embed = new Discord.MessageEmbed()
   
-  .setImage(user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
+  .setImage(user.displayAvatarURL({ format: 'png', dynamic: true, size: 2048 }))
   .setColor(config.color)
   .setAuthor(user.tag + " Avatar")
   .setFooter("Searched by " + message.author.tag)
