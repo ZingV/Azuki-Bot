@@ -57,7 +57,7 @@ exports.run = async (client, message, args) => {
     .addField("Owner", `\`\`\`${message.guild.owner.user.tag}\`\`\``)
     .addField(`Members [${total}]`, `\`\`\`Online: ${online} \nIdle: ${idle} \nDND: ${dnd} \nOffline: ${offline} \nBots: ${robot}\`\`\``)
     .addField(`Channels [${totalchan}]`, `\`\`\`Text: ${text} \nVoice: ${vc} \nCategory: ${category}\`\`\``)
-    .setDescription(`**Roles [${message.guild.roles.cache.size}]**`, `${message.guild.roles.cache.map(role => role.toString()).join(", ")}`);
+    .setDescription(`**Roles [${message.guild.roles.cache.size}]**\n${message.guild.roles.cache.map(role => role.toString()).join(", ")}`);
     message.channel.send(embed);
 }
 
