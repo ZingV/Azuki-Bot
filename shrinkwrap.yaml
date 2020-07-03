@@ -7,7 +7,7 @@ dependencies:
   express: 4.17.1
   fs: 0.0.2
   http: 0.0.0
-  mathjs: 6.6.5
+  mathjs: 7.0.2
   moment: 2.27.0
   ms: 2.1.2
   node-fetch: 2.6.0
@@ -941,7 +941,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-G2Lj61tXDnVFFOi8VZds+SoQjtQC3dgokKdDG2mTm1tx4m50NUHBOZSBwQQHyy0V12A0JTG4icfZQH+xPyh8VA==
-  /mathjs/6.6.5:
+  /mathjs/7.0.2:
     dependencies:
       complex.js: 2.0.11
       decimal.js: 10.2.0
@@ -953,10 +953,10 @@ packages:
       typed-function: 1.1.1
     dev: false
     engines:
-      node: '>= 8'
+      node: '>= 10'
     hasBin: true
     resolution:
-      integrity: sha512-jvRqk7eoEHBcx/lskmy05m+8M7xDHAJcJzRJoqIsqExtlTHPDQO0Zv85g5F0rasDAXF+DLog/70hcqCJijSzPQ==
+      integrity: sha512-+/HTkdie4Sek66mjcclk2cgTyVgFfykutk5PGspbtZHUBbS3lOeiM8/Ax7P6nQlz1KoellFAU/kGO4q7Yv1sZA==
   /media-typer/0.3.0:
     dev: false
     engines:
@@ -1739,7 +1739,7 @@ specifiers:
   express: ^4.17.1
   fs: ^0.0.2
   http: ^0.0.0
-  mathjs: ^6.6.5
+  mathjs: ^7.0.2
   moment: ^2.27.0
   ms: ^2.1.2
   node-fetch: ^2.6.0
