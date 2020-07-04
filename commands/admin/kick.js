@@ -41,7 +41,7 @@ module.exports.run = async (client, message, args) => {
           files: [
             {
               attachment:
-                "https://media.tenor.com/images/2787aa841c08a878f6587f3fafc2d33e/tenor.gif",
+                "https://media.tenor.com/images/5a00d95e850a59b551549b840039e62c/tenor.gif",
               name: "kick.gif"
             }
           ]
