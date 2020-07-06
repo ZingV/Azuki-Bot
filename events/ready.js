@@ -25,7 +25,7 @@ module.exports = client => {
       if (status) {
         message.channel
           .send(`**${mentioned.user.tag}** is AFK: **${status}**`)
-          .then(i => i.delete({ timeout: 500 }));
+          .then(i => i.delete({ timeout: 5000 }));
       }
     }
 
