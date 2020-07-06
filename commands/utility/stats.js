@@ -50,7 +50,7 @@ exports.run = async (client, message, args) => {
 • Processor: Intel(R) Xeon(R) CPU E5-2673 v3 @ 2,40 GHz
 • Architecture: x64_x64\n• Node.js: ${Node}\n• Discord.js: ${discord}\n• Websocket: ${client.ws.ping.toFixed(
         2
-      )}ms\`\`\`\n**General information**,\n\`\`\`• Guilds: ${guildsEval.toLocaleString()}\n• Channels: ${channelsEval.toLocaleString()}\n• Users: ${usersEval.toLocaleString()}\n• Uptime: ${parseDur(
+      )}ms\`\`\`\n**General information**,\n\`\`\`• Guilds: ${guildsEval.toLocaleString()}\n• Channels: ${channelsEval.toLocaleString()}\n• Users: ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}\n• Uptime: ${parseDur(
         client.uptime
       )}\`\`\`\n**Usage Information**\n\`\`\`• Memory usage:\n${(
         process.memoryUsage().rss /

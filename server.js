@@ -24,7 +24,7 @@ client.on("ready", () => {
   function randomStatus() {
     let status = [
       `🌏 ${client.guilds.cache.size.toLocaleString()} Guild`,
-      `👥 ${client.users.cache.size.toLocaleString()} Users`,
+      `👥 ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()} Users`,
       `👋 Use ${prefix}help`
     ]; // You can change it whatever you want.
     let rstatus = Math.floor(Math.random() * status.length);
