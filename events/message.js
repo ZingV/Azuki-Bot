@@ -1,4 +1,5 @@
 const Discord = require("discord.js"), cooldowns = new Discord.Collection();
+const config = require("../config.json")
 // cooldowns will store the user when they are still in the cooldown mode.
 
 module.exports = async (client, message) => {
@@ -70,7 +71,9 @@ module.exports = async (client, message) => {
     console.log(error.message);
   } finally {
     let embed = new Discord.MessageEmbed()
-    .setAuthor(
-    console.log(`${sender.tag} (${sender.id}) menggunakan command: ${cmd}`);
+    .setTitle(`Command Using On ${message.guild.name}`)
+    .setColor(config.color)
+    .setDescription(`${sender.tag} Using ${cmd}`)
+    client.channels.cache.get("730384372976582677").send(embed)
   }
 }
