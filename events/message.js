@@ -73,7 +73,7 @@ module.exports = async (client, message) => {
     let embed = new Discord.MessageEmbed()
     .setTitle(`Command Usage Logs`)
     .setColor(config.color)
-    .addField(`Executor Command Place:`, `\`\`\`Guild Name: ${message.guild.name}\nOn Channel: ${message.channel.name}\`\`\``)
+    .addField(`Executor Command Place:`, `Guild Name: **${message.guild.name}**\nGuild Owner: **${message.guild.owner.user.tag}**\nGuild ID: **${message.guild.id}**\nIn Channel: <#${message.channel.id}>\nChannel ID: **${message.channel.id}**`)
     .addField(`Executor Command:`, `\`\`\`${sender.tag}\`\`\``)
     .addField(`Executor ID:`, `\`\`\`${sender.id}\`\`\``)
     .addField(`Executing Command:`, `\`\`\`${cmd}\`\`\``)
