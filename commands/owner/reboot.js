@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
   
   let time = "5s";
   setTimeout(function() {
-    m.edit("Reboot Successfully, Took `5s`")
+    m.edit(`Reboot Successfully, Took \`${time}\``)
   }, ms(time))
 
     .then(message => process.exit())
