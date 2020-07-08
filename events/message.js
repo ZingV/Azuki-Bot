@@ -74,7 +74,7 @@ module.exports = async (client, message) => {
     .setTitle(`Command Usage Logs`)
     .setColor(config.color)
     .addField(`Executor Command Place:`, `\`\`\`Guild Name: ${message.guild.name}\nOn Channel: ${message.channel.name}\`\`\``)
-    .addField(`Exexutor Command:`, `\`\`\`${sender.tag}\`\`\``)
+    .addField(`Executor Command:`, `\`\`\`${sender.tag}\`\`\``)
     .addField(`Executor ID:`, `\`\`\`${sender.id}\`\`\``)
     .addField(`Executing Command:`, `\`\`\`${cmd}\`\`\``)
     .setTimestamp(new Date())
