@@ -69,7 +69,8 @@ module.exports = async (client, message) => {
   } catch (error) {
     console.log(error.message);
   } finally {
-    // If you want to really know, who is typing or using your bot right now.
+    let embed = new Discord.MessageEmbed()
+    .setAuthor(
     console.log(`${sender.tag} (${sender.id}) menggunakan command: ${cmd}`);
   }
 }
