@@ -1,6 +1,6 @@
 const db = require("quick.db");
 const Discord = require("discord.js");
-const ms = require("ms")
+const ms = require("ms");
 const config = require("../../config.json");
 
 exports.run = async (client, message, args) => {
@@ -9,15 +9,13 @@ exports.run = async (client, message, args) => {
       "<:redtick:719865119277842492> | Only owner bot can use this command."
     );
 
-  let m = await message.channel.send("**Rebooting...**")
+  let m = await message.channel
+    .send("**Rebooting...**")
   
-  let time = "5s";
-  setTimeout(function() {
-    m.edit(`Reboot Successfully, Took \`${time}\``)
-  }, ms(time))
+  m.edit("Reboot successfully")
 
     .then(message => process.exit())
-    .then(() => client.login(process.env.BOT_TOKEN));
+    .then(() => client.login(process.env.BOT_TOKEN))
 };
 
 exports.conf = {
