@@ -23,7 +23,7 @@ exports.run = async (client, message, args, ops) => {
   let time1 = "6s";
   setTimeout(function() {
     msg.edit(
-      `Email: ${toHack}6688@gmail.com\n\`Pass: **********\``
+      `Email: ${toHack}6699@gmail.com\n\`Pass: **********\``
     );
     console.log(`[HACK] Email: ${toHack}@gmail.com`);
   }, ms(time1));
