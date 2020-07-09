@@ -14,10 +14,6 @@ module.exports = client => {
         `👋 ${message.author} My prefix is \`${prefix}\``
       );
     }
-    
-    client.on('guildCreate', guild => {
-      client.channels.cache.get("730392825941721139").send(`Ordinary Bot Has Been Added To ${message.guild.name}, The Guild Have ${message.guild.memberCount} Members!`)
-    })
 
     let afk = new db.table("AFKs"),
       authorStatus = await afk.fetch(message.author.id),
@@ -27,8 +23,7 @@ module.exports = client => {
       let status = await afk.fetch(mentioned.id);
 
       if (status) {
-        message.channel
-          .send(`**${mentioned.user.tag}** is AFK: **${status}**`)
+        message.channel.send(`**${mentioned.user.tag}** is AFK: **${status}**`);
       }
     }
 
