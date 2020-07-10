@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
   let guildsEval = await client.guilds.cache.size;
   let channelsEval = await client.channels.cache.size;
   let usersEval = await client.users.cache.size;
-  const discord = require ("discord.js").version
+  const discord = require("discord.js").version;
   const Node = process.version;
   const config = require("../../config.json");
   const credit = client.users.cache.get("622019385086836765");
@@ -34,22 +34,28 @@ exports.run = async (client, message, args) => {
   } // Uptime bot.
 
   var embed = new Discord.MessageEmbed()
-    .setThumbnail(
-      "https://cdn.discordapp.com/avatars/711662245565825064/8efc5b559dceb783df316aeb7526110a.png?size=2048"
-    )
+    .setThumbnail(client.user.displayAvatarURL())
     .setAuthor(
-     client.user.username + " Statistics",
+      client.user.username + " Statistics",
       client.user.displayAvatarURL
     )
     .setDescription(
       `\`Use ${
         config.prefix
-      }help to see all commands list!\`\n**Owner**\n\`\`\`• ${owner.tag}\`\`\`\n**Credits**\n**\`\`\`• Thanks to ${credit.username}\n• Thanks to ${credit2.username}\`\`\`**\n**Server Information**\n\`\`\`\n• Operating System: Enterprise Linux 5
+      }help to see all commands list!\`\n**Owner**\n\`\`\`• ${
+        owner.tag
+      }\`\`\`\n**Credits**\n**\`\`\`• Thanks to ${
+        credit.username
+      }\n• Thanks to ${
+        credit2.username
+      }\`\`\`**\n**Server Information**\n\`\`\`\n• Operating System: Enterprise Linux 5
 • Kernel: 4.16.0-34-Enterprise
 • Processor: Intel(R) Xeon(R) CPU E5-2673 v3 @ 2,40 GHz
 • Architecture: x64_x64\n• Node.js: ${Node}\n• Discord.js: ${discord}\n• Websocket: ${client.ws.ping.toFixed(
         2
-      )}ms\`\`\`\n**General information**,\n\`\`\`• Guilds: ${guildsEval.toLocaleString()}\n• Channels: ${channelsEval.toLocaleString()}\n• Users: ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}\n• Uptime: ${parseDur(
+      )}ms\`\`\`\n**General information**,\n\`\`\`• Guilds: ${guildsEval.toLocaleString()}\n• Channels: ${channelsEval.toLocaleString()}\n• Users: ${client.guilds.cache
+        .reduce((a, b) => a + b.memberCount, 0)
+        .toLocaleString()}\n• Uptime: ${parseDur(
         client.uptime
       )}\`\`\`\n**Usage Information**\n\`\`\`• Memory usage:\n${(
         process.memoryUsage().rss /
@@ -78,13 +84,13 @@ exports.run = async (client, message, args) => {
 };
 
 exports.help = {
-         name: "stats",
-         description: "to see status about bot",
-         usage: "stats",
-         example: "/stats",
+  name: "stats",
+  description: "to see status about bot",
+  usage: "stats",
+  example: "/stats"
 };
 
 exports.conf = {
-          aliases: ["info", "botstats", "botinfo"],
-          cooldown: 2
+  aliases: ["info", "botstats", "botinfo"],
+  cooldown: 2
 };
