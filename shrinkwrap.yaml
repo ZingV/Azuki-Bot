@@ -19,7 +19,6 @@ dependencies:
   request: 2.88.2
   superagent: 5.3.1
   weather-js: 2.0.0
-  ytdl-core-discord: 1.2.1
 packages:
   /@discordjs/collection/0.1.5:
     dev: false
@@ -35,10 +34,6 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-ZfFsbgEXW71Rw/6EtBdrP5VxBJy4dthyC0tpQKGKmYFImlmmrykO14Za+BiIVduwjte0jXEBlhSKf0MWbFp9Eg==
-  /@types/node/14.0.18:
-    dev: false
-    resolution:
-      integrity: sha512-0Z3nS5acM0cIV4JPzrj9g/GH0Et5vmADWtip3YOXOp1NpOLU8V3KoZDc8ny9c1pe/YSYYzQkAWob6dyV/EWg4g==
   /abort-controller/3.0.0:
     dependencies:
       event-target-shim: 5.0.1
@@ -725,10 +720,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-4Ob+aijPUROIVeCG0Wkedx3iqLk=
-  /html-entities/1.3.1:
-    dev: false
-    resolution:
-      integrity: sha512-rhE/4Z3hIhzHAUKbW8jVcCyuT5oJCXXqhN/6mXXVCpzTmvJnoH2HL/bt3EZ6p55jbFJBeAe1ZNpL5BugLujxNA==
   /htmlparser2/3.10.1:
     dependencies:
       domelementtype: 1.3.1
@@ -950,15 +941,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-G2Lj61tXDnVFFOi8VZds+SoQjtQC3dgokKdDG2mTm1tx4m50NUHBOZSBwQQHyy0V12A0JTG4icfZQH+xPyh8VA==
-  /m3u8stream/0.7.1:
-    dependencies:
-      miniget: 1.7.2
-      sax: 1.2.4
-    dev: false
-    engines:
-      node: '>=10'
-    resolution:
-      integrity: sha512-z6ldnAdhbuWOL6LmMkwptSZGzj+qbRytMKLTbNicwF/bJMjf9U9lqD57RNQUFecvWadEkzy6PDjcNJFFgi19uQ==
   /mathjs/7.0.2:
     dependencies:
       complex.js: 2.0.11
@@ -1025,12 +1007,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-wXqjST+SLt7R009ySCglWBCFpjUygmCIfD790/kVbiGmUgfYGuB14PiTd5DwVxSV4NcYHjzMkoj5LjQZwTQLEA==
-  /miniget/1.7.2:
-    dev: false
-    engines:
-      node: '>=10'
-    resolution:
-      integrity: sha512-USPNNK2bnHLOplX8BZVMehUkyQizS/DFpBdoH0TS+fM+hQoLNg9tWg4MeY9wE8gfY0pbzmx5UBEODujt3Lz8AA==
   /minimist/1.2.5:
     dev: false
     resolution:
@@ -1753,25 +1729,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==
-  /ytdl-core-discord/1.2.1:
-    dependencies:
-      '@types/node': 14.0.18
-      prism-media: 1.2.2
-      ytdl-core: 2.1.7
-    dev: false
-    resolution:
-      integrity: sha512-xBbPkm+BwS9X3UCAw24RiDn/9ueSwMDEhAXzpse4fNvY1BFn6vgF1jY2FocAKVd/YmbWMZattjFJIJEhtQ2F1g==
-  /ytdl-core/2.1.7:
-    dependencies:
-      html-entities: 1.3.1
-      m3u8stream: 0.7.1
-      miniget: 1.7.2
-      sax: 1.2.4
-    dev: false
-    engines:
-      node: '>=10'
-    resolution:
-      integrity: sha512-ithllxxlt4zmJVTnYtT8/31QLv5MGlK3fSk29lx2S4eKc1BGh+ELKQEAkRJqWIf2P8TYBYrKwijx11xND4JcXw==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
@@ -1796,4 +1753,3 @@ specifiers:
   request: ^2.88.2
   superagent: ^5.3.1
   weather-js: ^2.0.0
-  ytdl-core-discord: ^1.2.0
