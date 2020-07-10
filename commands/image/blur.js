@@ -5,15 +5,15 @@ const canva = new Canvacord();
 exports.run = async (client, message, args) => {
 
   let avatar = message.mentions.users.first() || message.author;
-  let image = await canva.trigger(avatar.displayAvatarURL({ dynamic: false, format: "png" }));
-  let attachment = new Discord.MessageAttachment(image, "triggered.gif");
+  let image = await canva.blur(avatar.displayAvatarURL({ dynamic: false, format: "png" }));
+  let attachment = new Discord.MessageAttachment(image, "blur.gif");
   return message.channel.send("Took 5-10 seconds", attachment);
 };
 
 exports.help = {
-  name: "triggered",
-  description: "Making avatar triggered",
-  usage: "triggered, triggered <@user>"
+  name: "blur",
+  description: "Making avatar blur",
+  usage: "blur, blur <@user>"
 };
 
 exports.conf = {
