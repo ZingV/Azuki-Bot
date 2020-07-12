@@ -82,7 +82,7 @@ exports.run = async (client, message, args) => {
     } else {
       // If the user type the wrong command.
       return message.channel.send({
-        embed: { color: "RED", description: "Unknown command." }
+        embed: { color: config.color, description: "Unknown command." }
       });
     }
   }
