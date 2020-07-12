@@ -9,7 +9,7 @@ exports.run = async (client, message, args, color) => {
  let embed = new Discord.MessageEmbed()
  .setTitle(`📚| Motivation`)
  .setDescription(`\`\`\`${kata.text}\`\`\``)
- .setColor(color)
+ .setColor("#00bfff")
  .setFooter(`Auhor : ${kata.author} | Request By : ${message.author.username}`)
  message.channel.send(embed)
 }
