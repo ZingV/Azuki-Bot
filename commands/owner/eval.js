@@ -44,10 +44,10 @@ exports.run = async (client, message, args) => {
       );
       embed
         .addField("Output", `https://hastebin.com/${body.key}.js`)
-        .setColor(0x7289da);
+        .setColor(config.color);
       // Sometimes, the body.key will turn into undefined. It might be the API is under maintenance or broken.
     } else {
-      embed.addField("Output", "```js\n" + output + "```").setColor(0x7289da);
+      embed.addField("Output", "```js\n" + output + "```").setColor(config.color);
     }
 
     message.channel.send(embed);
@@ -58,9 +58,9 @@ exports.run = async (client, message, args) => {
       const { body } = await post("https://hastebin.com/documents").send(err);
       embed
         .addField("Output", `https://hastebin.com/${body.key}.js`)
-        .setColor("RED");
+        .setColor(config.color);
     } else {
-      embed.addField("Output", "```js\n" + err + "```").setColor("RED");
+      embed.addField("Output", "```js\n" + err + "```").setColor(config.color);
     }
 
     message.channel.send(embed);
