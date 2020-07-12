@@ -32,7 +32,7 @@ module.exports = client => {
           
           client.commands.set(prop.help.name, prop)
           
-          prop.conf.aliases.forEach(alias => {
+          prop.conf.aliases(alias => {
             client.aliases.set(alias, prop.help.name);
           })
           

@@ -3,7 +3,7 @@ const config = require("../../config.json");
 
 exports.run = async (client, message, args) => {
   let prefix = client.config.prefix;
-  
+
   const owner = client.users.cache.get("583649910092595232").tag
 
   if (!args[0]) {
@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
     for (const mod of module) {
       // You can change the .join(" | ") to commas, dots or every symbol.
       embed.addField(
-        `${mod.name}`,
+        `${mod.name} (${mod.total})`,
         mod.cmds.map(x => `\`${x}\``).join(" `|` ")
       );
     }
