@@ -10,7 +10,7 @@ exports.run = async (client, message, args, color) => {
  .setTitle(`📚| Motivation`)
  .setDescription(`\`\`\`${kata.text}\`\`\``)
  .setColor("#00bfff")
- .setFooter(`Auhor : ${kata.author} | Request By : ${message.author.username}`)
+ .setFooter(`Auhor : ${kata.author} | Request By : ${message.author.tag}`)
  message.channel.send(embed)
 }
 
