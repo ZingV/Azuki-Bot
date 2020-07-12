@@ -27,7 +27,6 @@
     "mathjs": "^7.0.2",
     "cheerio": "^0.22.0",
     "request": "^2.88.2",
-    "ytdl-core": "^3.1.2",
     "canvacord": "^3.0.8",
     "motivation": "^1.0.3"
   },
