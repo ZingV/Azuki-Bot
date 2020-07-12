@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 
   if (!user)
     return message.channel.send(
-      "<a:b_no:721969465205588048> | Who do you want to ban?",
+      "<a:b_no:721969465205588048> | And who do you want me to kill?",
       {
         files: [
           {
@@ -44,7 +44,7 @@ module.exports.run = async (client, message, args) => {
     .ban(reason)
     .then(() => {
       message.channel.send(
-        `<a:b_yes:721969088813072425> | Successfully banned **${user.tag}**`,
+        `<a:b_yes:721969088813072425> | Successfully banned **${user}**`,
         {
           files: [
             {
