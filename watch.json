@@ -3,7 +3,7 @@
         "include": [
             "^package\\.json$",
             "^\\.env$"
-        ]
+       ]
     },
     "restart": {
         "exclude": [
