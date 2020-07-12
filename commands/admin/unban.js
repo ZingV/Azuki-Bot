@@ -25,16 +25,13 @@ exports.run = async (client, message, args) => {
         "<a:b_no:721969465205588048> | I dont have permission to perform this command!"
       ) | message.delete()
     );
-  try {
-    message.guild.members
-      .unban(bannedMember, { reason: reason })
-      .catch(e => console.log(e.message))
-        return message.channel.send(
-          `<a:b_yes:721969088813072425> | **${bannedMember.tag}** has been unbanned from the guild!`
-        );
-  } catch (e) {
-    console.log(e.message);
-  }
+  
+  message.guild.members
+    .unban(bannedMember, { reason: reason })
+    .catch(e => console.log(e.message));
+  return message.channel.send(
+    `<a:b_yes:721969088813072425> | **${bannedMember.tag}** has been unbanned from the guild!`
+  );
 };
 
 exports.help = {

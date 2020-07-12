@@ -58,7 +58,7 @@ module.exports.run = async (client, message, args) => {
     })
     .catch(err => {
       message.channel.send(
-        "<:redtick:719865119277842492> | I was unable to ban the member."
+        "<a:b_no:721969465205588048> | I was unable to ban the member."
       );
     });
 };
