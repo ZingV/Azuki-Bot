@@ -44,7 +44,7 @@ module.exports.run = async (client, message, args) => {
     .ban(reason)
     .then(() => {
       message.channel.send(
-        `<a:b_yes:721969088813072425> | Successfully banned **${user}**`,
+        `<a:b_yes:721969088813072425> | Successfully banned <@${user.id}>`,
         {
           files: [
             {
