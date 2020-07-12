@@ -41,6 +41,7 @@ exports.run = async (client, message, args) => {
     .addField("Created Account Date", `${createdate} \nsince ${created} day(s) ago`, true)
     .addField("Joined Guild Date", `${joindate} \nsince ${joined} day(s) ago`, true)
     .addField("Status", status, true)
+    .addField("Register at", `${createdate} \nsince ${created} day ago`, `https://www.gambaranimasi.org/data/media/562/animasi-bergerak-garis-0031.gif`)
     
     message.channel.send(embed);
 }

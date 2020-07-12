@@ -1,8 +1,8 @@
 {
     "install": {
         "include": [
-           "^package\\.json$",
-            "^\\.env$"
+          "^package\\.json$",
+          "^\\.env$"
        ]
     },
     "restart": {
