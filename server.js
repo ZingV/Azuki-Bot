@@ -37,7 +37,7 @@ client.on("ready", () => {
       type: "WATCHING"
     });
   }
-  setInterval(randomStatus, 10000);
+  setInterval(randomStatus, 30000);
 });
 
 client.package = require("./package.json");

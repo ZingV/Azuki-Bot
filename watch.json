@@ -4,8 +4,7 @@
           "^package\\.json$",
           "^\\.env$"
        ]
-    },
-    "restart": {
+    },    "restart": {
         "exclude": [
             "^public/",
             "^dist/"
@@ -16,4 +15,4 @@
         ]
     },
     "throttle": 8000000
-}
+} 
