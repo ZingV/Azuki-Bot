@@ -3,7 +3,8 @@ const Discord = require("discord.js");
 const db = require("quick.db");
 
 module.exports = client => {
-  console.log(`${client.user.tag} The bot is ready!`);
+  let m = (`**${client.user.tag}** The bot is ready!`);
+  client.channels.cache.get("730392825941721139").send(m)
 
   let prefix = config.prefix;
 
