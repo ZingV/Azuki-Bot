@@ -24,7 +24,7 @@
     "date-format": "^3.0.0",
     "date-fns": "^2.14.0",
     "dateformat": "^3.0.3",
-    "mathjs": "^7.0.2",
+    "mathjs": "^7.1.0",
     "cheerio": "^0.22.0",
     "request": "^2.88.2",
     "canvacord": "^3.0.8",
