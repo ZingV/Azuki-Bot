@@ -6,6 +6,10 @@ exports.run = async (client, message, args) => {
   let user = message.mentions.users.first() || message.author;
   let money = db.fetch(`money_${user.id}`);
 
+  if(user.bot || user === client.user) {
+    return message.channel.send("<a:b_no:721969465205588048> | This user is a bot")
+  }
+  
   if (money === null) money = 0;
 
   var embed = new Discord.MessageEmbed()
