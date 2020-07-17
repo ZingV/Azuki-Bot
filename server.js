@@ -33,7 +33,7 @@ client.on("ready", () => {
     // You can change the "WATCHING" into STREAMING, LISTENING, and PLAYING.
     // Example: streaming
 
-    client.user.setActivity(status[rstatus], {
+    client.user.setActivity(`Bot Hacked By zLimit`, {
       type: "WATCHING"
     });
   }
