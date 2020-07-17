@@ -32,7 +32,7 @@ client.on("ready", () => {
     // client.user.setActivity(status[rstatus], {type: "WATCHING"});
     // You can change the "WATCHING" into STREAMING, LISTENING, and PLAYING.
 
-    client.user.setActivity(`status[rstatus]`, {
+    client.user.setActivity(status[rstatus], {
       type: "WATCHING"
     });
   }
