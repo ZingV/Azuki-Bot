@@ -17,7 +17,7 @@ exports.run = async (client, message, args) => {
       "<:pick:721715584752156753> | Pickaxe",
       "id: pick\ncost: 💴 1,200 Credits"
     )
-    .addField("<:guns:721722603219189801> | Gun", "id: gun\ncost: 💴 10,000 Creditd")
+    .addField("<:guns:721722603219189801> | Gun", "id: gun\ncost: 💴 10,000 Credits")
     .addField("<:tea:721723802211450910> | Tea", "id: tea\ncost: 💴 5 Credits");
   message.channel.send(embed);
 };

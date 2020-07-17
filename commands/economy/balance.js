@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
 
   var embed = new Discord.MessageEmbed()
     .setColor(config.color)
-    .setDescription(`**${user}** have 💴 **${money}** Credits`);
+    .setDescription(`**${user}** have 💴 **${money.toLocaleString()}** Credits`);
 
   message.channel.send(embed);
 };
