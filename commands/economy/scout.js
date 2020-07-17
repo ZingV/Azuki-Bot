@@ -21,7 +21,7 @@ exports.run = async (client,message, args) => {
             let embed = new Discord.MessageEmbed()
             .setColor("#00bfff")
             .setAuthor(`${message.author.tag}, it paid off`, message.author.displayAvatarURL())
-            .setDescription(`${message.author}, you searched a ${job} and found ${amountearned} coins`)
+            .setDescription(`${message.author}, you searched a ${job} and found 💴 ${amountearned} Credits`)
 
             message.channel.send(embed)
 

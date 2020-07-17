@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
       .setAuthor(`Daily`, message.author.displayAvatarURL)
       .setColor(config.color)
       .setDescription(`**Daily Rewards**`)
-      .addField(`Collected`, amount);
+      .addField(`Collected`, `💴 ${amount} Credits`);
     message.channel.send(embed);
 
     db.add(`money_${message.author.id}`, amount);

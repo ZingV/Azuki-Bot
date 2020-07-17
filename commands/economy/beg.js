@@ -35,7 +35,7 @@ exports.run = async (client, message, args) => {
         message.author.displayAvatarURL()
       )
       .setDescription(
-        `${message.author}, ${job} donated 💴${amountearned} Credits`
+        `${message.author}, ${job} donated 💴 ${amountearned} Credits`
       );
 
     message.channel.send(embed);

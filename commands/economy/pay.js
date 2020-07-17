@@ -21,7 +21,7 @@ exports.run = async(client,message, args) => {
         return message.channel.send(`That's more money than you've got in your balance. try again.`)
     }
 
-    message.channel.send(`${message.author.tag}, You successfully paid ${user.user.username} ${args[1]}$.`)
+    message.channel.send(`${message.author.tag}, You successfully paid ${user.user.username} 💴 ${args[1]} Credits`)
     db.add(`money_${user.id}`, args[1])
     db.subtract(`money_${message.author.id}`, args[1])
 
