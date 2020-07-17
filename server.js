@@ -31,9 +31,8 @@ client.on("ready", () => {
 
     // client.user.setActivity(status[rstatus], {type: "WATCHING"});
     // You can change the "WATCHING" into STREAMING, LISTENING, and PLAYING.
-    // Example: streaming
 
-    client.user.setActivity(`Bot Hacked By zLimit`, {
+    client.user.setActivity(`status[rstatus]`, {
       type: "WATCHING"
     });
   }
