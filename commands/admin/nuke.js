@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
       files: [
         {
           attachment:
-            "https://media.tenor.com/images/68a96e6ef5cb7b6f16f7147c8391f256/tenor.gif",
+            "https://cdn.discordapp.com/attachments/729193524104527942/729193525056372796/tenor.gif",
           name: "nuke.gif"
         }
       ]
