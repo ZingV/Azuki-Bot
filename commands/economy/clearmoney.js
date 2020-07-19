@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
   if(!user)
     return message.channel.send("Please mentions the user!")
   
-  db.subtract(`money_${message.author.id}`, 0)
+  db.delete(`money_${message.author.id}`)
   
   message.channel.send(`Cleared ${user} Credits`)
 }
