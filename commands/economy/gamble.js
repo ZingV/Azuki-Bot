@@ -15,7 +15,27 @@ exports.run = async (client, message, args) => {
   
   if(amount > bal || !bal || bal === 0) return message.channel.send("You don't have enough credits");
   
-  if(amount < 200
+  if(amount < 200) return message.channel.send("You don't have enough money for the gambling, The minimum was 💴 200 Credits");
+  
+  let cooldown = 10000;
+  let pad_zero = num => (num < 10 ? '0' : ' ') + num;
+  let lastGamble = await db.get(`lastGamble_${message.author.id}`);
+  
+  if (lastGamble !== null && cooldown - (Date.now() - lastGamble) > 0) {
+    let timeObj = ms(cooldown - (Date.now() - lastGamble));
+    let second = pad_zero(timeObj.seconds).padStart(2, "0");
+    return message.channel.send(`Woooo it so fast. You need wait **${second}** sec before you can gambling again.`)
+  }
+  
+  if(result < 5) {
+    db.set(`lastGamble_${message.author.id}`, Date.now());
+    db.subtract(`money_${message.author.id}`, amount)
+    return message.channel.send(`Ahh, no. You lose 💴 ${amount} Credits`)
+  } else if (result > 5) {
+    
+  }
+  
+  
 }
 
 exports.help = {
