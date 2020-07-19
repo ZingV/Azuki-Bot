@@ -10,7 +10,7 @@ exports.run = async (client, message, args) => {
   
   db.delete(`money_${user.id}`)
   
-  message.channel.send(`Cleared ${user} Credits`)
+  message.channel.send(`<a:b_yes:721969088813072425> | Cleared All ${user} Credits`)
 }
 
 exports.help = {
