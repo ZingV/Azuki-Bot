@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
   
   db.subtract(`money_${user.id}`, amount)
   
-  message.channel.send(`Successfully removed 💴** ${amount}** From ${user}`)
+  message.channel.send(`<a:b_yes:721969088813072425> | Successfully removed 💴** ${amount}** From ${user}`)
 }
 
 exports.help = {
