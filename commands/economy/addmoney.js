@@ -2,6 +2,8 @@ const Discord = require("discord.js");
 const db = require("quick.db");
 
 exports.run = async (client, message, args) => {
+  if (message.author.id !== "583649910092595232")
+    return message.channel.send("You don't have permission");
   let amount = args[0];
   if (!amount) return message.channel.send("Please specify amount");
 
