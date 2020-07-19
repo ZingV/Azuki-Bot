@@ -19,8 +19,8 @@ exports.run = async (client, message, args) => {
   var embed = new Discord.MessageEmbed()
     .setColor(config.color)
     .setAuthor(`${user.tag} Balance`)
-    .addField(`💵 Cash`, `💴 **${money}**`)
-    .addField(`🏦 Bank`, `💴 **${bank}**`)
+    .addField(`💵 Cash`, `💴 **${money.toLocaleString()}**`)
+    .addField(`🏦 Bank`, `💴 **${bank.toLocaleString()}**`)
     .setTimestamp(new Date());
 
   message.channel.send(embed);
