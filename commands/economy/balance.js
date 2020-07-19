@@ -5,16 +5,23 @@ const config = require("../../config.json");
 exports.run = async (client, message, args) => {
   let user = message.mentions.users.first() || message.author;
   let money = db.fetch(`money_${user.id}`);
+  let bank = db.fetch(`bank_${user.id}`);
 
-  if(user.bot || user === client.user) {
-    return message.channel.send("<a:b_no:721969465205588048> | This user is a bot")
+  if (user.bot || user === client.user) {
+    return message.channel.send(
+      "<a:b_no:721969465205588048> | This user is a bot"
+    );
   }
-  
+
   if (money === null) money = 0;
+  if (bank === null) bank = 0;
 
   var embed = new Discord.MessageEmbed()
     .setColor(config.color)
-    .setDescription(`**${user}** have 💴 **${money.toLocaleString()}** Credits`);
+    .setAuthor(`${user.tag} Balance`)
+    .addField(`💵 Cash`, `💴 **${money}**`)
+    .addField(`🏦 Bank`, `💴 **${bank}**`)
+    .setTimestamp(new Date());
 
   message.channel.send(embed);
 };
