@@ -28,11 +28,13 @@ exports.run = async (client, message, args) => {
   }
   
   if(result < 5) {
-    db.set(`lastGamble_${message.author.id}`, Date.now());
-    db.subtract(`money_${message.author.id}`, amount)
-    return message.channel.send(`Ahh, no. You lose 💴 ${amount} Credits`)
+    await db.set(`lastGamble_${message.author.id}`, Date.now());
+    await db.subtract(`money_${message.author.id}`, amount)
+    return message.channel.send(`Ahh, no. You lose 💴 **${amount}**. Good Luck Next Time!`);
   } else if (result > 5) {
-    
+    await db.set(`lastGamble_${message.author.id}`, Date.now());
+    await db.add(`money_${message.author.id}`, amount);
+    return message.channel.send(`Woohoo, You Won 💴 **${amount}** Good Luck, Have Fun!`)
   }
   
   
