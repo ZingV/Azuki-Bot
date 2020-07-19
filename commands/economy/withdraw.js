@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
   
   db.subtract(`bank_${message.author.id}`, amount)
   
-  message.channel.send(`Successfully Withdraw 💴 **${amount}** To The Bank`)
+  message.channel.send(`Successfully Withdraw 💴 **${amount}** To The Cash`)
   
   db.add(`money_${message.author.id}`, amount)
 }
