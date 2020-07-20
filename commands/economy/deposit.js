@@ -2,9 +2,11 @@ const Discord = require("discord.js")
 const db = require("quick.db")
 
 exports.run = async (client, message, args) => {
-  let amount = args[0]
+  let amount = parseInt(args[0])
   if(!amount)
     return message.channel.send("Please insert an amount")
+  
+  if(amount > bal || !bal ||
   
   db.subtract(`money_${message.author.id}`, amount)
   
