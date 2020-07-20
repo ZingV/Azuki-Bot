@@ -1,4 +1,5 @@
 const config = require("../../config.json");
+const db = require("quick.db")
 const Discord = require("discord.js"),
   { post } = require("node-superfetch");
 
