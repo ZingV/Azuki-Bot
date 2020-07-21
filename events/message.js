@@ -19,7 +19,7 @@ module.exports = async (client, message) => {
   
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
-    return message.channel.send(`👋 ${message.author} My prefix is \`${prefix}\``);
+    return message.channel.send(`👋 ${message.author} My Current Prefix Is \`${prefix}\``);
   }
   
   let inviteLink = [];
