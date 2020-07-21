@@ -1,5 +1,6 @@
 const Discord = require("discord.js"),
   cooldowns = new Discord.Collection();
+const db = require("quick.db")
 const config = require("../config.json");
 // cooldowns will store the user when they are still in the cooldown mode.
 
@@ -7,8 +8,20 @@ module.exports = async (client, message) => {
   // Prevent any chit-chats with other bots, or by himself.
   if (message.author.bot || message.author === client.user) return;
 
-  let prefix = client.config.prefix;
-
+  let pref = db.get(`prefix_${message.guild.id}`);
+  let prefix;
+  
+  if (!pref) {
+    prefix = config.prefix; // If the server doesn't have any custom prefix, return default.
+  } else {
+    prefix = pref;
+  }
+  
+  const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
+  if (message.content.match(prefixMention)) {
+    return message.channel.send(`👋 ${message.author} My prefix is \`${prefix}\``);
+  }
+  
   let inviteLink = [];
 
   if (inviteLink.some(word => message.content.toLowerCase().includes(word))) {
