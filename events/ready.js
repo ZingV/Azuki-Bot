@@ -9,7 +9,7 @@ module.exports = client => {
 
   client.on("message", async message => {
     
-    let pref = db.get(`prefix.${message.guild.id}`);
+    let pref = db.get(`prefix_${message.guild.id}`);
   let prefix;
   
   if (!pref) {
@@ -21,7 +21,7 @@ module.exports = client => {
     const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
     if (message.content.match(prefixMention)) {
       return message.channel.send(
-        `👋 ${message.author} My prefix is \`${prefix}\``
+        `👋 ${message.author} My prefix is \`${pref}\``
       );
     }
 
