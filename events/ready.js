@@ -5,9 +5,19 @@ const db = require("quick.db");
 module.exports = client => {
   console.log(`${client.user.tag} The bot is ready!`);
 
-  let prefix = config.prefix;
+  
 
   client.on("message", async message => {
+    
+    let pref = db.get(`prefix.${message.guild.id}`);
+  let prefix;
+  
+  if (!pref) {
+    prefix = config.prefix; // If the server doesn't have any custom prefix, return default.
+  } else {
+    prefix = pref;
+  }
+    
     const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
     if (message.content.match(prefixMention)) {
       return message.channel.send(
