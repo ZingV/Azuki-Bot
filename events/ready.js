@@ -9,19 +9,12 @@ module.exports = client => {
 
   client.on("message", async message => {
     
-    let pref = db.get(`prefix_${message.guild.id}`);
-  let prefix;
-  
-  if (!pref) {
-    prefix = config.prefix; // If the server doesn't have any custom prefix, return default.
-  } else {
-    prefix = pref;
-  }
+    let prefix = config.prefix;
     
     const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
     if (message.content.match(prefixMention)) {
       return message.channel.send(
-        `👋 ${message.author} My prefix is \`${pref}\``
+        `👋 ${message.author} My prefix is \`${prefix}\``
       );
     }
 
