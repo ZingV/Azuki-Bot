@@ -7,9 +7,6 @@ exports.run = async (client, message, args) => {
 
   const embed = new Discord.MessageEmbed()
     .setColor(config.color)
-    .setImage(
-      "https://www.gambaranimasi.org/data/media/562/animasi-bergerak-garis-0031.gif"
-    )
     .setAuthor(
       client.user.username + ` Server List [${client.guilds.cache.size}]:`,
       client.user.displayAvatarURL()
@@ -17,7 +14,8 @@ exports.run = async (client, message, args) => {
     .setDescription(`**${guildName}**`)
     .setImage(
       "https://www.gambaranimasi.org/data/media/562/animasi-bergerak-garis-0031.gif"
-    );
+    )
+  .setAuthor
 
   message.channel.send(embed);
 };
