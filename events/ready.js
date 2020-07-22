@@ -1,7 +1,6 @@
 const config = require("../config.json");
 const Discord = require("discord.js");
 const db = require("quick.db");
-const { addexp } = require("../handler/xp.js")
 
 module.exports = client => {
   console.log(`${client.user.tag} The bot is ready!`);
@@ -32,6 +31,5 @@ module.exports = client => {
       );
       afk.delete(message.author.id);
     }
-    return addexp(message)
   });
 };

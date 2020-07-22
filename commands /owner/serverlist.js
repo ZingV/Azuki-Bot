@@ -15,7 +15,7 @@ exports.run = async (client, message, args) => {
     .setImage(
       "https://www.gambaranimasi.org/data/media/562/animasi-bergerak-garis-0031.gif"
     )
-  .setAuthor
+    .setTimestamp(new Date());
 
   message.channel.send(embed);
 };
