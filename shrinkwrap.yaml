@@ -1,5 +1,6 @@
 dependencies:
   canvacord: 3.0.9
+  canvas: 2.6.1
   cheerio: 0.22.0
   date-fns: 2.14.0
   date-format: 3.0.0
@@ -2182,15 +2183,15 @@ packages:
     dev: false
     resolution:
       integrity: sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
-  /simple-concat/1.0.0:
+  /simple-concat/1.0.1:
     dev: false
     resolution:
-      integrity: sha1-c0TLuLbib7J9ZrL8hvn21Zl1IcY=
+      integrity: sha512-cSFtAPtRhljv69IK0hTVZQ+OfE9nePi/rtJmw5UjHeVyVroEqJXP1sFztKUy1qU+xvz3u/sfYJLa947b7nAN2Q==
   /simple-get/3.1.0:
     dependencies:
       decompress-response: 4.2.1
       once: 1.4.0
-      simple-concat: 1.0.0
+      simple-concat: 1.0.1
     dev: false
     resolution:
       integrity: sha512-bCR6cP+aTdScaQCnQKbPKtJOKDp/hj9EDLJo3Nw4y1QksqaovlW/bnptB6/c1e+qmNIDHRK+oXFDdEqBT8WzUA==
@@ -2568,6 +2569,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   canvacord: ^3.0.8
+  canvas: ^2.6.1
   cheerio: ^0.22.0
   date-fns: ^2.14.0
   date-format: ^3.0.0
