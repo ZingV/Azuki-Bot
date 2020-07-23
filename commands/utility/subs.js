@@ -8,7 +8,8 @@ exports.run = async (client, message, args) => {
   let yturl = args[0]
   let response = await request(yturl)
   let cok = cheerio.load(response)
-  let subscount = cok('').attr('title');
+  let subsCount = cok('[class="yt-subscription-button-subscriber-count-branded-horizontal subsribed yt-uix-tooltip"]').attr('title');
+  message.channel.send(`That Url YT Has Have ${subsCount} Subscriber`)
 }
 
 exports.help = {
