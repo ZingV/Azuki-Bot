@@ -29,7 +29,8 @@
     "request": "^2.88.2",
     "canvacord": "^3.0.8",
     "motivation": "^1.0.3",
-    "canvas": "^2.6.1"
+    "canvas": "^2.6.1",
+    "request-promise": "^4.2.6"
   },
   "engines": {
     "node": "12.x"
