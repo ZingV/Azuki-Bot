@@ -18,9 +18,11 @@ exports.run = async (client, message, args) => {
   
   const embed = new Discord.MessageEmbed()
   .setColor(client.config.color)
-  .setTitle('Server Invites')
+  .setAuthor('Server Invites', message.guild.iconURL())
+  .setImage('https://www.gambaranimasi.org/data/media/562/animasi-bergerak-garis-0031.gif')
   .addField('Leadeboard', `\`\`\`${table.table(possibleInvites)}\`\`\``)
-  .setFooter('All Invites Will Releated In This Leaderboard', 'https://www.gambaranimasi.org/data/media/562/animasi-bergerak-garis-0031.gif')
+  .setFooter('All Invites Will Releated In This Leaderboard', client.user.displayAvatarURL())
+  .setTimestamp(new Date())
   
   message.channel.send(embed)
   
