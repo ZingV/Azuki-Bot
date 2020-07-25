@@ -3,7 +3,7 @@ const Discord = require("discord.js"),
       table = require("table")
 
 exports.run = async (client, message, args) => {
-  let invites = await message.guilds.cache.fetchInvites().catch(error => {
+  let invites = await message.guild.fetchInvites().catch(error => {
     return message.channel.send("I Don't Have Permission To Check.")
   })
   
@@ -20,6 +20,7 @@ exports.run = async (client, message, args) => {
   .setColor(client.config.color)
   .setTitle('Server Invites')
   .addField('Leadeboard', `\`\`\`${table.table(possibleInvites)}\`\`\``)
+  .setFooter('All Invites Will Releated In This Leaderboard', 'https://www.gambaranimasi.org/data/media/562/animasi-bergerak-garis-0031.gif')
   
   message.channel.send(embed)
   
