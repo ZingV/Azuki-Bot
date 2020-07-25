@@ -4,7 +4,7 @@ const config = require("../../config.json");
 exports.run = async (client, message, args) => {
   if (message.author.id !== "583649910092595232") return;
   
-  client.guilds.cache.forEach(function(guild))
+  let guild = client.guilds.cache.map(a => a.name)
   
   const embed = new Discord.MessageEmbed()
     .setColor(config.color)
@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
       client.user.username + ` Server List [${client.guilds.cache.size}]:`,
       client.user.displayAvatarURL()
     )
-    .setDescription(`**${guildName}**`)
+    .setDescription(`**${guild.name}**`)
     .setImage(
       "https://www.gambaranimasi.org/data/media/562/animasi-bergerak-garis-0031.gif"
     )
