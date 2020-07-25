@@ -30,7 +30,9 @@
     "canvacord": "^3.0.8",
     "motivation": "^1.0.3",
     "canvas": "^2.6.1",
-    "request-promise": "^4.2.6"
+    "request-promise": "^4.2.6",
+    "array-sort": "^1.0.0",
+    "table": "^5.4.6"
   },
   "engines": {
     "node": "12.x"
