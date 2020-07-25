@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
       client.user.username + ` Server List [${client.guilds.cache.size}]:`,
       client.user.displayAvatarURL()
     )
-    .setDescription(`**${guild.name}**`)
+    .setDescription(`**${guild}**`)
     .setImage(
       "https://www.gambaranimasi.org/data/media/562/animasi-bergerak-garis-0031.gif"
     )
