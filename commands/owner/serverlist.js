@@ -4,7 +4,7 @@ const config = require("../../config.json");
 exports.run = async (client, message, args) => {
   if (message.author.id !== "583649910092595232") return;
   
-  let guild = client.guilds.cache.map(a => a.name)
+  let guild = client.guilds.cache.map(a => a.name).join("\n")
   
   const embed = new Discord.MessageEmbed()
     .setColor(config.color)
