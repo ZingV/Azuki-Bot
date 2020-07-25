@@ -8,7 +8,8 @@ exports.run = async (client, message, args) => {
 
   var guild = client.guilds.cache.get(guildId);
   var channel = guild.channels.cache.find(ch => ch.type === "text"); // getting server's random text channel
-  channel.createInvite().then(invite => {
+  channel.createInvite().catch(error => {
+    r.then(invite => {
     message.channel.send(`**${message.author} Here Invite Link For That Guild ID**\n**Here:** ${invite.url}`);
   });
 };
