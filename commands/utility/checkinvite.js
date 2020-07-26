@@ -20,7 +20,7 @@ exports.run = async (client, message, args) => {
   .setColor(client.config.color)
   .setAuthor('Server Invites', message.guild.iconURL())
   .setImage('https://www.gambaranimasi.org/data/media/562/animasi-bergerak-garis-0031.gif')
-  .addField('Leadeboard', `\`\`\`${table.table(possibleInvites)}\`\`\``)
+  .setDescription(`Leadeboard\n\`\`\`${table.table(possibleInvites)}\`\`\``)
   .setFooter('All Invites Will Releated In This Leaderboard', client.user.displayAvatarURL())
   .setTimestamp(new Date())
   
