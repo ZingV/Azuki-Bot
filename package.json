@@ -35,7 +35,7 @@
     "table": "^5.4.6"
   },
   "engines": {
-    "node": "10.x"
+    "node": "12.x"
   },
   "license": "Apache-2.0"
 }
