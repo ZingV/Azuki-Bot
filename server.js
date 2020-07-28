@@ -15,6 +15,19 @@ const tutorialBot = require("./handler/ClientBuilder.js"); // We're gonna create
 const client = new tutorialBot();
 const config = require("./config.json");
 
+const { GiveawaysManager } = require('discord-giveaways');
+
+client.giveawaysManager = new GiveawaysManager(client, {
+    storage: "./giveaways.json",
+    updateCountdownEvery: 5000,
+    default: {
+        botsCanWin: false,
+        exemptPermissions: [],
+        embedColor: "#FF0000",
+        reaction: "🎉"
+    }
+});
+
 require("./handler/module.js")(client);
 require("./handler/Event.js")(client);
 

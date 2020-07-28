@@ -32,7 +32,8 @@
     "canvas": "^2.6.1",
     "request-promise": "^4.2.6",
     "array-sort": "^1.0.0",
-    "table": "^5.4.6"
+    "table": "^5.4.6",
+    "discord-giveaways": "^4.2.1"
   },
   "engines": {
     "node": "12.x"
