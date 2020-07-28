@@ -1,5 +1,7 @@
 {
   "owners": ["583649910092595232"],
   "prefix": "o.",
-  "color": "#00BFFF"
+  "color": "#00BFFF",
+  "everyoneMention": false,
+  "hostedBy": true
 }
