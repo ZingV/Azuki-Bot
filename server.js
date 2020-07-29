@@ -3,7 +3,9 @@ const express = require("express");
 const app = express();
 app.get("/", (request, response) => {
   console.log("Ping received");
+  var owner = client.users.cache.get("583649910092595232")
   response.sendStatus(200);
+  response.send("Owner This Project Is " + owner.tag + ", If You Want Asking Something Just DM Him!")
 });
 app.listen(process.env.PORT);
 setInterval(() => {
