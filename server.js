@@ -6,8 +6,6 @@ app.use(express.static("public"))
 
 app.get("/", (request, response) => {
   console.log("Ping received");
-  var discord = client.users.cache.get("583649910092595232")
-  response.send(discord.tag)
   response.sendStatus(200)
 })
 app.listen(process.env.PORT);
