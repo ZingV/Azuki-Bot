@@ -38,11 +38,11 @@ module.exports.run = async (client, message, args) => {
     await rMember.roles
       .add(role.id)
       .catch(e => message.channel.send(`<a:b_no:721969465205588048> | **${e.message}**`));
+    }
     return message.channel.send(
       `<a:b_yes:721969088813072425> | You has been added **${role}** to **${rMember.displayName}.**`
-    );
-  }
-};
+    )
+  };
 
 exports.help = {
   name: "addrole",

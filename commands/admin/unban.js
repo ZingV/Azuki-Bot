@@ -10,7 +10,7 @@ exports.run = async (client, message, args) => {
 
   let bannedMember = await client.users
     .fetch(args[0])
-    .catch(err =>
+    .catch(err => 
       message.channel.send(
         "<a:b_no:721969465205588048> | Please enter his id for unban"
       )
@@ -28,7 +28,6 @@ exports.run = async (client, message, args) => {
   
   message.guild.members
     .unban(bannedMember, { reason: reason })
-    .catch(e => console.log(e.message));
   return message.channel.send(
     `<a:b_yes:721969088813072425> | **${bannedMember.tag}** has been unbanned from the guild!`
   );
