@@ -33,7 +33,7 @@
     "discord-giveaways": "^4.2.1"
   },
   "engines": {
-    "node": "12.x"
+    "node": "10.x"
   },
   "license": "Apache-2.0"
 }
