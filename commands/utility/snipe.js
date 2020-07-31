@@ -15,18 +15,17 @@ exports.run = async (client, message, args) => {
   .setTimestamp()
   .setTitle("Sniped Message")
   .setDescription(`I got a deleted message from **${user}** in **<#${channel}>** \n> ${content}`)
+
   message.channel.send(embed);
 }
 
 exports.help = {
   name: "snipe",
   description: "Shows the last deleted message.",
-  usage: "/snipe",
-  example: "/snipe"
+  usage: "snipe",
 };
 
 exports.conf = {
   aliases: [],
   cooldown: 10
 }
-© 
