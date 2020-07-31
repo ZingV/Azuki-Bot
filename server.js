@@ -15,7 +15,7 @@ setInterval(() => {
 
 const Discord = require("discord.js");
 const tutorialBot = require("./handler/ClientBuilder.js"); // We're gonna create this soon.
-const client = new tutorialBot();
+const client = new tutorialBot({partials: ["MESSAGE", "CHANNEL"]});
 const config = require("./config.json");
 
 const { GiveawaysManager } = require('discord-giveaways');

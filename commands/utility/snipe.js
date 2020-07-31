@@ -10,10 +10,10 @@ exports.run = async (client, message, args) => {
       channel = message.channel.id;
   
   const embed = new Discord.MessageEmbed()
-  .setColor("RANDOM")
+  .setColor("#00bfff")
   .setTimestamp()
-  .setTitle("Sniped Message")
-  .setDescription(`I got a deleted message from **${user}** in **<#${channel}>** \n${content}`)
+  .setTitle(`${user}`)
+  .setDescription(`${content}`)
   message.channel.send(embed);
 }
 
