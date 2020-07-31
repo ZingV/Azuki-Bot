@@ -7,12 +7,12 @@ exports.run = async (client, message, args) => {
   
   let content = data.content,
       user = data.user,
-      channel = message.channel.id;
+      channel = data.channel;
   
   const embed = new Discord.MessageEmbed()
   .setColor("#00bfff")
   .setTimestamp()
-  .setTitle(`${user}`)
+  .setAuthor(`<@${user}>`)
   .setDescription(`${content}`)
   message.channel.send(embed);
 }
