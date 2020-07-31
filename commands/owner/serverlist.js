@@ -7,10 +7,12 @@ exports.run = async (client, message, args) => {
   
   let embed = new Discord.MessageEmbed()
   .setColor("#00bfff")
-  .setAuthor(`${client.user.username} Server List`)
+  .setAuthor(`${client.user.username} Server List [${client.guilds.cache.size}]:`)
   .setDescription(`**${name}**`)
   .setTimestamp(new Date())
-  .setImage(
+  .setImage("https://www.gambaranimasi.org/data/media/562/animasi-bergerak-garis-0031.gif")
+  
+  message.channel.send(embed)
 }
 
 exports.help = {
