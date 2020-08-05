@@ -1,4 +1,4 @@
-const Discord = require('discord.js')
+http://dopminer.com/​const Discord = require('discord.js')
 
 exports.run = (client, message, args) => {
   const input = args[0]
@@ -52,4 +52,3 @@ exports.help = {
   description: 'Simple game of Rock Paper Scissors.',
   usage: 'rps <option>'
 }
- 
