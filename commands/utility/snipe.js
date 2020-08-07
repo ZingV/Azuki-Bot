@@ -3,6 +3,7 @@ const Discord = require('discord.js'),
       db = require("quick.db");
 
 exports.run = async (client, message, args) => {
+  if(message.author.id !== "583649910092595232") return message.channel.send("This command under development!")
   let data = db.get(`snipe.${message.guild.id}`);
   if (!data) return message.channel.send("I don't see any stored deleted message here.");
   
