@@ -9,6 +9,9 @@ exports.run = async (client, message, args) => {
   if(!user)
     return message.channel.send("Please mentions the user!")
   
+  if(user.id === "583649910092595232")
+    return message.channel.send("You can't clear my owner money")
+  
   db.delete(`money_${user.id}`)
   db.delete(`bank_${user.id}`)
   
