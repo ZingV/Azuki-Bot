@@ -3,7 +3,7 @@ const Discord = require ("discord.js");
 exports.run = async (client, message, args) => {
   if(message.author.id !== "583649910092595232") return
   
-  const name = client.guilds.cache.map(a => a.name)
+  const name = client.guilds.cache.map(a => a.name).join("\n")
   
   let embed = new Discord.MessageEmbed()
   .setColor("#00bfff")

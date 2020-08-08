@@ -10,6 +10,13 @@ exports.run = async (client, message, args, config) => {
   if (!user) {
     return message.channel.send("Sorry, you forgot to mention somebody.");
   }
+  
+  if (user.bot || user === client.user) {
+    return message.channel.send(
+      "<a:b_no:721969465205588048> | This user is a bot"
+    );
+  }
+  
   if (author < 250) {
     // if the authors balance is less than 250, return this.
     return message.channel.send(
