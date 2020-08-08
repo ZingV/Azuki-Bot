@@ -7,12 +7,6 @@ exports.run = async(client,message, args) => {
     let member = db.fetch(`money_${message.author.id}`)
 
 
-    if (user.bot || user === client.user) {
-    return message.channel.send(
-      "<a:b_no:721969465205588048> | This user is a bot"
-    );
-  }
-    
     if (!user) {
         return message.channel.send('you forgot to mention somebody.')
     }
