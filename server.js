@@ -25,7 +25,7 @@ client.giveawaysManager = new GiveawaysManager(client, {
     updateCountdownEvery: 5000,
     default: {
         botsCanWin: false,
-        exemptPermissions: [],
+        exemptPermissions: ["MANAGE_SERVER"],
         embedColor: "#00bfff",
         reaction: "🎉"
     }
