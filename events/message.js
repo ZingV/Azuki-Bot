@@ -30,9 +30,13 @@ module.exports = async (client, message) => {
       .send("Bro, you can't promote your server here!")
       .then(m => m.delete({ timeout: 10000 })); // Add this if you want the message automatically deleted.
   }
+  
+let blacklist = await db.fetch(`blacklist_${message.author.id}`)
 
   // If the user doesn't doing any to the bot, return it.
   if (!message.content.startsWith(prefix)) return;
+  
+  if (blacklist === "Blacklisted") return message.reply("You are blacklisted from the bot!")
 
   let args = message.content
     .slice(prefix.length)
