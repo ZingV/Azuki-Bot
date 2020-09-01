@@ -103,14 +103,9 @@ let blacklist = await db.fetch(`blacklist_${message.author.id}`)
     let embed = new Discord.MessageEmbed()
       .setTitle(`Command Usage Logs`)
       .setColor(config.color)
-      .addField(
-        `Executor Command Place:`,
-        `Guild Name: **${message.guild.name}**\nGuild Owner: **${message.guild.owner.user.tag}**\nGuild ID: **${message.guild.id}**\nIn Channel: <#${message.channel.id}>\nChannel ID: **${message.channel.id}**`
-      )
-      .addField(`Executor Command:`, `\`\`\`${sender.tag}\`\`\``)
-      .addField(`Executor ID:`, `\`\`\`${sender.id}\`\`\``)
-      .addField(`Executing Command:`, `\`\`\`${cmd}\`\`\``)
-      .setTimestamp(new Date());
+      .addField("Command:", `\`\`\`${cmd}\`\`\``)
+      .addField("Server:", `\`\`\`${message.guild.name} (${message.guild.id})\`\`\``)
+      .addField("Executor:", `\`\`\`${message.author.tag} (${message.author.id})\`\`\``)
     client.channels.cache.get("730392825941721139").send(embed);
   }
 };
