@@ -3,13 +3,13 @@ const ms = require("parse-ms");
 const Discord = require("discord.js");
 
 exports.run = async (client, message, args, config) => {
-  let user = message.mentions.members.first();
+  let user = message.mentions.users.first();
+  if(!user) {
+    return message.channel.send("Sorry, you forgot to mention someone!");
+  }
   let targetuser = await db.fetch(`money_${user.id}`); // fetch mentioned users balance
   let author = await db.fetch(`money_${message.author.id}`); // fetch authors balance
 
-  if (!user) {
-    return message.channel.send("Sorry, you forgot to mention somebody.");
-  }
   if (author < 250) {
     // if the authors balance is less than 250, return this.
     return message.channel.send(
