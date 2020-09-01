@@ -14,7 +14,6 @@ exports.run = async (client, message, args) => {
     if (!client.config.owners.includes(message.author.id))
       module = client.helps.array().filter(x => !x.hide);
     const embed = new Discord.MessageEmbed()
-    .setImage("https://cdn.discordapp.com/attachments/734805831362674738/737811258677395486/20200729_061709.jpg")
       .setColor(config.color)
       .setTimestamp(new Date())
       .setFooter(

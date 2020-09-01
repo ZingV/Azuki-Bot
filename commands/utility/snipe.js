@@ -4,20 +4,16 @@ const Discord = require('discord.js'),
 
 exports.run = async (client, message, args) => {
   if(message.author.id !== "583649910092595232") return message.channel.send("This command under development!")
-  let data = db.get(`snipe.${message.guild.id}`);
-  if (!data) return message.channel.send("I don't see any stored deleted message here.");
-  
-  let content = data.content,
-      user = data.user,
-      channel = data.channel;
-  
-  const embed = new Discord.MessageEmbed()
-  .setColor("RANDOM")
-  .setTimestamp()
-  .setTitle("Sniped Message")
-  .setDescription(`I got a deleted message from **${user}** in **<#${channel}>** \n> ${content}`)
-
-  message.channel.send(embed);
+  const msg = client.snipes.get(message.channel.id)
+    if(!msg) return message.channel.send("I don't see any stored deleted message here.")
+    const embed = new Discord.MessageEmbed()
+    .setAuthor(msg.author, msg.author.displayAvatarURL())
+    .setColor("ffed00")
+    .setDescription(msg.content)
+    if(msg.image)embed.setImage(msg.image)
+    
+    message.channel.send(embed)
+   
 }
 
 exports.help = {
