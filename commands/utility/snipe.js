@@ -3,7 +3,6 @@ const Discord = require('discord.js'),
       db = require("quick.db");
 
 exports.run = async (client, message, args) => {
-  if(message.author.id !== "583649910092595232") return message.channel.send("This command under development!")
   const msg = client.snipes.get(message.channel.id)
     if(!msg) return message.channel.send("I don't see any stored deleted message here.")
     const embed = new Discord.MessageEmbed()
