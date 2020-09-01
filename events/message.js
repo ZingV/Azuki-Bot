@@ -103,10 +103,10 @@ let blacklist = await db.fetch(`blacklist_${message.author.id}`)
     let embed = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.displayAvatarURL())
     .setColor(config.color)
-    .setThumbnail(message.guild.icon)
+    .setThumbnail(message.guild.iconURL())
     .addField(`Command:`, `\`\`\`${cmd}\`\`\``)
-    .addField(`Server:`, `\`\`\`${message.guild.name}\`\`\``)
-    .addField(`Executor:`, `\`\`\`${message.author.tag}\`\`\``)
+    .addField(`Server:`, `\`\`\`${message.guild.name} (${message.guild.id})\`\`\``)
+    .addField(`Executor:`, `\`\`\`${message.author.tag} (${message.author.id})\`\`\``)
     .setTimestamp(new Date());
     client.channels.cache.get("730392825941721139").send(embed);
   }
