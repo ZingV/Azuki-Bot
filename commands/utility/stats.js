@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
   const discord = require("discord.js").version;
   const Node = process.version;
   const config = require("../../config.json");
-  const credit = client.users.cache.get("622019385086836765");
+  const credit = client.users.cache.get("694411710974525551");
   const credit2 = client.users.cache.get("580618094792146975");
   const owner = client.users.cache.get("583649910092595232");
   function parseDur(ms) {
