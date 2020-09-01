@@ -101,11 +101,13 @@ let blacklist = await db.fetch(`blacklist_${message.author.id}`)
     console.log(error.message);
   } finally {
     let embed = new Discord.MessageEmbed()
-      .setTitle(`Command Usage Logs`)
+      .setAuthor(message.author.tag, message.author.displayAvatarURL())
+      .setThumbnail(message.guild.iconURL())
       .setColor(config.color)
       .addField("Command:", `\`\`\`${cmd}\`\`\``)
       .addField("Server:", `\`\`\`${message.guild.name} (${message.guild.id})\`\`\``)
       .addField("Executor:", `\`\`\`${message.author.tag} (${message.author.id})\`\`\``)
+    .setTimestamp(new Date())
     client.channels.cache.get("730392825941721139").send(embed);
   }
 };
