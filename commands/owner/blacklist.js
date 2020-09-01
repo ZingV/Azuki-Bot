@@ -10,10 +10,9 @@ exports.run = async (client, message, args) => {
     if (blacklist === "Not") {
       db.set(`blacklist_${user.id}`, "Blacklisted") 
       message.channel.send(`The ${user} has been blacklisted from the bot!`)
-    } else {
-       db.set(`blacklist_${user.id}`, "Not") 
-      message.channel.send(`Setup data for ${user}, please re blacklist!`)
-}
+    } else if (blacklist === "Blacklisted") {
+      message.channel.send(`${user} already blacklisted!`)
+    }
 }
 
 exports.help = {
