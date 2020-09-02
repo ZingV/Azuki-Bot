@@ -54,7 +54,7 @@ exports.run = async (client, message, args) => {
     .setDescription(`**ID:** ${message.guild.id}`)
     .addField("Region", `\`\`\`${location}\`\`\``)
     .addField("Date Created", `\`\`\`${created} \nsince ${h} day(s)\`\`\``)
-    .addField("Boost", `\`\`\`${message.guild.premiumTier}\`\`\``)
+    .addField("Boost Level", `\`\`\`${message.guild.premiumTier}\`\`\``)
     .addField("Owner", `\`\`\`${message.guild.owner.user.tag}\`\`\``)
     .addField(`Members [${total}]`, `\`\`\`Online: ${online} \nIdle: ${idle} \nDND: ${dnd} \nOffline: ${offline} \nBots: ${robot}\`\`\``)
     .addField(`Channels [${totalchan}]`, `\`\`\`Text: ${text} \nVoice: ${vc} \nCategory: ${category}\`\`\``)
