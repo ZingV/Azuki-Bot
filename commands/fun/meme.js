@@ -1,29 +1,49 @@
-const randomPuppy = require("random-puppy");
-const Discord = require("discord.js");
-const config = require("../../config.json")
+const Discord = require('discord.js');
+const fetch = require("node-fetch");
 
 exports.run = async (client, message, args) => {
-    const name = await client.user.username
-    const subReddits = ["dankmemes", "meme", "memes"];
-    const random = subReddits[Math.floor(Math.random() * subReddits.length)];
+    let loadingEmbed = new Discord.MessageEmbed()
+    .setColor("RANDOM")
+    .setDescription(`<a:loading:746163270414762184> Generating a meme!...`)
+    let msg = await message.channel
+      .send(loadingEmbed)
+      .then(m => m.delete({ timeout: 2000 }));
 
-    const img = await randomPuppy(random);
-    const memeEmbed = new Discord.MessageEmbed()
-      .setColor(config.color)
-      .setImage(img)
-      .setTitle(`Your meme. From ${name}`)
-      .setURL(`https://reddit.com/r/${random}`);
-    message.channel.send(memeEmbed);
+      let random = ["Memes", "Meme", "Davie504", "Dankmemer", "funny"]
+      let memes = random[Math.floor(Math.random() * random.length)]
+      fetch(`https://www.reddit.com/r/${memes}.json?sort=top&t=daily`)
+      .then(res => res.json())
+      .then(body => {
+        if (!body) return message.reply("I broke, try again!");
+
+      const allowed = message.channel.nsfw ? body.data.children : body.data.children.filter(post => !post.data.over_18);
+      if (!allowed.length) return message.channel.send('Hmm looks like an error to me...');
+        const randomnumber = Math.floor(Math.random() * allowed.length)
+       
+    let url = `https://www.reddit.com${allowed[randomnumber].data.permalink}`
+    let embed = new Discord.MessageEmbed()
+      .setTitle(allowed[randomnumber].data.title)
+      .setURL(url)
+      .setImage(allowed[randomnumber].data.url)
+      .setDescription("**-----------------------------------**")
+      .addField("Meme provided by", `https://reddit.com/r/${memes}`)
+      .addField("Upvotes and Comments", `:yessir:750062662628540477> **${allowed[randomnumber].data.ups}** | <:General:738595801890029660> **${allowed[randomnumber].data.num_comments}**`)
+      .setColor("#00bfff")
+      .setTimestamp()
+      .setFooter(`Requested by ${message.author.tag}`, message.author.displayAvatarURL())
+
+    return message.channel.send(embed);
+    });
   }
 
 exports.help = {
-         name: "meme",
-         description: "search some meme with images",
-         usage: "meme",
-         example: "/meme",
-};
+  name: "meme",
+  description: "Checkmate some memes from Reddit",
+  usage: "meme",
+  example: "meme"
+}
 
 exports.conf = {
-          aliases: [""],
-          cooldown: 2
-};
+  aliases: [],
+  cooldown: 3
+}
