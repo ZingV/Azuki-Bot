@@ -27,7 +27,7 @@ exports.run = async (client, message, args) => {
       .setImage(allowed[randomnumber].data.url)
       .setDescription("**-----------------------------------**")
       .addField("Meme provided by", `https://reddit.com/r/${memes}`)
-      .addField("Upvotes and Comments", `:yessir:750062662628540477> **${allowed[randomnumber].data.ups}** | <:General:738595801890029660> **${allowed[randomnumber].data.num_comments}**`)
+      .addField("Upvotes and Comments", `<:yessir:750062662628540477> **${allowed[randomnumber].data.ups}** | <:General:738595801890029660> **${allowed[randomnumber].data.num_comments}**`)
       .setColor("#00bfff")
       .setTimestamp()
       .setFooter(`Requested by ${message.author.tag}`, message.author.displayAvatarURL())
