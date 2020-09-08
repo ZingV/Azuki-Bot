@@ -8,7 +8,6 @@ exports.run = async (client, message, args) => {
     );
 
   if (args.join(" ") === "all") {
-    let all = args[0];
     fetch(`https://corona.lmao.ninja/v2/all`)
       .then(res => res.text())
       .then(json => {
