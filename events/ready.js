@@ -8,6 +8,7 @@ module.exports = client => {
   
 
   client.on("message", async message => {
+    
     if(message.author.bot) return;
     if(!message.guild.id) return
     
