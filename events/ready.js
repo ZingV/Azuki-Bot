@@ -8,9 +8,6 @@ module.exports = client => {
   
 
   client.on("message", async message => {
-  if(message.content === "dhani" || message.content === "Dhani")
-    message.reply("He Was Retarded")
-    
     if(message.author.bot) return;
     if(!message.guild.id) return
     
