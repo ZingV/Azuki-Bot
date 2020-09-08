@@ -46,7 +46,6 @@ let blacklist = await db.fetch(`blacklist_${message.author.id}`)
   let cmd = args.shift().toLowerCase();
   let sender = message.author;
 
-  // Many people don't know what is message.flags.
   // We've already seen a bot who has a message.flags or they would called, parameter things.
   message.flags = [];
   while (args[0] && args[0][0] === "-") {
