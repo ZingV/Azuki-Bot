@@ -22,7 +22,7 @@ module.exports = async (client, message) => {
     return message.channel.send(`👋 ${message.author} My Current Prefix Is \`${prefix}\``);
   }
    
-let badword = db.fetch(`bl_${message.guild.id}`)
+let badword = db.fetch(`bl_${message.guild.id}`);
 
 if (badword.some(word => message.content.toLowerCase().includes(word))) {
     await message.delete();
