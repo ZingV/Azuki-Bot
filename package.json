@@ -31,7 +31,8 @@
     "array-sort": "^1.0.0",
     "table": "^5.4.6",
     "discord-giveaways": "^4.2.1",
-    "cheerio": "^0.22.0"
+    "cheerio": "^0.22.0",
+    "request": "^2.88.2"
   },
   "engines": {
     "node": "12.x"
