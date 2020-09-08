@@ -6,7 +6,7 @@ app.use(express.static("public"))
 
 app.get("/", (request, response) => {
   console.log("Ping received");
-  response.sendStatus(200)
+  response.sendStatus(301)
 })
 app.listen(process.env.PORT);
 setInterval(() => {
