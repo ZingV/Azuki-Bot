@@ -21,15 +21,6 @@ module.exports = async (client, message) => {
   if (message.content.match(prefixMention)) {
     return message.channel.send(`👋 ${message.author} My Current Prefix Is \`${prefix}\``);
   }
-   
-let badword = db.fetch(`bl_${message.guild.id}`);
-
-if (badword.some(word => message.content.toLowerCase().includes(word))) {
-    await message.delete();
-    return message.channel
-      .send("Kamu telah mengucapkan kata-kata terlarang!")
-      .then(m => m.delete({ timeout: 10000 })); 
-}
   
   let inviteLink = [];
 
