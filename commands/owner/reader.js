@@ -8,8 +8,20 @@ exports.run = async(client, message, args) => {
   if(!ip)
     return message.channel.send("Please input the ip!")
   
-  req.post(`httpmessage.channel.send(`Result from ${ip}`)
-://${ip}/growtopia/server_data.php`, function(err, response, body) {
-    
+  const m = await message.channel.send("Reading the Server_Data.php...").then(a => a.delete({ timeout: 5000 }));
+  
+  req.post(`http://${ip}/growtopia/server_data.php`, function(err, response, body) {
+    message.channel.send(`\`\`\`css\nResult from ${ip}\n--------------------------------------\n${response && response.statusCode}\n${body}\n--------------------------------------\`\`\``)
   })
+};
+
+exports.help = {
+  name: "reader",
+  description: "Read Server_Data.php for GTPS",
+  usage: "reader <ip>"
+}
+
+exports.conf = {
+  aliases: [],
+  cooldown: 0
 }
