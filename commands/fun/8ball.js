@@ -4,12 +4,12 @@ exports.run = async(client, message, args) => {
   
 const pertanyaan = args.join(" ")
 
-if(!pertanyaan) return message.channel.send('You must write something.')
+if(!pertanyaan) return message.channel.send('Give me questions!')
 
 const responses = [
     "Yes",
     "Maybe yes, Maybe no",
-    "Literally i don't"
+    "Literally, i don't care",
     "Probably",
     "I don't know",
     "Unprobably",
@@ -18,10 +18,22 @@ const responses = [
 const randomResponse = Math.floor(Math.random() * (responses.length - 1) + 1);
 
 const embed = new Discord.MessageEmbed()
-.setTitle('Magic 8Ball')
-.setColor('RANDOM')
-.setDescription(`❓ **Question:** \`\`\`${message}\`\`\`\n❗ **Answer:** \`\`\`${responses[randomResponse]}\`\`\``)
+.setAuthor('Magic 8Ball', client.user.displayAvatarURL())
+.setColor('#00bfff')
+.addField(`❓ **Question:**`, `\`\`\`${message}\`\`\``)
+.addField(`❗ **Answer:**`, `\`\`\`${responses[randomResponse]}\`\`\``)
 .setFooter(`Request by ${message.author.tag}`)
 .setTimestamp()
 message.channel.send(embed)
+}
+
+exports.help = {
+  name: "8ball",
+  description: "Give some question, the bot will reply!",
+  usage: "8ball <questions>"
+}
+
+exports.conf = {
+  aliases: [],
+  cooldown: 5
 }
