@@ -5,6 +5,17 @@ const db = require("quick.db");
 module.exports = client => {
   console.log(`${client.user.tag} The bot is ready!`);
 
+client.snipes = new Map();
+client.on('messageDelete', function(message, channel){
+  
+  client.snipes.set(message.channel.id, {
+    content:message.content,
+    author:message.author.tag,
+    avatar:message.author.displayAvatarURL(),
+    image:message.attachments.first() ? message.attachments.first().proxyURL : null
+  })
+  
+})
   
 
   client.on("message", async message => {

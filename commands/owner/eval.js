@@ -1,6 +1,6 @@
 const config = require("../../config.json");
 const db = require("quick.db")
-const choice = [":no_entry_sign:"]
+const choice = ["🚫"]
 const Discord = require("discord.js"),
   { post } = require("node-superfetch");
 
@@ -49,7 +49,7 @@ exports.run = async (client, message, args) => {
         .setColor(config.color);
       // Sometimes, the body.key will turn into undefined. It might be the API is under maintenance or broken.
     } else {
-      embed.addField("Output", "```js\n" + output + "```").setColor(config.color);
+      embed.addField("Output", "```js\n" + output + "```").setColor(config.color).setFooter(`${client.user.username} Bot V1`).setTimestamp();
     }
 
     const m = await message.channel.send(embed);
@@ -58,7 +58,7 @@ exports.run = async (client, message, args) => {
     }
     const filter = (rect, usr) => choice.includes(rect.emoji.name) && usr.id === message.author.id;
     m.createReactionCollector(filter, { time: 600000, max: 1 }).on("collect", async col => {
-      if (col.emoji.name === "ðŸš«") return m.delete();
+      if (col.emoji.name === "🚫") return m.delete();
     });
   } catch (error) {
     let err = clean(error);
@@ -69,7 +69,7 @@ exports.run = async (client, message, args) => {
         .addField("Output", `https://hastebin.com/${body.key}.js`)
         .setColor(config.color);
     } else {
-      embed.addField("Output", "```js\n" + err + "```").setColor(config.color);
+      embed.addField("Output", "```js\n" + err + "```").setColor(config.color).setFooter(`${client.user.username} Bot V1`).setTimestamp();
     }
 
     const m = await message.channel.send(embed);
@@ -78,7 +78,7 @@ exports.run = async (client, message, args) => {
     }
     const filter = (rect, usr) => choice.includes(rect.emoji.name) && usr.id === message.author.id;
     m.createReactionCollector(filter, { time: 600000, max: 1 }).on("collect", async col => {
-      if (col.emoji.name === "ðŸš«") return m.delete();
+      if (col.emoji.name === "🚫") return m.delete();
     });
   }
 };

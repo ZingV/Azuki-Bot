@@ -32,18 +32,6 @@ client.giveawaysManager = new GiveawaysManager(client, {
     }
 });
 
-client.snipes = new Map();
-client.on('messageDelete', function(message, channel){
-  
-  client.snipes.set(message.channel.id, {
-    content:message.content,
-    author:message.author.tag,
-    avatar:message.author.displayAvatarURL(),
-    image:message.attachments.first() ? message.attachments.first().proxyURL : null
-  })
-  
-})
-
 require("./handler/module.js")(client);
 require("./handler/Event.js")(client);
 
