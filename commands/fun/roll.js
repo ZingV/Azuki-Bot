@@ -13,7 +13,7 @@ exports.run = async(client, message, args) => {
   }
   else {
     let embeds = new MessageEmbed()
-    .setColor("RANDOM")
+    .setColor("#FF0000")
     .setAuthor("Roulette Wheel", "https://vignette.wikia.nocookie.net/growtopia/images/8/8f/ItemSprites.png/revision/latest/window-crop/width/32/x-offset/544/y-offset/64/window-width/32/window-height/32?fill=cb-20201001200938")
     .setDescription(`**${message.author.username}** spun the wheel, And got **${result}**!`)
     .setTimestamp()
