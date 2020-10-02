@@ -26,7 +26,7 @@ exports.run = async (client, message, args) => {
         obj = obj.sort((x, y) => y.members - x.members) 
         
         for (let i = 0;i < size;i++) {  
-          content.push(`**${i + 1}# - ${obj[i].name}**:\n**Guild ID**: \`${obj[i].id}\`\n**Owner ID**: \`${obj[i].ownerID}\`\n**Member Count**: \`${obj[i].members}\``) 
+          content.push(`**${i + 1}# - ${obj[i].name}**:\n**Guild ID**: \`${obj[i].id}\`\n**Owner ID**: \`${obj[i].ownerID}\`\n**Member Count**: \`${obj[i].members}\` Users`) 
         }
   
   let embed = new Discord.MessageEmbed()
