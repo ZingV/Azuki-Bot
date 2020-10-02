@@ -27,6 +27,7 @@ client.giveawaysManager = new GiveawaysManager(client, {
         botsCanWin: false,
         exemptPermissions: [],
         embedColor: "#00bfff",
+        embedColorEnd: "#00bfff",
         reaction: "🎉"
     }
 });
