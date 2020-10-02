@@ -3,6 +3,8 @@ const Discord = require ("discord.js");
 exports.run = async (client, message, args) => {
   if(message.author.id !== "583649910092595232") return
   
+  let limit = 15;
+  
   let obj = [] 
                 
         client.guilds.cache.map(async x => {
@@ -15,8 +17,11 @@ exports.run = async (client, message, args) => {
           }) 
         }) 
        
-        //await new Promise(resolve => setTimeout(resolve, 2500))
-        
+        let lastPage = Math.ceil(Object.keys(obj).length / limit)
+        let page = parseInt(args[0])
+        if (!page) page = 1;
+        if (page > lastPage) return message.channel.send(`There is no page **${page}**`)
+  
         let content = []
         
         let size = obj.length
