@@ -13,7 +13,6 @@ exports.run = async (client, message, args) => {
             name: x.name,
             members: x.memberCount,
             ownerID: x.ownerID,
-            ownertag: x.ownerID.tag,
             id: x.id
           }) 
         }) 
@@ -27,14 +26,15 @@ exports.run = async (client, message, args) => {
         obj = obj.sort((x, y) => y.members - x.members) 
         
         for (let i = 0;i < size;i++) {  
-          content.push(`**${i + 1}# - ${obj[i].name}**:\n**Guild ID**: \`${obj[i].id}\`\n**Owner ID**: \`${obj[i].ownerID}\`\n**Owner Tag**: \`${obj[i].ownertag}\`\n**`) 
+          content.push(`**${i + 1}# - ${obj[i].name}**:\n**Guild ID**: \`${obj[i].id}\`\n**Owner ID**: \`${obj[i].ownerID}\`\n**Member Count**: \`${obj[i].members}\``) 
         }
   
   let embed = new Discord.MessageEmbed()
   .setColor("#00bfff")
-  .setAuthor(`${client.user.username} Server List [${client.guilds.cache.size}]:`)
+  .setAuthor(`${client.user.username} Server List:`)
   .setDescription(content.join("\n\n"))
   .setTimestamp(new Date())
+  .setFooter("Top 10 Server On My Dashboard")
   .setImage("https://www.gambaranimasi.org/data/media/562/animasi-bergerak-garis-0031.gif")
   
   message.channel.send(embed)
