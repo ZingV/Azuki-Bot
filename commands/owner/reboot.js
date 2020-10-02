@@ -14,8 +14,7 @@ exports.run = async (client, message, args) => {
   
   m.edit("Reboot successfully")
 
-    .then(message => process.exit())
-    .then(() => client.login(process.env.token))
+    process.exit(1)
 };
 
 exports.conf = {

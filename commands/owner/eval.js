@@ -22,6 +22,7 @@ exports.run = async (client, message, args) => {
       return message.channel.send(
         "<a:b_no:721969465205588048> | Please include the code."
       );
+    message.delete();
     let evaled;
 
     // This method is to prevent someone that you trust, open the secret shit here.

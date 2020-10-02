@@ -1,6 +1,8 @@
 const { MessageEmbed } = require("discord.js")
 
 exports.run = async(client, message, args) => {
+  const a = await message.channel.send("<a:loading:746163270414762184> roulette is spinning..").then(b => b.delete({ timeout: 2000 }));
+  
   let result = Math.floor(Math.random() * 32);
   
   if (result == 0) {
