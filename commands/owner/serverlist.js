@@ -13,24 +13,22 @@ exports.run = async (client, message, args) => {
             name: x.name,
             members: x.memberCount,
             ownerID: x.ownerID,
+            ownertag: x.ownerID.tag,
             id: x.id
           }) 
         }) 
        
-        let lastPage = Math.ceil(Object.keys(obj).length / limit)
-        let page = parseInt(args[0])
-        if (!page) page = 1;
-        if (page > lastPage) return message.channel.send(`There is no page **${page}**`)
-  
-  let frompages = limit * (page - 1);
-  let pageslimit = 15 * page;
-  
-  let list = Object.entries(obj).sort((a, b) => b.members - a.members).slice(frompages, pageslimit);
-  let content = []
-  
-  for (var i in list) {
-    content.push(`**${i + 1}#** - **${obj[i].name}**:\n**Guild ID:** \`${obj[i].id}\``)
-  }
+        let content = []
+        
+        let size = obj.length
+        
+        if (size > 10) size = 10
+        
+        obj = obj.sort((x, y) => y.members - x.members) 
+        
+        for (let i = 0;i < size;i++) {  
+          content.push(`**${i + 1}# - ${obj[i].name}**:\n**Guild ID**: \`${obj[i].id}\`\n**Owner ID**: \`${obj[i].ownerID}\`\n**Owner Tag**: \`${obj[i].ownertag}\`\n**`) 
+        }
   
   let embed = new Discord.MessageEmbed()
   .setColor("#00bfff")
