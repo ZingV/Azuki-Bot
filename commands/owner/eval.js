@@ -1,5 +1,6 @@
 const config = require("../../config.json");
 const db = require("quick.db")
+const choice = [":no_entry_sign:"]
 const Discord = require("discord.js"),
   { post } = require("node-superfetch");
 
@@ -51,7 +52,14 @@ exports.run = async (client, message, args) => {
       embed.addField("Output", "```js\n" + output + "```").setColor(config.color);
     }
 
-    message.channel.send(embed);
+    const m = await message.channel.send(embed);
+    for (const chot of choice) {
+      await m.react(chot);
+    }
+    const filter = (rect, usr) => choice.includes(rect.emoji.name) && usr.id === message.author.id;
+    m.createReactionCollector(filter, { time: 600000, max: 1 }).on("collect", async col => {
+      if (col.emoji.name === "ðŸš«") return m.delete();
+    });
   } catch (error) {
     let err = clean(error);
     if (err.length > 1024) {
@@ -64,7 +72,14 @@ exports.run = async (client, message, args) => {
       embed.addField("Output", "```js\n" + err + "```").setColor(config.color);
     }
 
-    message.channel.send(embed);
+    const m = await message.channel.send(embed);
+    for (const chot of choice) {
+      await m.react(chot);
+    }
+    const filter = (rect, usr) => choice.includes(rect.emoji.name) && usr.id === message.author.id;
+    m.createReactionCollector(filter, { time: 600000, max: 1 }).on("collect", async col => {
+      if (col.emoji.name === "ðŸš«") return m.delete();
+    });
   }
 };
 
