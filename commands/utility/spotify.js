@@ -8,13 +8,15 @@ exports.run = async (client, message, args) => {
     } else {
         user = message.author;
     }
+  
+  if (user.bot || user == client.user) return message.channel.send("That's user is bot!")
 
     let status;
     if (user.presence.activities.length === 1) status = user.presence.activities[0];
     else if (user.presence.activities.length > 1) status = user.presence.activities[1];
 
     if (user.presence.activities.length === 0 || status.name !== "Spotify" && status.type !== "LISTENING") {
-        return message.channel.send("This user isn't listening to Spotify.");
+        return message.channel.send(`**${user.tag}** isn't listening to Spotify.`);
     }
 
     if (status !== null && status.type === "LISTENING" && status.name === "Spotify" && status.assets !== null) {

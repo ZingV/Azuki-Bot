@@ -20,7 +20,7 @@ const randomResponse = Math.floor(Math.random() * (responses.length - 1) + 1);
 const embed = new Discord.MessageEmbed()
 .setAuthor('Magic 8Ball', client.user.displayAvatarURL())
 .setColor('#00bfff')
-.addField(`❓ **Question:**`, `\`\`\`${message}\`\`\``)
+.addField(`❓ **Question:**`, `\`\`\`${pertanyaan}\`\`\``)
 .addField(`❗ **Answer:**`, `\`\`\`${responses[randomResponse]}\`\`\``)
 .setFooter(`Request by ${message.author.tag}`)
 .setTimestamp()
