@@ -1,17 +1,14 @@
-const http = require("http");
-const express = require("express");
+const http = require('http');
+const express = require('express');
 const app = express();
-
-app.use(express.static("public"))
-
 app.get("/", (request, response) => {
-  console.log("Ping received");
-  response.sendStatus(200)
-})
+  console.log('[!] Ping Received!');
+  response.sendStatus(200);
+});
 app.listen(process.env.PORT);
 setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 60000);
+}, 280000);
 
 const Discord = require("discord.js");
 const tutorialBot = require("./handler/ClientBuilder.js"); // We're gonna create this soon.
