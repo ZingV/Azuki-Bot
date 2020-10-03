@@ -3,11 +3,13 @@ exports.run = async (client, message, args) => {
   
   if (!a) return message.channel.send("Enter your text!");
   
+  message.delete();
+  
   let reverse = a.split("").reverse().join("")
   
   let loadmsg = await message.channel.send("<a:loading:746163270414762184> Reversing ur text....").then(a => a.delete({ timeout: 1000}));
   
-  message.channel.send("Here ur text: " + reverse);
+  message.channel.send(`**${message.author.username}**: "${reverse}"`);
 }
 
 exports.help = {
