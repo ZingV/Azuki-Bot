@@ -1,4 +1,5 @@
 dependencies:
+  '@k3rn31p4nic/google-translate-api': 1.1.1
   array-sort: 1.0.0
   canvacord: 3.0.9
   cheerio: 0.22.0
@@ -449,6 +450,57 @@ packages:
     dev: false
     resolution:
       integrity: sha512-MY5KFYUru0y74IsgM/9asDwb3ERxWxXEu3CRCZEvE7DtT86y1bR1XgtlSliMrptjz4qbivNGMQSvUBpEFJDp1A==
+  /@k3rn31p4nic/google-translate-api/1.1.1:
+    dependencies:
+      got: 11.7.0
+    dev: false
+    engines:
+      node: '>=8.0.0'
+    resolution:
+      integrity: sha512-vg3zLYXhUmdwrNxmoKOfYSJzB8lHKDnqR7L/SYQQKCYkxsj2syK/cJMAcK5fQC0hfwgexxUaWhR2p2gGEe3nVw==
+  /@sindresorhus/is/3.1.2:
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-JiX9vxoKMmu8Y3Zr2RVathBL1Cdu4Nt4MuNWemt1Nc06A0RAin9c5FArkhGsyMBWfCu4zj+9b+GxtjAnE4qqLQ==
+  /@szmarczak/http-timer/4.0.5:
+    dependencies:
+      defer-to-connect: 2.0.0
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-PyRA9sm1Yayuj5OIoJ1hGt2YISX45w9WcFbh6ddT0Z/0yaFxOtGLInr4jUfU1EAFVs0Yfyfev4RNwBlUaHdlDQ==
+  /@types/cacheable-request/6.0.1:
+    dependencies:
+      '@types/http-cache-semantics': 4.0.0
+      '@types/keyv': 3.1.1
+      '@types/node': 14.11.2
+      '@types/responselike': 1.0.0
+    dev: false
+    resolution:
+      integrity: sha512-ykFq2zmBGOCbpIXtoVbz4SKY5QriWPh3AjyU4G74RYbtt5yOc5OfaY75ftjg7mikMOla1CTGpX3lLbuJh8DTrQ==
+  /@types/http-cache-semantics/4.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-c3Xy026kOF7QOTn00hbIllV1dLR9hG9NkSrLQgCVs8NF6sBU+VGWjD3wLPhmh1TYAc7ugCFsvHYMN4VcBN1U1A==
+  /@types/keyv/3.1.1:
+    dependencies:
+      '@types/node': 14.11.2
+    dev: false
+    resolution:
+      integrity: sha512-MPtoySlAZQ37VoLaPcTHCu1RWJ4llDkULYZIzOYxlhxBqYPB0RsRlmMU0R6tahtFe27mIdkHV+551ZWV4PLmVw==
+  /@types/node/14.11.2:
+    dev: false
+    resolution:
+      integrity: sha512-jiE3QIxJ8JLNcb1Ps6rDbysDhN4xa8DJJvuC9prr6w+1tIh+QAbYyNF3tyiZNLDBIuBCf4KEcV2UvQm/V60xfA==
+  /@types/responselike/1.0.0:
+    dependencies:
+      '@types/node': 14.11.2
+    dev: false
+    resolution:
+      integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==
   /abbrev/1.1.1:
     dev: false
     resolution:
@@ -666,6 +718,26 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
+  /cacheable-lookup/5.0.3:
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-W+JBqF9SWe18A72XFzN/V/CULFzPm7sBXzzR6ekkE+3tLG72wFZrBiBZhrZuDoYexop4PHJVdFAKb/Nj9+tm9w==
+  /cacheable-request/7.0.1:
+    dependencies:
+      clone-response: 1.0.2
+      get-stream: 5.2.0
+      http-cache-semantics: 4.1.0
+      keyv: 4.0.3
+      lowercase-keys: 2.0.0
+      normalize-url: 4.5.0
+      responselike: 2.0.0
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-lt0mJ6YAnsrBErpTMWeu5kl/tg9xMAWjavYTN6VQXM1A/teBITuNcccXsCxF0tDQQJf9DfAaX5O4e0zp0KlfZw==
   /canvacord/3.0.9:
     dependencies:
       '@jimp/custom': 0.14.0
@@ -725,6 +797,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==
+  /clone-response/1.0.2:
+    dependencies:
+      mimic-response: 1.0.1
+    dev: false
+    resolution:
+      integrity: sha1-0dyXOSAxTfZ/vrlCI7TuNQI56Ws=
   /code-point-at/1.1.0:
     dev: false
     engines:
@@ -872,6 +950,14 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-jOSne2qbyE+/r8G1VU+G/82LBs2Fs4LAsTiLSHOCOMZQl2OKZ6i8i4IyHemTe+/yIXOtTcRQMzPcgyhoFlqPkw==
+  /decompress-response/6.0.0:
+    dependencies:
+      mimic-response: 3.1.0
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ==
   /deep-extend/0.6.0:
     dev: false
     engines:
@@ -892,6 +978,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-QWfXlM0EkAbqOCbD/6HjdwT19j7WCkMyiRhWilc4H9/5h/RzTF9gv5LYh1+CmDV5d1rki6KAWLtQale0xt20eQ==
+  /defer-to-connect/2.0.0:
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-bYL2d05vOSf1JEZNx5vSAtPuBMkX8K9EUutg7zlKvTqKXHt7RhWJFbmd7qakVuf13i+IkGmp6FwSsONOf6VYIg==
   /delayed-stream/1.0.0:
     dev: false
     engines:
@@ -1256,6 +1348,14 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-jpQ9E1jcN1VQVOy+LtsFqhdO3hQ=
+  /get-stream/5.2.0:
+    dependencies:
+      pump: 3.0.0
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-nBF+F1rAZVCu/p7rjzgA+Yb4lfYXrpl7a6VmJrU8wF9I1CKvP/QwPNZHnOlwbTkY6dvtFIzFMSyQXbLoTQPRpA==
   /get-value/2.0.6:
     dev: false
     engines:
@@ -1303,6 +1403,24 @@ packages:
     dev: false
     resolution:
       integrity: sha1-52mJJopsdMOJCLEwWxD8DjlOnQ8=
+  /got/11.7.0:
+    dependencies:
+      '@sindresorhus/is': 3.1.2
+      '@szmarczak/http-timer': 4.0.5
+      '@types/cacheable-request': 6.0.1
+      '@types/responselike': 1.0.0
+      cacheable-lookup: 5.0.3
+      cacheable-request: 7.0.1
+      decompress-response: 6.0.0
+      http2-wrapper: 1.0.0-beta.5.2
+      lowercase-keys: 2.0.0
+      p-cancelable: 2.0.0
+      responselike: 2.0.0
+    dev: false
+    engines:
+      node: '>=10.19.0'
+    resolution:
+      integrity: sha512-7en2XwH2MEqOsrK0xaKhbWibBoZqy+f1RSUoIeF1BLcnf+pyQdDsljWMfmOh+QKJwuvDIiKx38GtPh5wFdGGjg==
   /got/6.7.1:
     dependencies:
       create-error-class: 3.0.2
@@ -1356,6 +1474,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-IgieNijUMbkDovyoKObU1DUhm1iwNYE/fuifEoEHfd1oZKZDaONBSkal7Y01shxsM49R4XaMdGez3WnF9UfiCQ==
+  /http-cache-semantics/4.1.0:
+    dev: false
+    resolution:
+      integrity: sha512-carPklcUh7ROWRK7Cv27RPtdhYhUsela/ue5/jKzjegVvXDqM2ILE9Q2BGn9JZJh1g87cp56su/FgQSzcWS8cQ==
   /http-errors/1.7.2:
     dependencies:
       depd: 1.1.2
@@ -1395,6 +1517,15 @@ packages:
     dev: false
     resolution:
       integrity: sha1-huYybSnF0Dnen6xYSkVon5KfT3I=
+  /http2-wrapper/1.0.0-beta.5.2:
+    dependencies:
+      quick-lru: 5.1.1
+      resolve-alpn: 1.0.0
+    dev: false
+    engines:
+      node: '>=10.19.0'
+    resolution:
+      integrity: sha512-xYz9goEyBnC8XwXDTuC/MZ6t+MrKVQZOk4s7+PaDkwIsQd8IwqvM+0M6bA/2lvG8GHXcPdf+MejTUeO2LCPCeQ==
   /iconv-lite/0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -1522,6 +1653,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-peZUwuWi3rXyAdls77yoDA7y9RM=
+  /json-buffer/3.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-4bV5BfR2mqfQTJm+V5tPPdf+ZpuhiIvTuAB5g8kcrXOZpTT/QwwVRWBywX1ozr6lEuPdbHxwaJlm9G6mI2sfSQ==
   /json-schema-traverse/0.4.1:
     dev: false
     resolution:
@@ -1559,6 +1694,12 @@ packages:
       '0': node >=0.6.0
     resolution:
       integrity: sha1-MT5mvB5cwG5Di8G3SZwuXFastqI=
+  /keyv/4.0.3:
+    dependencies:
+      json-buffer: 3.0.1
+    dev: false
+    resolution:
+      integrity: sha512-zdGa2TOpSZPq5mU6iowDARnMBZgtCqJ11dJROFi6tg6kTn4nuUdU09lFyLFSaHrWqpIJ+EBq4E8/Dc0Vx5vLdA==
   /kind-of/5.1.0:
     dev: false
     engines:
@@ -1640,6 +1781,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-G2Lj61tXDnVFFOi8VZds+SoQjtQC3dgokKdDG2mTm1tx4m50NUHBOZSBwQQHyy0V12A0JTG4icfZQH+xPyh8VA==
+  /lowercase-keys/2.0.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-tqNXrS78oMOE73NMxK4EMLQsQowWf8jKooH9g7xPavRT706R6bkQJ6DY2Te7QukaZsulxa30wQ7bk0pm4XiHmA==
   /mathjs/7.1.0:
     dependencies:
       complex.js: 2.0.11
@@ -1700,12 +1847,24 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-RZKhC3EmpBchfTGBVb8fb+RL2cWyw/32lshnsETttkBAyAUXSGHxbEJWWRXc751DrIxG1q04b8QwMbAwkRPpUA==
+  /mimic-response/1.0.1:
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==
   /mimic-response/2.1.0:
     dev: false
     engines:
       node: '>=8'
     resolution:
       integrity: sha512-wXqjST+SLt7R009ySCglWBCFpjUygmCIfD790/kVbiGmUgfYGuB14PiTd5DwVxSV4NcYHjzMkoj5LjQZwTQLEA==
+  /mimic-response/3.1.0:
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==
   /min-document/2.19.0:
     dependencies:
       dom-walk: 0.1.2
@@ -1848,6 +2007,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-CvaGwVMztSMJLOeXPrez7fyfObdZqNUK1cPAEzLHrTybIua9pMdmmPR5YwtfNftIOMv3DPUhFaxsZMNTQO20Kg==
+  /normalize-url/4.5.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==
   /npm-bundled/1.1.1:
     dependencies:
       npm-normalize-package-bin: 1.0.1
@@ -1940,6 +2105,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-0CWcCECdMVc2Rw3U5w9ZjqX6ga6ubk1xDVKxtBQPK7wis/0F2r9T6k4ydGYhecl7YUBxBVxhL5oisPsNxAPe2g==
+  /p-cancelable/2.0.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-wvPXDmbMmu2ksjkB4Z3nZWTSkJEb9lqVdMaCKpZUGJG9TMiNp9XcbG3fn9fPKjem04fJMJnXoyFPk2FmgiaiNg==
   /pako/1.0.11:
     dev: false
     resolution:
@@ -2098,6 +2269,12 @@ packages:
       node: '>=0.6'
     resolution:
       integrity: sha512-A1kFqHekCTM7cz0udomYUoYNWjBebHm/5wzU/XqrBRBNWectVH0QIiN+NEcZ0Dte5hvzHwbr8+XQmguPhJ6WdQ==
+  /quick-lru/5.1.1:
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
   /quick.db/7.1.1:
     dependencies:
       better-sqlite3: 6.0.1
@@ -2220,6 +2397,16 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-MsvtOrfG9ZcrOwAW+Qi+F6HbD0CWXEh9ou77uOb7FM2WPhwT7smM833PzanhJLsgXjN89Ir6V2PczXNnMpwKhw==
+  /resolve-alpn/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-rTuiIEqFmGxne4IovivKSDzld2lWW9QCjqv80SYjPgf+gS35eaCAjaP54CCwGAwBtnCsvNLYtqxe1Nw+i6JEmA==
+  /responselike/2.0.0:
+    dependencies:
+      lowercase-keys: 2.0.0
+    dev: false
+    resolution:
+      integrity: sha512-xH48u3FTB9VsZw7R+vvgaKeLKzT6jOogbQhEe/jewwnZgzPcnyWui2Av6JpoYZF/91uueC+lqhWqeURw5/qhCw==
   /rimraf/2.7.1:
     dependencies:
       glob: 7.1.6
@@ -2742,6 +2929,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  '@k3rn31p4nic/google-translate-api': ^1.1.0
   array-sort: ^1.0.0
   canvacord: ^3.0.8
   cheerio: ^0.22.0
