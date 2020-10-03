@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
   
   let reverse = a.split("").reverse().join("")
   
-  let loadmsg = await message.channel.send("a:loading:746163270414762184> Reversing ur text....").then(a => a.delete({ timeout: 1000}));
+  let loadmsg = await message.channel.send("<a:loading:746163270414762184> Reversing ur text....").then(a => a.delete({ timeout: 1000}));
   
   message.channel.send("Here ur text: " + reverse);
 }
@@ -16,3 +16,7 @@ exports.help = {
   usage: "reverse <text>"
 };
 
+exports.conf = {
+  aliases: [],
+  cooldown: 5
+}
