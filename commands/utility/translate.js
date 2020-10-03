@@ -7,7 +7,7 @@ exports.run = async(client, message, args) => {
   if(!args.slice(1).join(" ")) return message.channel.send("Insert what text to translate!")
 
     translate(args.slice(1).join(" "), { to: args[0] }).then(res => {
-      message.channel.send(`Auto Translate To **${args[0]}**: **${res.text}**`);
+      message.channel.send(`Translate: **${res.text}**`);
   }).catch(err => {
       message.channel.send(err);
   });
