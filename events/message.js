@@ -31,8 +31,6 @@ module.exports = async (client, message) => {
       .then(m => m.delete({ timeout: 10000 })); // Add this if you want the message automatically deleted.
   }
   
-let mt = await db.fetch(`mt_`)
-  
 let blacklist = await db.fetch(`blacklist_${message.author.id}`)
 
   // If the user doesn't doing any to the bot, return it.
@@ -40,8 +38,6 @@ let blacklist = await db.fetch(`blacklist_${message.author.id}`)
   
   if (blacklist === "Blacklisted") return message.reply("You are blacklisted from the bot!")
   
-  if (mt === "on") return message.channel.send(`**Clayne:** "Bot Under Maintenance!`)
-
   let args = message.content
     .slice(prefix.length)
     .trim()
