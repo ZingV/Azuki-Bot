@@ -8,15 +8,13 @@ exports.run = async (client, message, args) => {
     } else {
         user = message.author;
     }
-  
-  if (user.bot || user == client.user) return message.channel.send("That's user is bot!")
 
     let status;
     if (user.presence.activities.length === 1) status = user.presence.activities[0];
     else if (user.presence.activities.length > 1) status = user.presence.activities[1];
 
     if (user.presence.activities.length === 0 || status.name !== "Spotify" && status.type !== "LISTENING") {
-        return message.channel.send(`**${user.tag}** isn't listening to Spotify.`);
+        return message.channel.send("This user isn't listening to Spotify.");
     }
 
     if (status !== null && status.type === "LISTENING" && status.name === "Spotify" && status.assets !== null) {
@@ -34,14 +32,14 @@ exports.run = async (client, message, args) => {
         let time = `${minutes}:${seconds}`;
 
         const embed = new Discord.MessageEmbed()
-        .setAuthor("Spotify Track Information", "https://cdn.discordapp.com/emojis/719125875395788880.png?v=1")
+        .setAuthor("Spotify Track Information", "https://image.flaticon.com/icons/svg/2111/2111624.svg")
         .setColor(0x1ED768)
         .setThumbnail(image)
         .addField("Name:", name, true)
         .addField("Album:", album, true)
         .addField("Artist:", artist, true)
         .addField("Duration:", time, false)
-        .addField("Listen now on Spotify!", `[${artist} - ${name}](${url})`, false)
+        .addField("Listen now on Spotify!", `[\`${artist} - ${name}\`](${url})`, false)
         return message.channel.send(embed)
     }
 }
