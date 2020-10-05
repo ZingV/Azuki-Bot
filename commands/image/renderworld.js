@@ -1,16 +1,26 @@
 const discord = require("discord.js")
 const config = require("../../config.json")
+const fetch = require("node-fetch");
 
 exports.run = async (client, message, args) => {
   if(!args[0]) return message.channel.send("Please input name world!")
   let world = args[0]
+  
+  try {
+  fetch(`https://s3.amazonaws.com/world.growtopiagame.com/${world}.png`)
+    .then(res => res.json())
+    .then(body =>
+  
   let embed = new discord.MessageEmbed()
   .setColor(config.color)
   .setAuthor(`> Name World: ${world}`, "https://cdn.discordapp.com/emojis/727166288614522962.png?v=1")
-  .setImage(`https://s3.amazonaws.com/world.growtopiagame.com/${world}.png`)
+  .setImage(body)
   .setFooter(`Request by ${message.author.tag} | ${client.user.username} V1.0.0`)
   
   message.channel.send(embed)
+  } catch (e) {
+    message.channel.send("Seem that world not rendered by owner world!")
+  }
 }
 
 exports.help = {
