@@ -1,0 +1,33 @@
+const db = require("quick.db");
+const Discord = require("discord.js");
+
+exports.run = async(client, message, args) => {
+  if(args[0] === "add") {
+    let word = args.slice(3)
+    
+    if(!word)
+      return message.channel.send("Please input the word!");
+    
+    db.push(`bl_${message.guild.id
+  }
+  
+  if(args[0] === "list") {
+    
+  }
+  
+  if(args[0] === "remove") {
+    
+  }
+  
+}
+
+exports.help = {
+  name: "badword",
+  description: "Badword system",
+  usage: "badword add <word>, badword list, badword remove"
+}
+
+exports.conf = {
+  aliases: ["bw"],
+  cooldown: 3
+}
